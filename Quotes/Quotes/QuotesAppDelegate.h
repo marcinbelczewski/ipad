@@ -13,7 +13,7 @@
 @interface QuotesAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
-//something modified again
+//something modified again and again
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain) IBOutlet QuotesViewController *viewController;

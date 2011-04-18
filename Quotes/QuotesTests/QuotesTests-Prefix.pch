@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'QuotesTests' target in the 'QuotesTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

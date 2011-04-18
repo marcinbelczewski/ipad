@@ -1,0 +1,138 @@
+
+{
+    "tabs":
+    [
+        {
+            "category":"Indices",
+            "symbols":
+            [
+                {
+                    "name":"DJIA",
+                    "datetime":"2011-04-15T16:02:59-04:00",
+                    "price":"12341.83",
+                    "change":"56.68",
+                    "changePercent":"0.4614"
+                },
+                {
+                    "name":"S&P 500",
+                    "datetime":"2011-04-15T16:59:42-04:00",
+                    "price":"1319.68",
+                    "change":"5.16",
+                    "changePercent":"0.3925"
+                },
+                {
+                    "name":"NASDAQ",
+                    "datetime":"2011-04-15T17:16:13-04:00",
+                    "price":"2764.65",
+                    "change":"4.43",
+                    "changePercent":"0.1605"
+                },
+                {
+                    "name":"NYSE",
+                    "datetime":"2011-04-15T19:59:47-04:00",
+                    "price":"8400.3096",
+                    "change":"26.1494",
+                    "changePercent":"0.3123"
+                }
+            ]
+        },
+        {
+            "category":"Commodities",
+            "symbols":
+            [
+                {
+                    "name":"Crude,
+                     Light Sweet (Nymex)",
+                    "datetime":"2011-04-15T17:44:11-04:00",
+                    "price":"109.66",
+                    "change":"1.55",
+                    "changePercent":"1.4337"
+                },
+                {
+                    "name":"Natural Gas (Nymex)",
+                    "datetime":"2011-04-15T17:43:45-04:00",
+                    "price":"4.204",
+                    "change":"-0.008",
+                    "changePercent":"-0.1899"
+                },
+                {
+                    "name":"RBOB Gasoline (Nymex)",
+                    "datetime":"2011-04-15T17:44:25-04:00",
+                    "price":"3.2892",
+                    "change":"0.0545",
+                    "changePercent":"1.6849"
+                },
+                {
+                    "name":"Heating Oil (NYMEX)",
+                    "datetime":"2011-04-15T17:44:24-04:00",
+                    "price":"3.2242",
+                    "change":"0.0352",
+                    "changePercent":"1.1038"
+                },
+                {
+                    "name":"Crude Oil,
+                     Brent (ICE)",
+                    "datetime":"2011-04-15T17:58:13-04:00",
+                    "price":"123.45",
+                    "change":"1.09",
+                    "changePercent":"0.8908"
+                },
+                {
+                    "name":"Gas Oil (ICE)",
+                    "datetime":"2011-04-15T17:00:43-04:00",
+                    "price":"1024.5",
+                    "change":"12",
+                    "changePercent":"1.1852"
+                }
+            ]
+        },
+        {
+            "category":"Stocks",
+            "symbols":
+            [
+                {
+                    "name":"Bp P.l.c.",
+                    "datetime":"2011-04-15T16:00:56-04:00",
+                    "price":"44.96",
+                    "change":"-0.58",
+                    "changePercent":"-1.2736"
+                },
+                {
+                    "name":"Chevron Corporation",
+                    "datetime":"2011-04-15T16:01:14-04:00",
+                    "price":"106.24",
+                    "change":"1.36",
+                    "changePercent":"1.2967"
+                },
+                {
+                    "name":"Conocophillips",
+                    "datetime":"2011-04-15T16:00:28-04:00",
+                    "price":"79.12",
+                    "change":"0.84",
+                    "changePercent":"1.0731"
+                },
+                {
+                    "name":"Exxon Mobil Corp.",
+                    "datetime":"2011-04-15T16:01:19-04:00",
+                    "price":"84.29",
+                    "change":"0.85",
+                    "changePercent":"1.0187"
+                },
+                {
+                    "name":"Royal Dutch Shell Plc Cl 'a'",
+                    "datetime":"2011-04-15T16:02:29-04:00",
+                    "price":"72.86",
+                    "change":"-0.5",
+                    "changePercent":"-0.6816"
+                },
+                {
+                    "name":"Total S.a.",
+                    "datetime":"2011-04-15T16:06:06-04:00",
+                    "price":"60.4",
+                    "change":"-0.08",
+                    "changePercent":"-0.1323"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SplitViewTest1Tests' target in the 'SplitViewTest1Tests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:EEIPad/EEIPad.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Quotes/Quotes.xcodeproj">
    </FileRef>
 </Workspace>

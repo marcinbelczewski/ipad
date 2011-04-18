@@ -41,6 +41,7 @@
     [cfg addSmallWidget:nil withLabel:@"Indicies"];    
     [cfg addSmallWidget:nil withLabel:@"Stock Quotes"];
     [cfg addSmallWidget:nil withLabel:@"Video"];
+    [cfg addSmallWidget:@"QuotesViewController" withLabel:@"Quotes"];    
     cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:324];
     
     [cfg addLargeWidget:nil withLabel:@"Spotlight"];

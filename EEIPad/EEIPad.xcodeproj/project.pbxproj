@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B51B32135C81670015FB5A /* green_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B30135C81670015FB5A /* green_up.png */; };
+		19B51B33135C81670015FB5A /* red_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B31135C81670015FB5A /* red_down.png */; };
+		19B51B3D135C81840015FB5A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B35135C81840015FB5A /* JSONKit.m */; };
+		19B51B3E135C81840015FB5A /* QuotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B37135C81840015FB5A /* QuotesTableCell.m */; };
+		19B51B3F135C81840015FB5A /* QuotesTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B38135C81840015FB5A /* QuotesTableCell.xib */; };
+		19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */; };
+		19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3C135C81840015FB5A /* QuotesViewController.m */; };
+		19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B42135C823A0015FB5A /* QuotesViewController.xib */; };
 		F404C875134F4FF0006EAA18 /* WidgetLg.m in Sources */ = {isa = PBXBuildFile; fileRef = F404C873134F4FF0006EAA18 /* WidgetLg.m */; };
 		F404C876134F4FF0006EAA18 /* WidgetLg.xib in Resources */ = {isa = PBXBuildFile; fileRef = F404C874134F4FF0006EAA18 /* WidgetLg.xib */; };
 		F424C405135C1BDE00EF228D /* UIViewScrollContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F424C404135C1BDE00EF228D /* UIViewScrollContainer.m */; };
@@ -61,6 +69,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19B51B30135C81670015FB5A /* green_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_up.png; path = images/green_up.png; sourceTree = "<group>"; };
+		19B51B31135C81670015FB5A /* red_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_down.png; path = images/red_down.png; sourceTree = "<group>"; };
+		19B51B34135C81840015FB5A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Quotes/JSONKit.h; sourceTree = "<group>"; };
+		19B51B35135C81840015FB5A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Quotes/JSONKit.m; sourceTree = "<group>"; };
+		19B51B36135C81840015FB5A /* QuotesTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesTableCell.h; path = Quotes/QuotesTableCell.h; sourceTree = "<group>"; };
+		19B51B37135C81840015FB5A /* QuotesTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesTableCell.m; path = Quotes/QuotesTableCell.m; sourceTree = "<group>"; };
+		19B51B38135C81840015FB5A /* QuotesTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuotesTableCell.xib; path = Quotes/QuotesTableCell.xib; sourceTree = "<group>"; };
+		19B51B39135C81840015FB5A /* QuotesTableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesTableDelegate.h; path = Quotes/QuotesTableDelegate.h; sourceTree = "<group>"; };
+		19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesTableDelegate.m; path = Quotes/QuotesTableDelegate.m; sourceTree = "<group>"; };
+		19B51B3B135C81840015FB5A /* QuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesViewController.h; path = Quotes/QuotesViewController.h; sourceTree = "<group>"; };
+		19B51B3C135C81840015FB5A /* QuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesViewController.m; path = Quotes/QuotesViewController.m; sourceTree = "<group>"; };
+		19B51B42135C823A0015FB5A /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuotesViewController.xib; path = Quotes/QuotesViewController.xib; sourceTree = "<group>"; };
 		F404C872134F4FF0006EAA18 /* WidgetLg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetLg.h; sourceTree = "<group>"; };
 		F404C873134F4FF0006EAA18 /* WidgetLg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetLg.m; sourceTree = "<group>"; };
 		F404C874134F4FF0006EAA18 /* WidgetLg.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetLg.xib; sourceTree = "<group>"; };
@@ -144,6 +164,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19B51B2E135C80D70015FB5A /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				19B51B42135C823A0015FB5A /* QuotesViewController.xib */,
+				19B51B34135C81840015FB5A /* JSONKit.h */,
+				19B51B35135C81840015FB5A /* JSONKit.m */,
+				19B51B36135C81840015FB5A /* QuotesTableCell.h */,
+				19B51B37135C81840015FB5A /* QuotesTableCell.m */,
+				19B51B38135C81840015FB5A /* QuotesTableCell.xib */,
+				19B51B39135C81840015FB5A /* QuotesTableDelegate.h */,
+				19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */,
+				19B51B3B135C81840015FB5A /* QuotesViewController.h */,
+				19B51B3C135C81840015FB5A /* QuotesViewController.m */,
+			);
+			name = Quotes;
+			sourceTree = "<group>";
+		};
 		F43DD72D1358CB8A00F92AD9 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +201,7 @@
 		F43DD72F1358CBDC00F92AD9 /* SmallWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				19B51B2E135C80D70015FB5A /* Quotes */,
 				F43DD7301358CC7100F92AD9 /* StocksWidget.h */,
 				F43DD7311358CC7100F92AD9 /* StocksWidget.m */,
 				F43DD7321358CC7100F92AD9 /* StocksWidget.xib */,
@@ -197,6 +235,8 @@
 		F4825F6F13562E8300837AE2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				19B51B30135C81670015FB5A /* green_up.png */,
+				19B51B31135C81670015FB5A /* red_down.png */,
 				F43DD759135B6A5900F92AD9 /* stockquotes.png */,
 				F4825F711356321000837AE2 /* widget_body.png */,
 				F4ECB5B8135827D1009CD828 /* widget_small.png */,
@@ -376,6 +416,10 @@
 				F43DD7341358CC7100F92AD9 /* StocksWidget.xib in Resources */,
 				F43DD758135B691A00F92AD9 /* NewsAndAnalysisWidget.xib in Resources */,
 				F43DD75A135B6A5900F92AD9 /* stockquotes.png in Resources */,
+				19B51B32135C81670015FB5A /* green_up.png in Resources */,
+				19B51B33135C81670015FB5A /* red_down.png in Resources */,
+				19B51B3F135C81840015FB5A /* QuotesTableCell.xib in Resources */,
+				19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +469,10 @@
 				F43DD752135AB2C700F92AD9 /* Widget.m in Sources */,
 				F43DD757135B691A00F92AD9 /* NewsAndAnalysisWidget.m in Sources */,
 				F424C405135C1BDE00EF228D /* UIViewScrollContainer.m in Sources */,
+				19B51B3D135C81840015FB5A /* JSONKit.m in Sources */,
+				19B51B3E135C81840015FB5A /* QuotesTableCell.m in Sources */,
+				19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */,
+				19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

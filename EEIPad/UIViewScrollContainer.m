@@ -44,11 +44,11 @@
     [super dealloc];
 }
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-	if ([self pointInside:point withEvent:event]) {
-		return scrollView;
-	}
-	return nil;
-}
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+//	if ([self pointInside:point withEvent:event]) {
+//		return scrollView;
+//	}
+//	return nil;
+//}
 
 @end

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class DetailViewController;
-
 @interface EEIAppDelegate : NSObject <UIApplicationDelegate> {
 
 }

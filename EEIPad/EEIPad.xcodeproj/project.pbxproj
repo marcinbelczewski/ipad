@@ -17,6 +17,8 @@
 		19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B42135C823A0015FB5A /* QuotesViewController.xib */; };
 		F404C875134F4FF0006EAA18 /* WidgetLg.m in Sources */ = {isa = PBXBuildFile; fileRef = F404C873134F4FF0006EAA18 /* WidgetLg.m */; };
 		F404C876134F4FF0006EAA18 /* WidgetLg.xib in Resources */ = {isa = PBXBuildFile; fileRef = F404C874134F4FF0006EAA18 /* WidgetLg.xib */; };
+		F42470541364941300660869 /* full_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = F42470521364941300660869 /* full_screen.png */; };
+		F42470551364941300660869 /* restore.png in Resources */ = {isa = PBXBuildFile; fileRef = F42470531364941300660869 /* restore.png */; };
 		F424C405135C1BDE00EF228D /* UIViewScrollContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F424C404135C1BDE00EF228D /* UIViewScrollContainer.m */; };
 		F43DD7331358CC7100F92AD9 /* StocksWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DD7311358CC7100F92AD9 /* StocksWidget.m */; };
 		F43DD7341358CC7100F92AD9 /* StocksWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43DD7321358CC7100F92AD9 /* StocksWidget.xib */; };
@@ -84,6 +86,8 @@
 		F404C872134F4FF0006EAA18 /* WidgetLg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetLg.h; sourceTree = "<group>"; };
 		F404C873134F4FF0006EAA18 /* WidgetLg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetLg.m; sourceTree = "<group>"; };
 		F404C874134F4FF0006EAA18 /* WidgetLg.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetLg.xib; sourceTree = "<group>"; };
+		F42470521364941300660869 /* full_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = full_screen.png; path = images/full_screen.png; sourceTree = "<group>"; };
+		F42470531364941300660869 /* restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = restore.png; path = images/restore.png; sourceTree = "<group>"; };
 		F424C403135C1BDD00EF228D /* UIViewScrollContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContainer.h; sourceTree = "<group>"; };
 		F424C404135C1BDE00EF228D /* UIViewScrollContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContainer.m; sourceTree = "<group>"; };
 		F43DD7301358CC7100F92AD9 /* StocksWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StocksWidget.h; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		F4825F6F13562E8300837AE2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F42470521364941300660869 /* full_screen.png */,
+				F42470531364941300660869 /* restore.png */,
 				19B51B30135C81670015FB5A /* green_up.png */,
 				19B51B31135C81670015FB5A /* red_down.png */,
 				F43DD759135B6A5900F92AD9 /* stockquotes.png */,
@@ -420,6 +426,8 @@
 				19B51B33135C81670015FB5A /* red_down.png in Resources */,
 				19B51B3F135C81840015FB5A /* QuotesTableCell.xib in Resources */,
 				19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */,
+				F42470541364941300660869 /* full_screen.png in Resources */,
+				F42470551364941300660869 /* restore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

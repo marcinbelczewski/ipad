@@ -8,8 +8,12 @@
 
 #import "WidgetLg.h"
 #import "WidgetConfig.h"
+#import "EEIAppDelegate.h"
+
 
 @implementation WidgetLg
+@synthesize restoreButton;
+@synthesize expandButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,6 +28,8 @@
 - (void)dealloc
 {
     [label release];
+    [restoreButton release];
+    [expandButton release];
     [super dealloc];
 }
 
@@ -46,6 +52,8 @@
 {
     [self setView:nil];
     [self setLabel:nil];
+    [self setRestoreButton:nil];
+    [self setExpandButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -58,8 +66,17 @@
 }
 
 - (IBAction)ExpandClicked:(id)sender {
-    self.view.frame = CGRectMake(0, 0, 768, 1024);
+    EEIAppDelegate *eeiapp= [[UIApplication sharedApplication] delegate];
+    [eeiapp.window.rootViewController presentModalViewController:self animated:YES];
+    expandButton.hidden = true;
+    restoreButton.hidden = false;
 }
 
-
+- (IBAction)RestoreClicked:(id)sender {
+    EEIAppDelegate *eeiapp= [[UIApplication sharedApplication] delegate];
+    [eeiapp.window.rootViewController dismissModalViewControllerAnimated:true];
+    expandButton.hidden = false;
+    restoreButton.hidden = true;
+    [self.view setNeedsDisplay];
+}
 @end

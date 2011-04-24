@@ -12,7 +12,12 @@
 
 @interface WidgetLg : Widget {
     
+    UIButton *restoreButton;
+    UIButton *expandButton;
 }
 - (IBAction)ExpandClicked:(id)sender;
+- (IBAction)RestoreClicked:(id)sender;
+@property (nonatomic, retain) IBOutlet UIButton *restoreButton;
+@property (nonatomic, retain) IBOutlet UIButton *expandButton;
 
 @end

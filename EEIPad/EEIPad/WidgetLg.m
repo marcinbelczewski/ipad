@@ -66,17 +66,28 @@
 }
 
 - (IBAction)ExpandClicked:(id)sender {
+    frameRect = self.view.frame;
+    originalSuperView = self.view.superview;
     EEIAppDelegate *eeiapp= [[UIApplication sharedApplication] delegate];
-    [eeiapp.window.rootViewController presentModalViewController:self animated:YES];
+//    [UIView setAnimationTransition: trans forView: [self view] cache: YES];
+//    [eeiapp.window.rootViewController presentModalViewController:self animated:NO];
+    [eeiapp.window.rootViewController.view addSubview: self.view];
+    [UIView beginAnimations: nil context: nil];
+    [self.view setFrame:CGRectMake(0, 0, 768, 1024)];
+    
+    [UIView commitAnimations];        
     expandButton.hidden = true;
     restoreButton.hidden = false;
 }
 
 - (IBAction)RestoreClicked:(id)sender {
     EEIAppDelegate *eeiapp= [[UIApplication sharedApplication] delegate];
-    [eeiapp.window.rootViewController dismissModalViewControllerAnimated:true];
+//    [eeiapp.window.rootViewController dismissModalViewControllerAnimated:NO];
+    [originalSuperView addSubview: self.view]; 
+    [self.view setFrame:frameRect];
+    
     expandButton.hidden = false;
     restoreButton.hidden = true;
-    [self.view setNeedsDisplay];
+    [self.view.superview.superview setNeedsDisplay];
 }
 @end

@@ -14,6 +14,8 @@
     
     UIButton *restoreButton;
     UIButton *expandButton;
+    CGRect frameRect;
+    UIView *originalSuperView;
 }
 - (IBAction)ExpandClicked:(id)sender;
 - (IBAction)RestoreClicked:(id)sender;

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		197D02EB1369DC800082C1EC /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 197D02EA1369DC800082C1EC /* WebRequest.m */; };
+		197D02EF1369E5B30082C1EC /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 197D02EE1369E5B30082C1EC /* WebRequest.m */; };
 		19B51B32135C81670015FB5A /* green_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B30135C81670015FB5A /* green_up.png */; };
 		19B51B33135C81670015FB5A /* red_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B31135C81670015FB5A /* red_down.png */; };
 		19B51B3D135C81840015FB5A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B35135C81840015FB5A /* JSONKit.m */; };
@@ -90,8 +90,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		197D02E91369DC800082C1EC /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRequest.h; path = ../../Quotes/Quotes/WebRequest.h; sourceTree = "<group>"; };
-		197D02EA1369DC800082C1EC /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRequest.m; path = ../../Quotes/Quotes/WebRequest.m; sourceTree = "<group>"; };
+		197D02ED1369E5B30082C1EC /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRequest.h; path = Utils/WebRequest.h; sourceTree = "<group>"; };
+		197D02EE1369E5B30082C1EC /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRequest.m; path = Utils/WebRequest.m; sourceTree = "<group>"; };
 		19B51B30135C81670015FB5A /* green_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_up.png; path = images/green_up.png; sourceTree = "<group>"; };
 		19B51B31135C81670015FB5A /* red_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_down.png; path = images/red_down.png; sourceTree = "<group>"; };
 		19B51B34135C81840015FB5A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Quotes/JSONKit.h; sourceTree = "<group>"; };
@@ -213,8 +213,8 @@
 		197D02EC1369DEEF0082C1EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				197D02EA1369DC800082C1EC /* WebRequest.m */,
-				197D02E91369DC800082C1EC /* WebRequest.h */,
+				197D02ED1369E5B30082C1EC /* WebRequest.h */,
+				197D02EE1369E5B30082C1EC /* WebRequest.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -568,7 +568,7 @@
 				19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */,
 				19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */,
 				F424706A13692AC100660869 /* VideoWidget.m in Sources */,
-				197D02EB1369DC800082C1EC /* WebRequest.m in Sources */,
+				197D02EF1369E5B30082C1EC /* WebRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

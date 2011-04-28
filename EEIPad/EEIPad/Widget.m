@@ -55,7 +55,7 @@
 {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor clearColor];
+//    self.view.backgroundColor = [UIColor clearColor];
     [label setText:widgetConfig.label];
     if(subView!=nil)
     {

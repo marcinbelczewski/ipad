@@ -15,6 +15,7 @@
 @synthesize restoreButton;
 @synthesize expandButton;
 @synthesize titleView;
+@synthesize bottomView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +33,7 @@
     [restoreButton release];
     [expandButton release];
     [titleView release];
+    [bottomView release];
     [super dealloc];
 }
 
@@ -49,8 +51,8 @@
 {
     [super viewDidLoad];
     
-    UIImage *patternImage = [UIImage imageNamed:@"widget_title.png"];
-    self.titleView.backgroundColor = [UIColor colorWithPatternImage:patternImage];
+    self.titleView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"widgetlg_top_pattern.png"]];
+    self.bottomView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"widgetlg_bottom_pattern.png"]];
    
 }
 
@@ -61,6 +63,7 @@
     [self setRestoreButton:nil];
     [self setExpandButton:nil];
     [self setTitleView:nil];
+    [self setBottomView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

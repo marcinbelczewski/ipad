@@ -28,8 +28,6 @@
 		19E9EC751359A2830052DBA7 /* QuotesTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 19E9EC741359A2830052DBA7 /* QuotesTests.h */; };
 		19E9EC771359A2830052DBA7 /* QuotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E9EC761359A2830052DBA7 /* QuotesTests.m */; };
 		19E9EC821359A2A80052DBA7 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E9EC811359A2A80052DBA7 /* JSONKit.m */; };
-		19E9EC8D1359A5BD0052DBA7 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E9EC8C1359A5BD0052DBA7 /* WebRequest.m */; };
-		19E9EC8E1359A5BD0052DBA7 /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E9EC8C1359A5BD0052DBA7 /* WebRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +70,6 @@
 		19E9EC761359A2830052DBA7 /* QuotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuotesTests.m; sourceTree = "<group>"; };
 		19E9EC801359A2A80052DBA7 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		19E9EC811359A2A80052DBA7 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		19E9EC8B1359A5BD0052DBA7 /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRequest.h; sourceTree = "<group>"; };
-		19E9EC8C1359A5BD0052DBA7 /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +135,6 @@
 				19E9EC5D1359A2820052DBA7 /* QuotesViewController.m */,
 				19E9EC5F1359A2830052DBA7 /* QuotesViewController.xib */,
 				19E9EC4E1359A2820052DBA7 /* Supporting Files */,
-				19E9EC8B1359A5BD0052DBA7 /* WebRequest.h */,
-				19E9EC8C1359A5BD0052DBA7 /* WebRequest.m */,
 				19318D531359D738009D8E36 /* QuotesTableCell.h */,
 				19318D541359D738009D8E36 /* QuotesTableCell.m */,
 				19318D571359D7B6009D8E36 /* QuotesTableCell.xib */,
@@ -297,7 +291,6 @@
 				19E9EC581359A2820052DBA7 /* QuotesAppDelegate.m in Sources */,
 				19E9EC5E1359A2820052DBA7 /* QuotesViewController.m in Sources */,
 				19E9EC821359A2A80052DBA7 /* JSONKit.m in Sources */,
-				19E9EC8D1359A5BD0052DBA7 /* WebRequest.m in Sources */,
 				19318D551359D738009D8E36 /* QuotesTableCell.m in Sources */,
 				19318D5B135A0D40009D8E36 /* QuotesTableDelegate.m in Sources */,
 			);
@@ -308,7 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E9EC771359A2830052DBA7 /* QuotesTests.m in Sources */,
-				19E9EC8E1359A5BD0052DBA7 /* WebRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

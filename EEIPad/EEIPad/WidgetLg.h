@@ -14,6 +14,7 @@
     
     UIButton *restoreButton;
     UIButton *expandButton;
+    UIView *titleView;
     CGRect frameRect;
     UIView *originalSuperView;
 }
@@ -21,5 +22,6 @@
 - (IBAction)RestoreClicked:(id)sender;
 @property (nonatomic, retain) IBOutlet UIButton *restoreButton;
 @property (nonatomic, retain) IBOutlet UIButton *expandButton;
+@property (nonatomic, retain) IBOutlet UIView *titleView;
 
 @end

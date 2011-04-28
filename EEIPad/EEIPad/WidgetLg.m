@@ -14,6 +14,7 @@
 @implementation WidgetLg
 @synthesize restoreButton;
 @synthesize expandButton;
+@synthesize titleView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +31,7 @@
     [label release];
     [restoreButton release];
     [expandButton release];
+    [titleView release];
     [super dealloc];
 }
 
@@ -46,6 +48,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIImage *patternImage = [UIImage imageNamed:@"widget_title.png"];
+    self.titleView.backgroundColor = [UIColor colorWithPatternImage:patternImage];
+   
 }
 
 - (void)viewDidUnload
@@ -54,6 +60,7 @@
     [self setLabel:nil];
     [self setRestoreButton:nil];
     [self setExpandButton:nil];
+    [self setTitleView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

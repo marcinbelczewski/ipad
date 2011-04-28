@@ -55,9 +55,11 @@
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor clearColor];
     [label setText:widgetConfig.label];
     if(subView!=nil)
     {
+
         subView.view.frame = widgetConfig.widgetRect;
         [self.view addSubview:subView.view];
     }

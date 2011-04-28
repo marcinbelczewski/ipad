@@ -37,10 +37,10 @@
 {
     AppConfig *cfg = [[AppConfig alloc]init];
      
+    [cfg addSmallWidget:@"VideoWidget" withLabel:@"Video"];
     [cfg addSmallWidget:@"StocksWidget" withLabel:@"Futures"];
     [cfg addSmallWidget:nil withLabel:@"Indicies"];    
     [cfg addSmallWidget:nil withLabel:@"Stock Quotes"];
-    [cfg addSmallWidget:nil withLabel:@"Video"];
     [cfg addSmallWidget:@"QuotesViewController" withLabel:@"Quotes"];    
     cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:324];
     

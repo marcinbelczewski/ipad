@@ -23,6 +23,10 @@
 		F42470631369259200660869 /* widget_topleft.png in Resources */ = {isa = PBXBuildFile; fileRef = F42470601369259200660869 /* widget_topleft.png */; };
 		F42470641369259200660869 /* widget_topright.png in Resources */ = {isa = PBXBuildFile; fileRef = F42470611369259200660869 /* widget_topright.png */; };
 		F42470661369259E00660869 /* widget_large_body.png in Resources */ = {isa = PBXBuildFile; fileRef = F42470651369259E00660869 /* widget_large_body.png */; };
+		F424706A13692AC100660869 /* VideoWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = F424706813692AC100660869 /* VideoWidget.m */; };
+		F424706B13692AC100660869 /* VideoWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = F424706913692AC100660869 /* VideoWidget.xib */; };
+		F424706D1369305E00660869 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F424706C1369305D00660869 /* MediaPlayer.framework */; };
+		F424706F1369328B00660869 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F424706E1369328B00660869 /* MediaPlayer.framework */; };
 		F424C405135C1BDE00EF228D /* UIViewScrollContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F424C404135C1BDE00EF228D /* UIViewScrollContainer.m */; };
 		F43DD7331358CC7100F92AD9 /* StocksWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DD7311358CC7100F92AD9 /* StocksWidget.m */; };
 		F43DD7341358CC7100F92AD9 /* StocksWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43DD7321358CC7100F92AD9 /* StocksWidget.xib */; };
@@ -96,6 +100,11 @@
 		F42470601369259200660869 /* widget_topleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = widget_topleft.png; path = images/widget_topleft.png; sourceTree = "<group>"; };
 		F42470611369259200660869 /* widget_topright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = widget_topright.png; path = images/widget_topright.png; sourceTree = "<group>"; };
 		F42470651369259E00660869 /* widget_large_body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = widget_large_body.png; path = images/widget_large_body.png; sourceTree = "<group>"; };
+		F424706713692AC100660869 /* VideoWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWidget.h; sourceTree = "<group>"; };
+		F424706813692AC100660869 /* VideoWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWidget.m; sourceTree = "<group>"; };
+		F424706913692AC100660869 /* VideoWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoWidget.xib; sourceTree = "<group>"; };
+		F424706C1369305D00660869 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F424706E1369328B00660869 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		F424C403135C1BDD00EF228D /* UIViewScrollContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewScrollContainer.h; sourceTree = "<group>"; };
 		F424C404135C1BDE00EF228D /* UIViewScrollContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewScrollContainer.m; sourceTree = "<group>"; };
 		F43DD7301358CC7100F92AD9 /* StocksWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StocksWidget.h; sourceTree = "<group>"; };
@@ -155,10 +164,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F424706D1369305E00660869 /* MediaPlayer.framework in Frameworks */,
 				F48B4D0F134E063F007B0100 /* UIKit.framework in Frameworks */,
 				F48B4D11134E063F007B0100 /* Foundation.framework in Frameworks */,
 				F48B4D13134E063F007B0100 /* CoreGraphics.framework in Frameworks */,
 				F48B4D15134E063F007B0100 /* CoreData.framework in Frameworks */,
+				F424706F1369328B00660869 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +228,9 @@
 				F43DD7301358CC7100F92AD9 /* StocksWidget.h */,
 				F43DD7311358CC7100F92AD9 /* StocksWidget.m */,
 				F43DD7321358CC7100F92AD9 /* StocksWidget.xib */,
+				F424706713692AC100660869 /* VideoWidget.h */,
+				F424706813692AC100660869 /* VideoWidget.m */,
+				F424706913692AC100660869 /* VideoWidget.xib */,
 			);
 			name = SmallWidgets;
 			sourceTree = "<group>";
@@ -268,6 +282,7 @@
 		F48B4CFF134E063E007B0100 = {
 			isa = PBXGroup;
 			children = (
+				F424706C1369305D00660869 /* MediaPlayer.framework */,
 				F424C403135C1BDD00EF228D /* UIViewScrollContainer.h */,
 				F424C404135C1BDE00EF228D /* UIViewScrollContainer.m */,
 				F48B4D16134E063F007B0100 /* EEIPad */,
@@ -289,6 +304,7 @@
 		F48B4D0D134E063F007B0100 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F424706E1369328B00660869 /* MediaPlayer.framework */,
 				F48B4D0E134E063F007B0100 /* UIKit.framework */,
 				F48B4D10134E063F007B0100 /* Foundation.framework */,
 				F48B4D12134E063F007B0100 /* CoreGraphics.framework */,
@@ -444,6 +460,7 @@
 				F42470631369259200660869 /* widget_topleft.png in Resources */,
 				F42470641369259200660869 /* widget_topright.png in Resources */,
 				F42470661369259E00660869 /* widget_large_body.png in Resources */,
+				F424706B13692AC100660869 /* VideoWidget.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +514,7 @@
 				19B51B3E135C81840015FB5A /* QuotesTableCell.m in Sources */,
 				19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */,
 				19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */,
+				F424706A13692AC100660869 /* VideoWidget.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

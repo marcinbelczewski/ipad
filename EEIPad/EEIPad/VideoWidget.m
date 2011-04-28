@@ -1,17 +1,17 @@
 //
-//  Widget.m
+//  VideoWidget.m
 //  EEIPad
 //
-//  Created by Worker on 4/17/11.
+//  Created by Worker on 4/28/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Widget.h"
-#import "WidgetConfig.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import "VideoWidget.h"
 
-@implementation Widget
-@synthesize widgetConfig, subView;
-@synthesize label;
+
+@implementation VideoWidget
+@synthesize videoView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,13 +22,9 @@
     return self;
 }
 
-- (void) configureWith:(WidgetConfig *)config
-{
-    widgetConfig=config;
-}
-
 - (void)dealloc
 {
+    [videoView release];
     [super dealloc];
 }
 
@@ -42,33 +38,21 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.view.backgroundColor = [UIColor clearColor];
-    [label setText:widgetConfig.label];
-    if(subView!=nil)
-    {
-
-        subView.view.backgroundColor = [UIColor clearColor];
-        subView.view.frame = widgetConfig.widgetRect;
-        [self.view addSubview:subView.view];
-    }
+    // Do any additional setup after loading the view from its nib.
+    MPMoviePlayerController *player = [[MPMoviePlayerController alloc] 
+                                       initWithContentURL: [NSURL URLWithString:@"http://eeivid.exec-insider.com/PROD_VIDEO/2011_04_26_MarneBeukes.mp4"]];
+    [player.view setFrame: videoView.bounds];  // player's frame must match parent's
+    [videoView addSubview: player.view];
+    // ...
+    [player play];
 }
-
 
 - (void)viewDidUnload
 {
+    [self setVideoView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

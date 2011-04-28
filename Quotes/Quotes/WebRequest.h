@@ -21,7 +21,7 @@
 }
 @property (assign) id<WebRequestDelegate> delegate;
 
--(id) initWithURL:(NSString*)requestURL;
+-(id) initWithURLString:(NSString*)requestURL;
 -(void) makeRequest;
 -(void) cancelRequest;
 @end

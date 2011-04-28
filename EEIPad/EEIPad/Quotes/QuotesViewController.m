@@ -10,6 +10,7 @@
 #import "JSONKit.h"
 #import "QuotesTableCell.h"
 #import "QuotesViewController.h"
+#import "WebRequest.h"
 
 @implementation QuotesViewController
 
@@ -34,6 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    webRequest = [[WebRequest alloc] initWithURLString:@"http://www.globalinsight.test.idmanagedsolutions.com/json/indexlist"];
+    webRequest.delegate = self;
     timer = [NSTimer scheduledTimerWithTimeInterval:5.0 
                                              target:self 
                                            selector:@selector(refreshQuotes) 
@@ -44,9 +47,13 @@
 }
 
 -(void)refreshQuotes
+{    
+    [webRequest makeRequest];
+}
+
+-(void) dataLoaded:(NSData*)data
 {
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.globalinsight.test.idmanagedsolutions.com/json/indexlist"]];
-    quotes = [jsonData objectFromJSONData];
+    quotes = [data objectFromJSONData];
     [indicesTableController setData:[[[quotes objectForKey:@"tabs"] objectAtIndex:0] objectForKey:@"symbols"]];
     [commoditiesTableController setData:[[[quotes objectForKey:@"tabs"] objectAtIndex:1] objectForKey:@"symbols"]];
     [stocksTableController setData:[[[quotes objectForKey:@"tabs"] objectAtIndex:2] objectForKey:@"symbols"]];    
@@ -63,6 +70,11 @@
     updatedLabel.text  = dateString;
     [now release];
     [format release];   
+    
+}
+-(void) requestFailed:(NSString*) errMsg
+{
+    
 }
 
 - (void)viewDidUnload

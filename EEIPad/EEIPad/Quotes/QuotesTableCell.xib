@@ -57,46 +57,56 @@
 									<object class="IBUILabel" id="221674456">
 										<reference key="NSNextResponder" ref="785483554"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{5, 9}, {91, 21}}</string>
+										<string key="NSFrame">{{5, 9}, {116, 21}}</string>
 										<reference key="NSSuperview" ref="785483554"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="405435786"/>
 										<bool key="IBUIOpaque">NO</bool>
+										<bool key="IBUIAutoresizesSubviews">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<int key="IBUIContentMode">7</int>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 										<string key="IBUIText">Label</string>
+										<object class="NSFont" key="IBUIFont" id="230772059">
+											<string key="NSName">Helvetica</string>
+											<double key="NSSize">9</double>
+											<int key="NSfFlags">16</int>
+										</object>
 										<object class="NSColor" key="IBUITextColor" id="348585488">
 											<int key="NSColorSpace">1</int>
 											<bytes key="NSRGB">MCAwIDAAA</bytes>
 										</object>
 										<nil key="IBUIHighlightedColor"/>
 										<int key="IBUIBaselineAdjustment">1</int>
-										<float key="IBUIMinimumFontSize">10</float>
+										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+										<float key="IBUIMinimumFontSize">9</float>
 									</object>
 									<object class="IBUILabel" id="405435786">
 										<reference key="NSNextResponder" ref="785483554"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{104, 9}, {42, 21}}</string>
+										<string key="NSFrame">{{129, 9}, {42, 21}}</string>
 										<reference key="NSSuperview" ref="785483554"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="266833076"/>
 										<bool key="IBUIOpaque">NO</bool>
+										<bool key="IBUIAutoresizesSubviews">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<int key="IBUIContentMode">7</int>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 										<string key="IBUIText">Label</string>
+										<reference key="IBUIFont" ref="230772059"/>
 										<reference key="IBUITextColor" ref="348585488"/>
 										<nil key="IBUIHighlightedColor"/>
 										<int key="IBUIBaselineAdjustment">1</int>
-										<float key="IBUIMinimumFontSize">10</float>
+										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+										<float key="IBUIMinimumFontSize">9</float>
 									</object>
 									<object class="IBUIImageView" id="266833076">
 										<reference key="NSNextResponder" ref="785483554"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{170, 15}, {10, 10}}</string>
+										<string key="NSFrame">{{179, 15}, {10, 10}}</string>
 										<reference key="NSSuperview" ref="785483554"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="202273662"/>
@@ -112,15 +122,18 @@
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="661633161"/>
 										<bool key="IBUIOpaque">NO</bool>
+										<bool key="IBUIAutoresizesSubviews">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<int key="IBUIContentMode">7</int>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 										<string key="IBUIText">Label</string>
+										<reference key="IBUIFont" ref="230772059"/>
 										<reference key="IBUITextColor" ref="348585488"/>
 										<nil key="IBUIHighlightedColor"/>
 										<int key="IBUIBaselineAdjustment">1</int>
-										<float key="IBUIMinimumFontSize">10</float>
+										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+										<float key="IBUIMinimumFontSize">9</float>
 									</object>
 									<object class="IBUILabel" id="661633161">
 										<reference key="NSNextResponder" ref="785483554"/>
@@ -128,16 +141,20 @@
 										<string key="NSFrame">{{246, 9}, {42, 21}}</string>
 										<reference key="NSSuperview" ref="785483554"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<bool key="IBUIOpaque">NO</bool>
+										<bool key="IBUIAutoresizesSubviews">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<int key="IBUIContentMode">7</int>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 										<string key="IBUIText">Label</string>
+										<reference key="IBUIFont" ref="230772059"/>
 										<reference key="IBUITextColor" ref="348585488"/>
 										<nil key="IBUIHighlightedColor"/>
 										<int key="IBUIBaselineAdjustment">1</int>
-										<float key="IBUIMinimumFontSize">10</float>
+										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+										<float key="IBUIMinimumFontSize">9</float>
 									</object>
 								</object>
 								<string key="NSFrameSize">{300, 40}</string>

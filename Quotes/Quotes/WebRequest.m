@@ -13,7 +13,7 @@
 @implementation WebRequest
 @synthesize delegate;
 
--(id) initWithURL:(NSString*)requestURL {
+-(id) initWithURLString:(NSString*)requestURL {
 	if (self == [super init]) {
 		url = [requestURL retain];
 	}

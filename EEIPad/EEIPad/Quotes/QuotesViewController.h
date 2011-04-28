@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class QuotesTableDelegate;
+#import "WebRequest.h"
 
 
-@interface QuotesViewController : UIViewController/*<WebRequestDelegate, UITableViewDataSource, UITableViewDelegate>*/ {
+@interface QuotesViewController : UIViewController<WebRequestDelegate> {
 	IBOutlet UISegmentedControl *viewsSwitcher;  
     NSDictionary *quotes;
     IBOutlet QuotesTableDelegate *indicesTableController;
@@ -21,6 +22,7 @@
     IBOutlet UITableView *stocksTable;    
     IBOutlet UILabel *updatedLabel;
     NSTimer *timer;
+    WebRequest *webRequest;
 }
 -(void)refreshQuotes;
 @end

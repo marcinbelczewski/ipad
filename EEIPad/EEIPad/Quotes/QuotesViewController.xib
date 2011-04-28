@@ -48,9 +48,9 @@
 					<object class="IBUISegmentedControl" id="855823621">
 						<reference key="NSNextResponder" ref="833446345"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{10, 12}, {300, 44}}</string>
+						<string key="NSFrame">{{10, 33}, {300, 44}}</string>
 						<reference key="NSSuperview" ref="833446345"/>
-						<reference key="NSNextKeyView" ref="841220366"/>
+						<reference key="NSNextKeyView" ref="995217168"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBNumberOfSegments">3</int>
@@ -89,9 +89,9 @@
 					<object class="IBUITableView" id="841220366">
 						<reference key="NSNextResponder" ref="833446345"/>
 						<int key="NSvFlags">288</int>
-						<string key="NSFrame">{{10, 64}, {300, 300}}</string>
+						<string key="NSFrame">{{10, 86}, {300, 220}}</string>
 						<reference key="NSSuperview" ref="833446345"/>
-						<reference key="NSNextKeyView" ref="995217168"/>
+						<reference key="NSNextKeyView" ref="670291636"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="421411684">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -110,7 +110,7 @@
 					<object class="IBUITableView" id="995217168">
 						<reference key="NSNextResponder" ref="833446345"/>
 						<int key="NSvFlags">-2147483392</int>
-						<string key="NSFrame">{{10, 64}, {300, 300}}</string>
+						<string key="NSFrame">{{10, 85}, {300, 220}}</string>
 						<reference key="NSSuperview" ref="833446345"/>
 						<reference key="NSNextKeyView" ref="1059902703"/>
 						<reference key="IBUIBackgroundColor" ref="421411684"/>
@@ -128,9 +128,9 @@
 					<object class="IBUITableView" id="1059902703">
 						<reference key="NSNextResponder" ref="833446345"/>
 						<int key="NSvFlags">-2147483392</int>
-						<string key="NSFrame">{{10, 64}, {300, 300}}</string>
+						<string key="NSFrame">{{10, 85}, {300, 220}}</string>
 						<reference key="NSSuperview" ref="833446345"/>
-						<reference key="NSNextKeyView" ref="670291636"/>
+						<reference key="NSNextKeyView" ref="841220366"/>
 						<reference key="IBUIBackgroundColor" ref="421411684"/>
 						<bool key="IBUIAutoresizesSubviews">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -181,7 +181,7 @@
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
 				</object>
-				<string key="NSFrameSize">{320, 400}</string>
+				<string key="NSFrameSize">{320, 340}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="855823621"/>
 				<reference key="IBUIBackgroundColor" ref="421411684"/>
@@ -374,11 +374,6 @@
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">52</int>
-						<reference key="object" ref="855823621"/>
-						<reference key="parent" ref="833446345"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">55</int>
 						<reference key="object" ref="841220366"/>
 						<reference key="parent" ref="833446345"/>
@@ -393,6 +388,9 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">58</int>
 						<reference key="object" ref="1059902703"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+						</object>
 						<reference key="parent" ref="833446345"/>
 						<string key="objectName">Stocks Table View</string>
 					</object>
@@ -419,6 +417,12 @@
 						<reference key="object" ref="687158305"/>
 						<reference key="parent" ref="833446345"/>
 						<string key="objectName">Updated Date</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">52</int>
+						<reference key="object" ref="855823621"/>
+						<reference key="parent" ref="833446345"/>
+						<string key="objectName">Segmented Control - Indices, Commodities, Stocks</string>
 					</object>
 				</object>
 			</object>
@@ -475,7 +479,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">78</int>
+			<int key="maxID">81</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

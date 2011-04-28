@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		197D02EF1369E5B30082C1EC /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 197D02EE1369E5B30082C1EC /* WebRequest.m */; };
+		197D02F61369E7720082C1EC /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 197D02F51369E7720082C1EC /* WebRequest.m */; };
+		197D02F91369E7AD0082C1EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 197D02F81369E7AD0082C1EC /* JSONKit.m */; };
 		19B51B32135C81670015FB5A /* green_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B30135C81670015FB5A /* green_up.png */; };
 		19B51B33135C81670015FB5A /* red_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B31135C81670015FB5A /* red_down.png */; };
-		19B51B3D135C81840015FB5A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B35135C81840015FB5A /* JSONKit.m */; };
 		19B51B3E135C81840015FB5A /* QuotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B37135C81840015FB5A /* QuotesTableCell.m */; };
 		19B51B3F135C81840015FB5A /* QuotesTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B38135C81840015FB5A /* QuotesTableCell.xib */; };
 		19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */; };
@@ -90,12 +90,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		197D02ED1369E5B30082C1EC /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRequest.h; path = Utils/WebRequest.h; sourceTree = "<group>"; };
-		197D02EE1369E5B30082C1EC /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRequest.m; path = Utils/WebRequest.m; sourceTree = "<group>"; };
+		197D02F41369E7720082C1EC /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRequest.h; path = Utils/WebRequest.h; sourceTree = "<group>"; };
+		197D02F51369E7720082C1EC /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRequest.m; path = Utils/WebRequest.m; sourceTree = "<group>"; };
+		197D02F71369E7AD0082C1EC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Utils/JSONKit.h; sourceTree = "<group>"; };
+		197D02F81369E7AD0082C1EC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Utils/JSONKit.m; sourceTree = "<group>"; };
 		19B51B30135C81670015FB5A /* green_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_up.png; path = images/green_up.png; sourceTree = "<group>"; };
 		19B51B31135C81670015FB5A /* red_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_down.png; path = images/red_down.png; sourceTree = "<group>"; };
-		19B51B34135C81840015FB5A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Quotes/JSONKit.h; sourceTree = "<group>"; };
-		19B51B35135C81840015FB5A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Quotes/JSONKit.m; sourceTree = "<group>"; };
 		19B51B36135C81840015FB5A /* QuotesTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesTableCell.h; path = Quotes/QuotesTableCell.h; sourceTree = "<group>"; };
 		19B51B37135C81840015FB5A /* QuotesTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesTableCell.m; path = Quotes/QuotesTableCell.m; sourceTree = "<group>"; };
 		19B51B38135C81840015FB5A /* QuotesTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuotesTableCell.xib; path = Quotes/QuotesTableCell.xib; sourceTree = "<group>"; };
@@ -213,8 +213,10 @@
 		197D02EC1369DEEF0082C1EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				197D02ED1369E5B30082C1EC /* WebRequest.h */,
-				197D02EE1369E5B30082C1EC /* WebRequest.m */,
+				197D02F41369E7720082C1EC /* WebRequest.h */,
+				197D02F51369E7720082C1EC /* WebRequest.m */,
+				197D02F71369E7AD0082C1EC /* JSONKit.h */,
+				197D02F81369E7AD0082C1EC /* JSONKit.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -223,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				19B51B42135C823A0015FB5A /* QuotesViewController.xib */,
-				19B51B34135C81840015FB5A /* JSONKit.h */,
-				19B51B35135C81840015FB5A /* JSONKit.m */,
 				19B51B36135C81840015FB5A /* QuotesTableCell.h */,
 				19B51B37135C81840015FB5A /* QuotesTableCell.m */,
 				19B51B38135C81840015FB5A /* QuotesTableCell.xib */,
@@ -563,12 +563,12 @@
 				F43DD752135AB2C700F92AD9 /* Widget.m in Sources */,
 				F43DD757135B691A00F92AD9 /* NewsAndAnalysisWidget.m in Sources */,
 				F424C405135C1BDE00EF228D /* UIViewScrollContainer.m in Sources */,
-				19B51B3D135C81840015FB5A /* JSONKit.m in Sources */,
 				19B51B3E135C81840015FB5A /* QuotesTableCell.m in Sources */,
 				19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */,
 				19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */,
 				F424706A13692AC100660869 /* VideoWidget.m in Sources */,
-				197D02EF1369E5B30082C1EC /* WebRequest.m in Sources */,
+				197D02F61369E7720082C1EC /* WebRequest.m in Sources */,
+				197D02F91369E7AD0082C1EC /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

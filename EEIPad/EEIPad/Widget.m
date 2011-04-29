@@ -62,6 +62,15 @@
 
         subView.view.backgroundColor = [UIColor clearColor];
         subView.view.frame = widgetConfig.widgetRect;
+        subView.view.contentMode = UIViewContentModeScaleToFill;
+        subView.view.autoresizingMask =    
+//          UIViewAutoresizingFlexibleLeftMargin+
+          UIViewAutoresizingFlexibleWidth+
+          UIViewAutoresizingFlexibleRightMargin+
+//          UIViewAutoresizingFlexibleTopMargin+
+          UIViewAutoresizingFlexibleHeight+
+          UIViewAutoresizingFlexibleBottomMargin;
+
         [self.view addSubview:subView.view];
     }
 }

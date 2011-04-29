@@ -43,7 +43,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     MPMoviePlayerController *player = [[MPMoviePlayerController alloc] 
-                                       initWithContentURL: [NSURL URLWithString:@"http://eeivid.exec-insider.com/PROD_VIDEO/2011_04_26_MarneBeukes.mp4"]];
+                                       initWithContentURL: [NSURL URLWithString:@"http://eeivid.exec-insider.com/PROD_VIDEO/2011_04_28_Mandell1.mp4"]];
     player.controlStyle = MPMovieControlStyleEmbedded;
     [player.view setFrame: videoView.bounds];  // player's frame must match parent's
     [videoView addSubview: player.view];

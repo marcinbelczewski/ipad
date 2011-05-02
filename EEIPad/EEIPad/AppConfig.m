@@ -44,7 +44,7 @@
     [cfg addSmallWidget:@"QuotesViewController" withLabel:@"Quotes"];    
     cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:324];
     
-    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withLabel:@"Spotlight"];
     [cfg addLargeWidget:@"NewsAndAnalysisWidget" withLabel:@"News & Analysis"];    
     [cfg addLargeWidget:nil withLabel:@"Latest Deal"];
     

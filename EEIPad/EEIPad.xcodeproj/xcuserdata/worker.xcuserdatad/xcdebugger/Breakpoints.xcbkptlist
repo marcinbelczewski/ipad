@@ -415,11 +415,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/AppConfig.m"
-         timestampString = "325660205.517034"
+         timestampString = "326230636.186754"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "41"
-         endingLineNumber = "41"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "+EEIPadAppConfig"
          landmarkType = "5">
       </FileBreakpoint>

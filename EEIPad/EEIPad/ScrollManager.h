@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class ScrollViewConfig;
-@interface ScrollManager : NSObject<UIScrollViewDelegate>
+@interface ScrollManager : UIView<UIScrollViewDelegate>
 {
 @protected
     UIScrollView *scrollView;
@@ -20,6 +20,8 @@
 
     NSMutableArray *widgets;
     ScrollViewConfig *viewConfig;
+    CGFloat lastContentOffset;
+    int scrollDirection;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;

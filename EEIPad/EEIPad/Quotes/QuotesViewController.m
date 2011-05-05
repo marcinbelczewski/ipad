@@ -11,6 +11,7 @@
 #import "QuotesTableCell.h"
 #import "QuotesViewController.h"
 #import "WebRequest.h"
+#import "QuotesTableDelegate.h"
 
 @implementation QuotesViewController
 

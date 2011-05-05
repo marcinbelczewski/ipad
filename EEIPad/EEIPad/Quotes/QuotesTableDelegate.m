@@ -30,7 +30,7 @@
     QuotesTableCell *cell = (QuotesTableCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil){
-        NSLog(@"Cell created");
+        //NSLog(@"Cell created");
         
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuotesTableCell" owner:nil options:nil];
         

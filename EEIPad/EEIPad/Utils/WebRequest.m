@@ -47,7 +47,7 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	NSLog(@"Did receive response: %@", response);
+	//NSLog(@"Did receive response: %@", response);
 	
     [data release];
 	data = [[NSMutableData alloc] init];

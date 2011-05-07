@@ -11,24 +11,21 @@
 #import <CoreData/CoreData.h>
 #import "ScrollManager.h"
 
+@class UIViewScrollContainer;
+
 @interface DetailViewController : UIViewController {
 
-    UIScrollView *_upperScroll;
-    ScrollManager *_lowerScrollM;
-    UIPageControl *_upperPager;
-    UIScrollView *_lowerScroll;
-    UIPageControl *_lowerPager;
-    ScrollManager *_upperScrollM;
+    UIViewScrollContainer *upperContainer;
+    UIViewScrollContainer *lowerContainer;    
 }
 
-@property (nonatomic, retain) IBOutlet ScrollManager *upperScrollM;
-@property (nonatomic, retain) IBOutlet ScrollManager *lowerScrollM;
+
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
-@property (nonatomic, retain) IBOutlet UIScrollView *upperScroll;
-@property (nonatomic, retain) IBOutlet UIPageControl *upperPager;
-@property (nonatomic, retain) IBOutlet UIScrollView *lowerScroll;
-@property (nonatomic, retain) IBOutlet UIPageControl *lowerPager;
+
+@property(nonatomic, retain) IBOutlet UIViewScrollContainer * upperContainer;
+@property(nonatomic, retain) IBOutlet UIViewScrollContainer * lowerContainer;
+
 
 
 @end

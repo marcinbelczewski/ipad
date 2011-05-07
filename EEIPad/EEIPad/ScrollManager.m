@@ -10,14 +10,14 @@
 #import "ScrollViewConfig.h"
 
 
-static NSInteger overlapWidth = 40;
-static NSInteger marginWidth = 20;
 
 @interface ScrollManager (PrivateMethods)
 - (void)loadScrollViewWithPage:(int)page;
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender;
 @end
+
+
 
 @implementation ScrollManager
 
@@ -33,19 +33,6 @@ static NSInteger marginWidth = 20;
 - (int)calculateItemWidth {
     return (viewConfig.widgetWidth + marginWidth);
 }
-
-
-
-- (UIView *) hitTest:(CGPoint) point withEvent:(UIEvent *)event {
-    UIView* child = nil;
-    if ((child = [super hitTest:point withEvent:event]) == self)
-    {
-        return self.scrollView;
-    }
-    return child;
-}
-
-
 
 - (void)setupWithWidgets:(NSMutableArray *)array andConfig:(ScrollViewConfig *)config {
     widgets = [[NSMutableArray alloc] init];
@@ -73,20 +60,16 @@ static NSInteger marginWidth = 20;
     pageControl.currentPage = 0;
 
     // a page is the width of the scroll view
-    scrollView.pagingEnabled = YES;
-    scrollView.contentSize = CGSizeMake((pageControl.numberOfPages) * ([self calculateItemWidth]), scrollView.frame.size.height - 2);
+    scrollView.pagingEnabled = NO;
+    scrollView.bounces = NO;
+    scrollView.contentSize = CGSizeMake(([widgets count]) * ([self calculateItemWidth]), scrollView.frame.size.height - 2);
     scrollView.frame = CGRectMake(
             0,
             scrollView.frame.origin.y,
-            [self calculateItemWidth],
+            [self calculateItemWidth] * (viewConfig.widgetsPerPage) + 1,
             scrollView.frame.size.height-2);
     //scrollView.contentSize = CGSizeMake(([self calculateItemWidth]), scrollView.frame.size.height);
-    self.clipsToBounds = NO;
-    self.frame = CGRectMake(
-            overlapWidth+marginWidth,
-            scrollView.frame.origin.y,
-            [self calculateItemWidth] * pageControl.numberOfPages,
-            scrollView.frame.size.height-2);
+
 
     scrollView.clipsToBounds = NO;
     //    scrollView.contentOffset = CGPointMake(overlapWidth, overlapWidth);
@@ -140,7 +123,7 @@ static NSInteger marginWidth = 20;
         // add the controller's view to the scroll view
         if (controller.view.superview == nil) {
             CGRect frame = scrollView.frame;
-            frame.origin.x = (page) * (marginWidth + viewConfig.widgetWidth);
+            frame.origin.x = (page) * [self calculateItemWidth];
             frame.origin.y = 0;
             frame.size.width = viewConfig.widgetWidth;
             controller.view.frame = frame;
@@ -151,14 +134,14 @@ static NSInteger marginWidth = 20;
     }
 }
 
-- (int)currentPage {
+- (int)currentPageFromOffset {
     CGFloat pageWidth = [self calculateItemWidth];
     int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     return page;
 }
 
 - (void)updatePageAndLoadContent {
-    int page = [self currentPage];
+    int page = [self currentPageFromOffset];
     //NSLog(@"scrolling page = %d", page);
     pageControl.currentPage = page;
 
@@ -167,10 +150,27 @@ static NSInteger marginWidth = 20;
             [self loadScrollViewWithPage:page + i];
 }
 
+- (void)calculateScrollDirection {
+    int xOffset = scrollView.contentOffset.x;
+    if (xOffset > lastXOffset + 1){
+        direction = 1;
+    }
+    if(xOffset < lastXOffset - 1){
+        direction = -1;
+    }
+    if (xOffset == lastXOffset - 1 || xOffset == lastXOffset  +1){
+        direction = 0;
+    }
+    lastXOffset = xOffset;
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     // We don't want a "feedback loop" between the UIPageControl and the scroll delegate in
     // which a scroll event generated from the user hitting the page control triggers updates from
     // the delegate method. We use a boolean to disable the delegate logic when the page control is used.
+    [self calculateScrollDirection];
+
+
     if (pageControlUsed) {
         // do nothing - the scroll was initiated from the page control, not the user dragging
         return;
@@ -178,12 +178,14 @@ static NSInteger marginWidth = 20;
     // Switch the indicator when more than 50% of the previous/next page is visible
     //CGFloat pageWidth = scrollView.frame.size.width;
     [self updatePageAndLoadContent];
+
+
+
     // A possible optimization would be to unload the views+controllers which are no longer visible
 }
 
 // At the begin of scroll dragging, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    //NSLog(@"beginDragging = %d", [self currentPage]);
     pageControlUsed = NO;
 }
 
@@ -191,26 +193,36 @@ static NSInteger marginWidth = 20;
 
 // At the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    //NSLog(@"DidEndDeclaring = %d", [self currentPage]);
     pageControlUsed = NO;
+}
+
+- (BOOL)needScrollToNextPage {
+    return direction == 1 && pageControl.currentPage < pageControl.numberOfPages - 1;
+}
+
+- (BOOL)needScrollToPreviousPage {
+    return direction == -1 && pageControl.currentPage > 0;
+}
+
+- (BOOL)needToChangePage {
+    return [self needScrollToNextPage] || [self needScrollToPreviousPage];
 }
 
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
     pageControlUsed = NO;
-    //NSLog(@"willBeginDeclaring = %d", [self currentPage]);
+    if ([self needToChangePage]){
+        pageControl.currentPage += direction;
+        [self changePage];
+    }
+
 }
 
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    //NSLog(@"endDraggin = %d", pageControl.currentPage);
-   // [self snapToPosition:scrollView];
-    //NSLog(@"scrolLViewDidEndDraggin = %d, direction = %d", [self currentPage], scrollDirection);
-
 }
 
-- (IBAction)changePage:(id)sender {
+- (IBAction)changePage {
     int page = pageControl.currentPage;
-
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
@@ -218,9 +230,12 @@ static NSInteger marginWidth = 20;
 
     // update the scroll view to the appropriate page
     CGRect frame = scrollView.frame;
-    frame.origin.x = page * (marginWidth + viewConfig.widgetWidth);
+    frame.origin.x = page * [self calculateItemWidth];
     frame.origin.y = 0;
-    [scrollView scrollRectToVisible:frame animated:YES];
+    //frame.origin.y = scrollView.contentOffset.y;
+    [scrollView setContentOffset:frame.origin animated:YES];
+    //[scrollView scrollRectToVisible:frame animated:YES];
+    //NSLog(@"contentOffset = %d, %d", (int)scrollView.contentOffset.x, (int)scrollView.contentOffset.y);
 
     // Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
     pageControlUsed = YES;

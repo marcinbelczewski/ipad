@@ -36,9 +36,9 @@
 +(id)EEIPadAppConfig
 {
     AppConfig *cfg = [[AppConfig alloc]init];
-     
-    [cfg addSmallWidget:@"QuotesViewController" withLabel:@"Quotes"];    
+
     [cfg addSmallWidget:@"VideoWidget" withLabel:@"Video"];
+    [cfg addSmallWidget:@"QuotesViewController" withLabel:@"Quotes"];
     [cfg addSmallWidget:@"StocksWidget" withLabel:@"Futures"];
     [cfg addSmallWidget:nil withLabel:@"Indicies"];    
     [cfg addSmallWidget:nil withLabel:@"Stock Quotes"];

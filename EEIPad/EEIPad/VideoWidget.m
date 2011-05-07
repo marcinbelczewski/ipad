@@ -24,6 +24,7 @@
 
 - (void)dealloc
 {
+    [player release];
     [videoView release];
     [super dealloc];
 }
@@ -42,8 +43,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    MPMoviePlayerController *player = [[MPMoviePlayerController alloc] 
-                                       initWithContentURL: [NSURL URLWithString:@"http://eeivid.exec-insider.com/PROD_VIDEO/2011_04_28_Mandell1.mp4"]];
+    //NSURL *movieUrl = [NSURL URLWithString:@"http://eeivid.exec-insider.com/PROD_VIDEO/2011_04_28_Mandell1.mp4"];
+    NSURL *movieUrl = [NSURL URLWithString:@"http://media.ch9.ms/ch9/1ea0/ef05d6a9-86a1-43bd-af65-9ed200a41ea0/devdays054_high_ch9.mp4"];
+    player = [[MPMoviePlayerController alloc]
+                initWithContentURL:movieUrl];
+
     player.controlStyle = MPMovieControlStyleEmbedded;
     [player.view setFrame: videoView.bounds];  // player's frame must match parent's
     [videoView addSubview: player.view];

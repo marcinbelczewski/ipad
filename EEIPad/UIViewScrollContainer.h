@@ -8,11 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@class ScrollViewConfig;
+@class ScrollManager;
+
 
 @interface UIViewScrollContainer : UIView {
-    UIScrollView *scrollView;    
+    UIScrollView *scrollView;
+
+@private
+    ScrollManager *_scrollManager;
+    UIPageControl *_pageControl;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet ScrollManager *scrollManager;
+@property (nonatomic,retain) IBOutlet UIPageControl *pageControl;
+
+
+
+
+- (void) setupWithWidgets: (NSMutableArray *) array andConfig: (ScrollViewConfig *) config;
 
 @end

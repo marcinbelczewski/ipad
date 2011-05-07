@@ -8,27 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
+
+static NSInteger overlapWidth = 40;
+static NSInteger marginWidth = 20;
+
 @class ScrollViewConfig;
-@interface ScrollManager : UIView<UIScrollViewDelegate>
+@interface ScrollManager : NSObject<UIScrollViewDelegate>
 {
 @protected
     UIScrollView *scrollView;
     UIPageControl *pageControl;
     NSMutableArray *viewControllers;
     BOOL pageControlUsed;
-    int margin;
 
     NSMutableArray *widgets;
     ScrollViewConfig *viewConfig;
-    CGFloat lastContentOffset;
-    int scrollDirection;
+    int lastXOffset;
+    char direction;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, retain) NSMutableArray *viewControllers;
 
-- (IBAction)changePage:(id)sender;
+- (IBAction)changePage;
 - (void) setupWithWidgets: (NSMutableArray *) array andConfig: (ScrollViewConfig *) config;
+
+- (int)calculateItemWidth;
+
 
 @end

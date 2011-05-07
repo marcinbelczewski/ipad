@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Widget.h"
+#import "UIViewWithShadow.h"
 @class WidgetConfig;
 
 
 @interface WidgetSm : Widget {
     
+    UIViewWithShadow *sampleView;
 }
+@property (nonatomic, retain) IBOutlet UIViewWithShadow *sampleView;
 
 @end

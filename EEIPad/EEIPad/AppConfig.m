@@ -42,13 +42,13 @@
     [cfg addSmallWidget:@"StocksWidget" withLabel:@"Futures"];
     [cfg addSmallWidget:nil withLabel:@"Indicies"];    
     [cfg addSmallWidget:nil withLabel:@"Stock Quotes"];
-    cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:324];
+    cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:314];
     
     [cfg addLargeWidget:@"CategoryArticlesWidget" withLabel:@"Spotlight"];
     [cfg addLargeWidget:@"NewsAndAnalysisWidget" withLabel:@"News & Analysis"];    
     [cfg addLargeWidget:nil withLabel:@"Latest Deal"];
     
-    cfg.largeScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:659];
+    cfg.largeScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:649];
     
     return cfg;
 }

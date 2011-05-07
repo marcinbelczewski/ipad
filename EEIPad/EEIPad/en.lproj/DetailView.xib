@@ -138,7 +138,7 @@
 							<object class="IBUIScrollView" id="195569055">
 								<reference key="NSNextResponder" ref="459054507"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrameSize">{773, 516}</string>
+								<string key="NSFrameSize">{773, 506}</string>
 								<reference key="NSSuperview" ref="459054507"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="918490718"/>
@@ -149,7 +149,7 @@
 								<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
 							</object>
 						</object>
-						<string key="NSFrame">{{0, 417}, {768, 516}}</string>
+						<string key="NSFrame">{{0, 425}, {768, 506}}</string>
 						<reference key="NSSuperview" ref="647120888"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="195569055"/>

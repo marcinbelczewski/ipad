@@ -44,7 +44,7 @@
 			</object>
 			<object class="IBUIView" id="365664360">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">310</int>
+				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUITableView" id="68640201">
@@ -80,6 +80,7 @@
 						<string key="NSFrame">{{210, 0}, {437, 470}}</string>
 						<reference key="NSSuperview" ref="365664360"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -89,7 +90,7 @@
 						<bool key="IBUIDetectsPhoneNumbers">YES</bool>
 					</object>
 				</object>
-				<string key="NSFrameSize">{647, 480}</string>
+				<string key="NSFrameSize">{647, 470}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="68640201"/>

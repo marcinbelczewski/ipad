@@ -345,11 +345,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetLg.m"
-         timestampString = "325688399.316724"
+         timestampString = "326490438.512029"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
          landmarkName = "-didReceiveMemoryWarning"
          landmarkType = "5">
       </FileBreakpoint>
@@ -541,11 +541,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetLg.m"
-         timestampString = "325688399.316724"
+         timestampString = "326490438.512029"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -639,11 +639,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetLg.m"
-         timestampString = "325688399.316724"
+         timestampString = "326490438.512029"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "56"
-         endingLineNumber = "56"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -667,11 +667,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetLg.m"
-         timestampString = "325688399.316724"
+         timestampString = "326490438.512029"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
          landmarkName = "-RestoreClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -681,11 +681,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetLg.m"
-         timestampString = "325688399.316724"
+         timestampString = "326490438.512029"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
          landmarkName = "-RestoreClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -695,11 +695,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetLg.m"
-         timestampString = "325688399.316724"
+         timestampString = "326490438.512029"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "101"
-         endingLineNumber = "101"
+         startingLineNumber = "92"
+         endingLineNumber = "92"
          landmarkName = "-RestoreClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -723,11 +723,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/UIViewWithShadow.m"
-         timestampString = "326487306.763407"
+         timestampString = "326489886.719492"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
          landmarkName = "-initWithCoder:"
          landmarkType = "5">
       </FileBreakpoint>

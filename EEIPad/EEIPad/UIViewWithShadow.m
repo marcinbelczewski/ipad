@@ -22,6 +22,7 @@
         self.layer.shadowOpacity = 0.3;    
         self.layer.borderColor = [UIColor colorWithRed:159.0/255.0f green:159.0/255.0f blue:159.0/255.0f alpha:1.0].CGColor;
         self.layer.borderWidth = 1.0f;
+        self.layer.shouldRasterize = true;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
 //        CAGradientLayer *gradient = [CAGradientLayer layer];
 //        gradient.frame =  CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width,30.0f);

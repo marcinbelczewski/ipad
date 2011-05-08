@@ -1,31 +1,40 @@
 //
-//  UIViewWithShadow.m
+//  UIViewWithRoundedCorners.m
 //  EEIPad
 //
-//  Created by Worker on 5/7/11.
+//  Created by grzegorz.chlodzinski on 5/8/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
+
 #import <QuartzCore/QuartzCore.h>
-#import "UIViewWithShadow.h"
+#import "UIViewWithRoundedCorners.h"
 
 
-@implementation UIViewWithShadow
+@implementation UIViewWithRoundedCorners
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
-        self.layer.masksToBounds = NO;
+        self.layer.masksToBounds = YES;
         self.layer.cornerRadius = 6; // if you like rounded corners
-        self.layer.shadowOffset = CGSizeMake(0, 0);
-        self.layer.shadowRadius = 3;
-        self.layer.shadowOpacity = 0.3;    
-        self.layer.shouldRasterize = true;
+        self.layer.borderColor = [UIColor colorWithRed:159.0/255.0f green:159.0/255.0f blue:159.0/255.0f alpha:1.0].CGColor;
+        self.layer.borderWidth = 1.0f;
+        
     }
     return self;
     
 }
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

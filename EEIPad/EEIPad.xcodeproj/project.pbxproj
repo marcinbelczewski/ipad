@@ -83,6 +83,7 @@
 		F48B4D47134E063F007B0100 /* EEIPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48B4D46134E063F007B0100 /* EEIPadTests.m */; };
 		F4ECB5B6135827AC009CD828 /* WidgetSm.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECB5B4135827AC009CD828 /* WidgetSm.m */; };
 		F4ECB5B7135827AC009CD828 /* WidgetSm.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ECB5B5135827AC009CD828 /* WidgetSm.xib */; };
+		F4F62E161376DAAA00D6989F /* UIViewWithRoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,8 @@
 		F4ECB5B3135827AC009CD828 /* WidgetSm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSm.h; sourceTree = "<group>"; };
 		F4ECB5B4135827AC009CD828 /* WidgetSm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSm.m; sourceTree = "<group>"; };
 		F4ECB5B5135827AC009CD828 /* WidgetSm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetSm.xib; sourceTree = "<group>"; };
+		F4F62E141376DAAA00D6989F /* UIViewWithRoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewWithRoundedCorners.h; sourceTree = "<group>"; };
+		F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewWithRoundedCorners.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +242,8 @@
 				F414340E13758C14007605F2 /* UIViewWithShadow.m */,
 				F41434461375C1EB007605F2 /* UIViewWithGradient.h */,
 				F41434471375C1EB007605F2 /* UIViewWithGradient.m */,
+				F4F62E141376DAAA00D6989F /* UIViewWithRoundedCorners.h */,
+				F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				F46BACD2136F3A3600AEED85 /* CategoryViewController.m in Sources */,
 				F414340F13758C14007605F2 /* UIViewWithShadow.m in Sources */,
 				F41434481375C1EB007605F2 /* UIViewWithGradient.m in Sources */,
+				F4F62E161376DAAA00D6989F /* UIViewWithRoundedCorners.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

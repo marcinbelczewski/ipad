@@ -60,6 +60,7 @@
     if(subView!=nil)
     {
 
+        
         subView.view.backgroundColor = [UIColor clearColor];
         subView.view.frame = widgetConfig.widgetRect;
         subView.view.contentMode = UIViewContentModeScaleToFill;
@@ -71,7 +72,11 @@
           UIViewAutoresizingFlexibleHeight+
           UIViewAutoresizingFlexibleBottomMargin;
 
-        [self.view addSubview:subView.view];
+        if([[self.view subviews] count]>0)
+            [[self.view.subviews objectAtIndex:0] addSubview:subView.view];
+        else
+            [self.view addSubview:subView.view];
+            
     }
 }
 

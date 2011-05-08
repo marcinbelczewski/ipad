@@ -625,11 +625,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/Widget.m"
-         timestampString = "325700634.668947"
+         timestampString = "326557360.103699"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -723,11 +723,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/UIViewWithShadow.m"
-         timestampString = "326489886.719492"
+         timestampString = "326570091.169522"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "34"
-         endingLineNumber = "34"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
          landmarkName = "-initWithCoder:"
          landmarkType = "5">
       </FileBreakpoint>

@@ -26,6 +26,17 @@
     return self;
     
 }
+
+-(id)hideShadow
+{
+    self.layer.shadowOpacity = 0.0;
+}
+
+- (id)showShadow
+{
+    self.layer.shadowOpacity = 0.3;
+    
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

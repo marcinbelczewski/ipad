@@ -52,7 +52,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     AppConfig *config = [AppConfig EEIPadAppConfig];
     [self.upperContainer setupWithWidgets:config.smallWidgets andConfig:config.smalScrollView];

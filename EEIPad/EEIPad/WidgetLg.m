@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "WidgetLg.h"
 #import "WidgetConfig.h"
 #import "EEIAppDelegate.h"
@@ -67,14 +68,16 @@
 }
 
 - (IBAction)ExpandClicked:(id)sender {
-    frameRect = self.view.frame;
     originalSuperView = self.view.superview;
     EEIAppDelegate *eeiapp= [[UIApplication sharedApplication] delegate];
-//    [UIView setAnimationTransition: trans forView: [self view] cache: YES];
-//    [eeiapp.window.rootViewController presentModalViewController:self animated:NO];
+    frameRect = self.view.frame;
+    frameRectInRootController = [originalSuperView convertRect:self.view.frame toView:eeiapp.window.rootViewController.view];
+
     [eeiapp.window.rootViewController.view addSubview: self.view];
-    [self.view setFrame:CGRectMake(60, 420, self.view.frame.size.width, self.view.frame.size.height)];
-    [UIView animateWithDuration:0.4 
+    
+    [self.view setFrame:frameRectInRootController];
+    [self.view hideShadow];
+    [UIView animateWithDuration:0.4
                      animations:^{
                          [self.view setFrame:CGRectMake(0, 44, 768, 914)];                         
                      }
@@ -87,8 +90,9 @@
 
 - (IBAction)RestoreClicked:(id)sender {
     [UIView animateWithDuration:0.4
-                     animations: ^{[self.view setFrame:CGRectMake(60,420, frameRect.size.width, frameRect.size.height)];} 
+                     animations: ^{[self.view setFrame:frameRectInRootController];} 
                      completion:  ^(BOOL finished){
+                         [self.view showShadow];
                          [originalSuperView addSubview: self.view];
                          [self.view setFrame:frameRect];
                          expandButton.hidden = false;

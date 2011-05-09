@@ -13,4 +13,6 @@
     
 }
 
+- hideShadow;
+- showShadow;
 @end

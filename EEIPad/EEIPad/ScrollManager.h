@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "PageControl.h"
 
 static NSInteger overlapWidth = 40;
 static NSInteger marginWidth = 20;
 
 @class ScrollViewConfig;
-@interface ScrollManager : NSObject<UIScrollViewDelegate>
+@interface ScrollManager : NSObject<UIScrollViewDelegate, PageControlDelegate>
 {
 @protected
     UIScrollView *scrollView;
-    UIPageControl *pageControl;
+    PageControl *pageControl;
     NSMutableArray *viewControllers;
     BOOL pageControlUsed;
 
@@ -28,7 +28,7 @@ static NSInteger marginWidth = 20;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, retain) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, retain) IBOutlet PageControl *pageControl;
 @property (nonatomic, retain) NSMutableArray *viewControllers;
 
 - (IBAction)changePage;

@@ -52,11 +52,11 @@
     self.viewControllers = controllers;
     [controllers release];
 
-    pageControl.backgroundColor = [UIColor clearColor];
+
     //viewConfig.widgetWidth = (scrollView.frame.size.width-marginWidth-2*overlapWidth - viewConfig.widgetsPerPage*marginWidth)/viewConfig.widgetsPerPage;
 
-
-    pageControl.numberOfPages = ([widgets count] - viewConfig.widgetsPerPage) + 1;
+    pageControl.numberOfItems = [widgets count];
+    pageControl.itemsPerPage = viewConfig.widgetsPerPage;
     pageControl.currentPage = 0;
 
     // a page is the width of the scroll view
@@ -139,6 +139,12 @@
     int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     return page;
 }
+- (void)loadActiveAndNeighbourPages:(PageControl *)pageControl {
+    for (int item = pageControl.firstActiveItem - 1; item < pageControl.lastActiveItem + 1 ; item++) {
+        [self loadScrollViewWithPage:item];
+    }
+}
+
 
 - (void)updatePageAndLoadContent {
     int page = [self currentPageFromOffset];
@@ -146,8 +152,7 @@
     pageControl.currentPage = page;
 
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
-    for (int i = -1; i <= viewConfig.widgetsPerPage; i++)
-            [self loadScrollViewWithPage:page + i];
+    [self loadActiveAndNeighbourPages:pageControl];
 }
 
 - (void)calculateScrollDirection {
@@ -212,13 +217,33 @@
     pageControlUsed = NO;
     if ([self needToChangePage]){
         pageControl.currentPage += direction;
-        [self changePage];
+        [self pageControlPageDidChange:pageControl];
     }
 
 }
 
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+}
+
+
+
+- (void)pageControlPageDidChange:(PageControl *)pageControl {
+    int page = pageControl.currentPage;
+    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+    [self loadActiveAndNeighbourPages:pageControl];
+
+    CGRect frame = scrollView.frame;
+    frame.origin.x = page * [self calculateItemWidth];
+    frame.origin.y = 0;
+    //frame.origin.y = scrollView.contentOffset.y;
+    [scrollView setContentOffset:frame.origin animated:YES];
+    //[scrollView scrollRectToVisible:frame animated:YES];
+    //NSLog(@"contentOffset = %d, %d", (int)scrollView.contentOffset.x, (int)scrollView.contentOffset.y);
+
+    // Set the boolean used when scrolls originate from the UIPageControl. See scrollViewDidScroll: above.
+    pageControlUsed = YES;
+    
 }
 
 - (IBAction)changePage {

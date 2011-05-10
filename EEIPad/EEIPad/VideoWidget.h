@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 
 @interface VideoWidget : UIViewController {
     
     UIView *videoView;
+    MPMoviePlayerController *player;
 }
 @property (nonatomic, retain) IBOutlet UIView *videoView;
 

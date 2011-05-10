@@ -10,6 +10,7 @@
 #import "WidgetConfig.h"
 #import "StocksWidget.h"
 @implementation WidgetSm
+@synthesize sampleView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,6 +24,7 @@
 - (void)dealloc
 {
     [label release];
+    [sampleView release];
     [super dealloc];
 }
 
@@ -44,6 +46,7 @@
 - (void)viewDidUnload
 {
     [self setLabel:nil];
+    [self setSampleView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

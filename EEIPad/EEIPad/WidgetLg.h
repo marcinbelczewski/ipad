@@ -14,16 +14,12 @@
     
     UIButton *restoreButton;
     UIButton *expandButton;
-    UIView *titleView;
-    UIView *bottomView;
-    CGRect frameRect;
+    CGRect frameRect,frameRectInRootController;
     UIView *originalSuperView;
 }
 - (IBAction)ExpandClicked:(id)sender;
 - (IBAction)RestoreClicked:(id)sender;
 @property (nonatomic, retain) IBOutlet UIButton *restoreButton;
 @property (nonatomic, retain) IBOutlet UIButton *expandButton;
-@property (nonatomic, retain) IBOutlet UIView *titleView;
-@property (nonatomic, retain) IBOutlet UIView *bottomView;
 
 @end

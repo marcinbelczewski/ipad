@@ -7,14 +7,18 @@
 //
 
 #import "UIViewScrollContainer.h"
+#import "ScrollViewConfig.h"
+#import "ScrollManager.h"
 
 
 @implementation UIViewScrollContainer
 
 @synthesize scrollView;
+@synthesize scrollManager = _scrollManager;
+@synthesize pageControl = _pageControl;
 
-- (id)initWithFrame:(CGRect)frame
-{
+
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -24,32 +28,28 @@
     return self;
 }
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     self.backgroundColor = [UIColor clearColor];
-    
+
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
-- (void)dealloc
-{
+- (void)dealloc {
     [scrollView release];
+    [_scrollManager release];
+    [_pageControl release];
     [super dealloc];
 }
 
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-//	if ([self pointInside:point withEvent:event]) {
-//		return scrollView;
-//	}
-//	return nil;
-//}
+- (void)setupWithWidgets:(NSMutableArray *)array andConfig:(ScrollViewConfig *)config {
+    [_scrollManager setupWithWidgets:array andConfig:config];
+
+    self.clipsToBounds = NO;
+    self.frame = CGRectMake(
+            overlapWidth + marginWidth,
+            self.frame.origin.y,
+            [_scrollManager calculateItemWidth] * _scrollManager.pageControl.numberOfPages,
+            self.frame.size.height - 2);
+}
+
 
 @end

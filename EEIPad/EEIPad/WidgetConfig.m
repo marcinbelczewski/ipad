@@ -38,7 +38,7 @@
         [self setWidgetClass: widgetClass];
         [self setLabel: label];
         self->widgetContainerClass = @"WidgetLg";
-        self.widgetRect = CGRectMake(6, 38, 647, 470);
+        self.widgetRect = CGRectMake(1, 35, 647, 471);
         
     }
     

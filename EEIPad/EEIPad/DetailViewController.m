@@ -8,15 +8,15 @@
 
 #import "DetailViewController.h"
 #import "AppConfig.h"
+#import "UIViewScrollContainer.h"
 @implementation DetailViewController
 
-@synthesize upperScrollM = _upperScrollM;
-@synthesize lowerScrollM = _lowerScrollM;
+
+
 @synthesize toolbar=_toolbar;
-@synthesize upperScroll = _upperScroll;
-@synthesize upperPager = _upperPager;
-@synthesize lowerScroll = _lowerScroll;
-@synthesize lowerPager = _lowerPager;
+@synthesize upperContainer;
+@synthesize lowerContainer;
+
 
 - (void)configureView
 {
@@ -52,22 +52,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     AppConfig *config = [AppConfig EEIPadAppConfig];
-    [self.upperScrollM setupWithWidgets:config.smallWidgets andConfig:config.smalScrollView];
-    [self.lowerScrollM setupWithWidgets:config.largeWidgets andConfig:config.largeScrollView];
+    [self.upperContainer setupWithWidgets:config.smallWidgets andConfig:config.smalScrollView];
+    [self.lowerContainer setupWithWidgets:config.largeWidgets andConfig:config.largeScrollView];
 }
 
 - (void)viewDidUnload
 {
-    [self setUpperScrollM:nil];
-    [self setLowerScrollM:nil];
-    [self setUpperPager:nil];
-    [self setLowerPager:nil];
-    [self setLowerScroll:nil];
-    [self setUpperScroll:nil];
-    [self setLowerScroll:nil];
 	[super viewDidUnload];
 }
 
@@ -84,12 +76,8 @@
 - (void)dealloc
 {
     [_toolbar release];
-    [_upperScroll release];
-    [_lowerScroll release];
-    [_upperPager release];
-    [_lowerPager release];
-    [_upperScrollM release];
-    [_lowerScrollM release];
+    [upperContainer release];
+    [lowerContainer release];
     [super dealloc];
 }
 @end

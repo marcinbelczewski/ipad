@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 @class QuotesTableDelegate;
 #import "WebRequest.h"
-
+#import "QuotesModel.h"
 
 @interface QuotesViewController : UIViewController<WebRequestDelegate> {
 	IBOutlet UISegmentedControl *viewsSwitcher;  
-    NSDictionary *quotes;
     IBOutlet QuotesTableDelegate *indicesTableController;
     IBOutlet QuotesTableDelegate *commoditiesTableController;
     IBOutlet QuotesTableDelegate *stocksTableController;    

@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1919B5BC1377180800D3D5F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D0E134E063F007B0100 /* UIKit.framework */; };
+		1919B5BD1377180800D3D5F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D10134E063F007B0100 /* Foundation.framework */; };
+		1919B5BE1377180800D3D5F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D12134E063F007B0100 /* CoreGraphics.framework */; };
+		1919B5C41377180800D3D5F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1919B5C21377180800D3D5F7 /* InfoPlist.strings */; };
+		1919B5C71377180800D3D5F7 /* when_initializing_quote.h in Resources */ = {isa = PBXBuildFile; fileRef = 1919B5C61377180800D3D5F7 /* when_initializing_quote.h */; };
+		1919B5C91377180800D3D5F7 /* when_initializing_quote.m in Sources */ = {isa = PBXBuildFile; fileRef = 1919B5C81377180800D3D5F7 /* when_initializing_quote.m */; };
+		1919B5CD13772E3C00D3D5F7 /* QuotesModel.h in Sources */ = {isa = PBXBuildFile; fileRef = 19F032BC137675F800920828 /* QuotesModel.h */; };
+		1919B5CE13772E3C00D3D5F7 /* QuotesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F032BD137675F800920828 /* QuotesModel.m */; };
+		1919B5CF13772E3C00D3D5F7 /* Quote.h in Sources */ = {isa = PBXBuildFile; fileRef = 19F032C0137677B500920828 /* Quote.h */; };
+		1919B5D013772E3C00D3D5F7 /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F032C1137677B600920828 /* Quote.m */; };
+		1919B5D113772E3C00D3D5F7 /* QuotesCategory.h in Sources */ = {isa = PBXBuildFile; fileRef = 19F032C313767C7800920828 /* QuotesCategory.h */; };
+		1919B5D213772E3C00D3D5F7 /* QuotesCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F032C413767C7800920828 /* QuotesCategory.m */; };
 		197D02F61369E7720082C1EC /* WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 197D02F51369E7720082C1EC /* WebRequest.m */; };
 		197D02F91369E7AD0082C1EC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 197D02F81369E7AD0082C1EC /* JSONKit.m */; };
+		19957D4E1378778F0005A407 /* when_initializing_quote_model.m in Sources */ = {isa = PBXBuildFile; fileRef = 19957D4D1378778F0005A407 /* when_initializing_quote_model.m */; };
+		19957D52137921EE0005A407 /* QuoteDictionaryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 19957D51137921EE0005A407 /* QuoteDictionaryBuilder.m */; };
+		199FCBE613782BEE0079E012 /* when_initializing_quote_category.m in Sources */ = {isa = PBXBuildFile; fileRef = 199FCBE513782BEE0079E012 /* when_initializing_quote_category.m */; };
 		19B51B32135C81670015FB5A /* green_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B30135C81670015FB5A /* green_up.png */; };
 		19B51B33135C81670015FB5A /* red_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B31135C81670015FB5A /* red_down.png */; };
 		19B51B3E135C81840015FB5A /* QuotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B37135C81840015FB5A /* QuotesTableCell.m */; };
@@ -16,6 +31,9 @@
 		19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */; };
 		19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3C135C81840015FB5A /* QuotesViewController.m */; };
 		19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B42135C823A0015FB5A /* QuotesViewController.xib */; };
+		19F032BE137675F900920828 /* QuotesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F032BD137675F800920828 /* QuotesModel.m */; };
+		19F032C2137677B600920828 /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F032C1137677B600920828 /* Quote.m */; };
+		19F032C513767C7900920828 /* QuotesCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F032C413767C7800920828 /* QuotesCategory.m */; };
 		F404C875134F4FF0006EAA18 /* WidgetLg.m in Sources */ = {isa = PBXBuildFile; fileRef = F404C873134F4FF0006EAA18 /* WidgetLg.m */; };
 		F404C876134F4FF0006EAA18 /* WidgetLg.xib in Resources */ = {isa = PBXBuildFile; fileRef = F404C874134F4FF0006EAA18 /* WidgetLg.xib */; };
 		F42470541364941300660869 /* full_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = F42470521364941300660869 /* full_screen.png */; };
@@ -61,13 +79,6 @@
 		F48B4D27134E063F007B0100 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48B4D25134E063F007B0100 /* MainWindow.xib */; };
 		F48B4D2A134E063F007B0100 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48B4D29134E063F007B0100 /* DetailViewController.m */; };
 		F48B4D2D134E063F007B0100 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48B4D2B134E063F007B0100 /* DetailView.xib */; };
-		F48B4D37134E063F007B0100 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D0E134E063F007B0100 /* UIKit.framework */; };
-		F48B4D38134E063F007B0100 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D10134E063F007B0100 /* Foundation.framework */; };
-		F48B4D39134E063F007B0100 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D12134E063F007B0100 /* CoreGraphics.framework */; };
-		F48B4D3A134E063F007B0100 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D14134E063F007B0100 /* CoreData.framework */; };
-		F48B4D42134E063F007B0100 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F48B4D40134E063F007B0100 /* InfoPlist.strings */; };
-		F48B4D45134E063F007B0100 /* EEIPadTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F48B4D44134E063F007B0100 /* EEIPadTests.h */; };
-		F48B4D47134E063F007B0100 /* EEIPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48B4D46134E063F007B0100 /* EEIPadTests.m */; };
 		F4AF48C01369845D00CA9EBB /* widgetlg_shadow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AF48BF1369845D00CA9EBB /* widgetlg_shadow_right.png */; };
 		F4C2C65C13699BB300C40D21 /* widgetlg_bottom_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C2C65B13699BB300C40D21 /* widgetlg_bottom_pattern.png */; };
 		F4C2C65F13699BBF00C40D21 /* widgetlg_top_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C2C65E13699BBF00C40D21 /* widgetlg_top_pattern.png */; };
@@ -82,21 +93,23 @@
 		F4ECB5B9135827D1009CD828 /* widget_small.png in Resources */ = {isa = PBXBuildFile; fileRef = F4ECB5B8135827D1009CD828 /* widget_small.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F48B4D3B134E063F007B0100 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F48B4D01134E063E007B0100 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F48B4D09134E063F007B0100;
-			remoteInfo = SplitViewTest1;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		1919B5BB1377180800D3D5F7 /* EEIPad.LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EEIPad.LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1919B5C11377180800D3D5F7 /* EEIPad.LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EEIPad.LogicTests-Info.plist"; sourceTree = "<group>"; };
+		1919B5C31377180800D3D5F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1919B5C51377180800D3D5F7 /* EEIPad.LogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EEIPad.LogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		1919B5C61377180800D3D5F7 /* when_initializing_quote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = when_initializing_quote.h; sourceTree = "<group>"; };
+		1919B5C81377180800D3D5F7 /* when_initializing_quote.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = when_initializing_quote.m; sourceTree = "<group>"; };
 		197D02F41369E7720082C1EC /* WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRequest.h; path = Utils/WebRequest.h; sourceTree = "<group>"; };
 		197D02F51369E7720082C1EC /* WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRequest.m; path = Utils/WebRequest.m; sourceTree = "<group>"; };
 		197D02F71369E7AD0082C1EC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Utils/JSONKit.h; sourceTree = "<group>"; };
 		197D02F81369E7AD0082C1EC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Utils/JSONKit.m; sourceTree = "<group>"; };
+		19957D4C1378778F0005A407 /* when_initializing_quote_model.h */ = {isa = PBXFileReference; fileEncoding = 4; path = when_initializing_quote_model.h; sourceTree = "<group>"; };
+		19957D4D1378778F0005A407 /* when_initializing_quote_model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = when_initializing_quote_model.m; sourceTree = "<group>"; };
+		19957D50137921EE0005A407 /* QuoteDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; path = QuoteDictionaryBuilder.h; sourceTree = "<group>"; };
+		19957D51137921EE0005A407 /* QuoteDictionaryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteDictionaryBuilder.m; sourceTree = "<group>"; };
+		199FCBE413782BEE0079E012 /* when_initializing_quote_category.h */ = {isa = PBXFileReference; fileEncoding = 4; path = when_initializing_quote_category.h; sourceTree = "<group>"; };
+		199FCBE513782BEE0079E012 /* when_initializing_quote_category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = when_initializing_quote_category.m; sourceTree = "<group>"; };
 		19B51B30135C81670015FB5A /* green_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_up.png; path = images/green_up.png; sourceTree = "<group>"; };
 		19B51B31135C81670015FB5A /* red_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_down.png; path = images/red_down.png; sourceTree = "<group>"; };
 		19B51B36135C81840015FB5A /* QuotesTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesTableCell.h; path = Quotes/QuotesTableCell.h; sourceTree = "<group>"; };
@@ -107,6 +120,12 @@
 		19B51B3B135C81840015FB5A /* QuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesViewController.h; path = Quotes/QuotesViewController.h; sourceTree = "<group>"; };
 		19B51B3C135C81840015FB5A /* QuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesViewController.m; path = Quotes/QuotesViewController.m; sourceTree = "<group>"; };
 		19B51B42135C823A0015FB5A /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuotesViewController.xib; path = Quotes/QuotesViewController.xib; sourceTree = "<group>"; };
+		19F032BC137675F800920828 /* QuotesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesModel.h; sourceTree = "<group>"; };
+		19F032BD137675F800920828 /* QuotesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesModel.m; sourceTree = "<group>"; };
+		19F032C0137677B500920828 /* Quote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quote.h; sourceTree = "<group>"; };
+		19F032C1137677B600920828 /* Quote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quote.m; sourceTree = "<group>"; };
+		19F032C313767C7800920828 /* QuotesCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesCategory.h; sourceTree = "<group>"; };
+		19F032C413767C7800920828 /* QuotesCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesCategory.m; sourceTree = "<group>"; };
 		F404C872134F4FF0006EAA18 /* WidgetLg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetLg.h; sourceTree = "<group>"; };
 		F404C873134F4FF0006EAA18 /* WidgetLg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetLg.m; sourceTree = "<group>"; };
 		F404C874134F4FF0006EAA18 /* WidgetLg.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetLg.xib; sourceTree = "<group>"; };
@@ -169,12 +188,6 @@
 		F48B4D28134E063F007B0100 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F48B4D29134E063F007B0100 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F48B4D2C134E063F007B0100 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
-		F48B4D36134E063F007B0100 /* EEIPadTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EEIPadTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F48B4D3F134E063F007B0100 /* EEIPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EEIPadTests-Info.plist"; sourceTree = "<group>"; };
-		F48B4D41134E063F007B0100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F48B4D43134E063F007B0100 /* EEIPadTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EEIPadTests-Prefix.pch"; sourceTree = "<group>"; };
-		F48B4D44134E063F007B0100 /* EEIPadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EEIPadTests.h; sourceTree = "<group>"; };
-		F48B4D46134E063F007B0100 /* EEIPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EEIPadTests.m; sourceTree = "<group>"; };
 		F4AF48BF1369845D00CA9EBB /* widgetlg_shadow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = widgetlg_shadow_right.png; path = images/widgetlg_shadow_right.png; sourceTree = "<group>"; };
 		F4C2C65B13699BB300C40D21 /* widgetlg_bottom_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = widgetlg_bottom_pattern.png; path = images/widgetlg_bottom_pattern.png; sourceTree = "<group>"; };
 		F4C2C65E13699BBF00C40D21 /* widgetlg_top_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = widgetlg_top_pattern.png; path = images/widgetlg_top_pattern.png; sourceTree = "<group>"; };
@@ -191,6 +204,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1919B5B71377180800D3D5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1919B5BC1377180800D3D5F7 /* UIKit.framework in Frameworks */,
+				1919B5BD1377180800D3D5F7 /* Foundation.framework in Frameworks */,
+				1919B5BE1377180800D3D5F7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F48B4D07134E063F007B0100 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,20 +227,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F48B4D32134E063F007B0100 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F48B4D37134E063F007B0100 /* UIKit.framework in Frameworks */,
-				F48B4D38134E063F007B0100 /* Foundation.framework in Frameworks */,
-				F48B4D39134E063F007B0100 /* CoreGraphics.framework in Frameworks */,
-				F48B4D3A134E063F007B0100 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1919B5BF1377180800D3D5F7 /* EEIPad.LogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				1919B5C61377180800D3D5F7 /* when_initializing_quote.h */,
+				1919B5C81377180800D3D5F7 /* when_initializing_quote.m */,
+				1919B5C01377180800D3D5F7 /* Supporting Files */,
+				199FCBE413782BEE0079E012 /* when_initializing_quote_category.h */,
+				199FCBE513782BEE0079E012 /* when_initializing_quote_category.m */,
+				19957D4C1378778F0005A407 /* when_initializing_quote_model.h */,
+				19957D4D1378778F0005A407 /* when_initializing_quote_model.m */,
+				19957D50137921EE0005A407 /* QuoteDictionaryBuilder.h */,
+				19957D51137921EE0005A407 /* QuoteDictionaryBuilder.m */,
+			);
+			path = EEIPad.LogicTests;
+			sourceTree = "<group>";
+		};
+		1919B5C01377180800D3D5F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1919B5C11377180800D3D5F7 /* EEIPad.LogicTests-Info.plist */,
+				1919B5C21377180800D3D5F7 /* InfoPlist.strings */,
+				1919B5C51377180800D3D5F7 /* EEIPad.LogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		197D02EC1369DEEF0082C1EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +278,12 @@
 				19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */,
 				19B51B3B135C81840015FB5A /* QuotesViewController.h */,
 				19B51B3C135C81840015FB5A /* QuotesViewController.m */,
+				19F032BC137675F800920828 /* QuotesModel.h */,
+				19F032BD137675F800920828 /* QuotesModel.m */,
+				19F032C0137677B500920828 /* Quote.h */,
+				19F032C1137677B600920828 /* Quote.m */,
+				19F032C313767C7800920828 /* QuotesCategory.h */,
+				19F032C413767C7800920828 /* QuotesCategory.m */,
 			);
 			name = Quotes;
 			sourceTree = "<group>";
@@ -337,7 +381,7 @@
 				F424C403135C1BDD00EF228D /* UIViewScrollContainer.h */,
 				F424C404135C1BDE00EF228D /* UIViewScrollContainer.m */,
 				F48B4D16134E063F007B0100 /* EEIPad */,
-				F48B4D3D134E063F007B0100 /* EEIPadTests */,
+				1919B5BF1377180800D3D5F7 /* EEIPad.LogicTests */,
 				F48B4D0D134E063F007B0100 /* Frameworks */,
 				F48B4D0B134E063F007B0100 /* Products */,
 			);
@@ -347,7 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				F48B4D0A134E063F007B0100 /* EEIPad.app */,
-				F48B4D36134E063F007B0100 /* EEIPadTests.octest */,
+				1919B5BB1377180800D3D5F7 /* EEIPad.LogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,26 +443,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F48B4D3D134E063F007B0100 /* EEIPadTests */ = {
-			isa = PBXGroup;
-			children = (
-				F48B4D44134E063F007B0100 /* EEIPadTests.h */,
-				F48B4D46134E063F007B0100 /* EEIPadTests.m */,
-				F48B4D3E134E063F007B0100 /* Supporting Files */,
-			);
-			path = EEIPadTests;
-			sourceTree = "<group>";
-		};
-		F48B4D3E134E063F007B0100 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F48B4D3F134E063F007B0100 /* EEIPadTests-Info.plist */,
-				F48B4D40134E063F007B0100 /* InfoPlist.strings */,
-				F48B4D43134E063F007B0100 /* EEIPadTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		F4E293B2136F386400E9E361 /* CategoryWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +458,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1919B5BA1377180800D3D5F7 /* EEIPad.LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1919B5CA1377180800D3D5F7 /* Build configuration list for PBXNativeTarget "EEIPad.LogicTests" */;
+			buildPhases = (
+				1919B5B61377180800D3D5F7 /* Sources */,
+				1919B5B71377180800D3D5F7 /* Frameworks */,
+				1919B5B81377180800D3D5F7 /* Resources */,
+				1919B5B91377180800D3D5F7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EEIPad.LogicTests;
+			productName = EEIPad.LogicTests;
+			productReference = 1919B5BB1377180800D3D5F7 /* EEIPad.LogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		F48B4D09134E063F007B0100 /* EEIPad */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F48B4D4A134E063F007B0100 /* Build configuration list for PBXNativeTarget "EEIPad" */;
@@ -450,25 +492,6 @@
 			productName = SplitViewTest1;
 			productReference = F48B4D0A134E063F007B0100 /* EEIPad.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F48B4D35134E063F007B0100 /* EEIPadTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F48B4D4D134E063F007B0100 /* Build configuration list for PBXNativeTarget "EEIPadTests" */;
-			buildPhases = (
-				F48B4D31134E063F007B0100 /* Sources */,
-				F48B4D32134E063F007B0100 /* Frameworks */,
-				F48B4D33134E063F007B0100 /* Resources */,
-				F48B4D34134E063F007B0100 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F48B4D3C134E063F007B0100 /* PBXTargetDependency */,
-			);
-			name = EEIPadTests;
-			productName = SplitViewTest1Tests;
-			productReference = F48B4D36134E063F007B0100 /* EEIPadTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -488,12 +511,21 @@
 			projectRoot = "";
 			targets = (
 				F48B4D09134E063F007B0100 /* EEIPad */,
-				F48B4D35134E063F007B0100 /* EEIPadTests */,
+				1919B5BA1377180800D3D5F7 /* EEIPad.LogicTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1919B5B81377180800D3D5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1919B5C41377180800D3D5F7 /* InfoPlist.strings in Resources */,
+				1919B5C71377180800D3D5F7 /* when_initializing_quote.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F48B4D08134E063F007B0100 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,19 +571,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F48B4D33134E063F007B0100 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F48B4D42134E063F007B0100 /* InfoPlist.strings in Resources */,
-				F48B4D45134E063F007B0100 /* EEIPadTests.h in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F48B4D34134E063F007B0100 /* ShellScript */ = {
+		1919B5B91377180800D3D5F7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -567,6 +590,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1919B5B61377180800D3D5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1919B5CD13772E3C00D3D5F7 /* QuotesModel.h in Sources */,
+				1919B5CE13772E3C00D3D5F7 /* QuotesModel.m in Sources */,
+				1919B5CF13772E3C00D3D5F7 /* Quote.h in Sources */,
+				1919B5D013772E3C00D3D5F7 /* Quote.m in Sources */,
+				1919B5D113772E3C00D3D5F7 /* QuotesCategory.h in Sources */,
+				1919B5D213772E3C00D3D5F7 /* QuotesCategory.m in Sources */,
+				1919B5C91377180800D3D5F7 /* when_initializing_quote.m in Sources */,
+				199FCBE613782BEE0079E012 /* when_initializing_quote_category.m in Sources */,
+				19957D4E1378778F0005A407 /* when_initializing_quote_model.m in Sources */,
+				19957D52137921EE0005A407 /* QuoteDictionaryBuilder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F48B4D06134E063F007B0100 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,28 +633,23 @@
 				197D02F91369E7AD0082C1EC /* JSONKit.m in Sources */,
 				F46BACD0136F3A3600AEED85 /* CategoryArticlesWidget.m in Sources */,
 				F46BACD2136F3A3600AEED85 /* CategoryViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F48B4D31134E063F007B0100 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F48B4D47134E063F007B0100 /* EEIPadTests.m in Sources */,
+				19F032BE137675F900920828 /* QuotesModel.m in Sources */,
+				19F032C2137677B600920828 /* Quote.m in Sources */,
+				19F032C513767C7900920828 /* QuotesCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F48B4D3C134E063F007B0100 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F48B4D09134E063F007B0100 /* EEIPad */;
-			targetProxy = F48B4D3B134E063F007B0100 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		1919B5C21377180800D3D5F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1919B5C31377180800D3D5F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		F48B4D19134E063F007B0100 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -639,17 +674,51 @@
 			name = DetailView.xib;
 			sourceTree = "<group>";
 		};
-		F48B4D40134E063F007B0100 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F48B4D41134E063F007B0100 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1919B5CB1377180800D3D5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EEIPad.LogicTests/EEIPad.LogicTests-Prefix.pch";
+				INFOPLIST_FILE = "EEIPad.LogicTests/EEIPad.LogicTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1919B5CC1377180800D3D5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EEIPad.LogicTests/EEIPad.LogicTests-Prefix.pch";
+				INFOPLIST_FILE = "EEIPad.LogicTests/EEIPad.LogicTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		F48B4D48134E063F007B0100 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -712,55 +781,18 @@
 			};
 			name = Release;
 		};
-		F48B4D4E134E063F007B0100 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EEIPad.app/EEIPad";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EEIPadTests/EEIPadTests-Prefix.pch";
-				INFOPLIST_FILE = "EEIPadTests/EEIPadTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = EEIPadTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		F48B4D4F134E063F007B0100 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EEIPad.app/EEIPad";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EEIPadTests/EEIPadTests-Prefix.pch";
-				INFOPLIST_FILE = "EEIPadTests/EEIPadTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = EEIPadTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1919B5CA1377180800D3D5F7 /* Build configuration list for PBXNativeTarget "EEIPad.LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1919B5CB1377180800D3D5F7 /* Debug */,
+				1919B5CC1377180800D3D5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F48B4D04134E063E007B0100 /* Build configuration list for PBXProject "EEIPad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -775,15 +807,6 @@
 			buildConfigurations = (
 				F48B4D4B134E063F007B0100 /* Debug */,
 				F48B4D4C134E063F007B0100 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F48B4D4D134E063F007B0100 /* Build configuration list for PBXNativeTarget "EEIPadTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F48B4D4E134E063F007B0100 /* Debug */,
-				F48B4D4F134E063F007B0100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

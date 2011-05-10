@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface QuotesTableDelegate : NSObject<UITableViewDelegate, UITableViewDataSource> {
     NSArray *data;
 }

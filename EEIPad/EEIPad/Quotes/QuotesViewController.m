@@ -12,13 +12,16 @@
 #import "QuotesViewController.h"
 #import "WebRequest.h"
 #import "QuotesTableDelegate.h"
+#import "QuotesModel.h"
+
 
 @implementation QuotesViewController
 
 - (void)dealloc
 {
     [super dealloc];
-    [timer release];
+    [timer release], timer = nil;
+  //  [quotes release], quotes = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,24 +57,15 @@
 
 -(void) dataLoaded:(NSData*)data
 {
-    quotes = [data objectFromJSONData];
-    [indicesTableController setData:[[[quotes objectForKey:@"tabs"] objectAtIndex:0] objectForKey:@"symbols"]];
-    [commoditiesTableController setData:[[[quotes objectForKey:@"tabs"] objectAtIndex:1] objectForKey:@"symbols"]];
-    [stocksTableController setData:[[[quotes objectForKey:@"tabs"] objectAtIndex:2] objectForKey:@"symbols"]];    
+    NSDictionary *dictionary = [data objectFromJSONData];
+    QuotesModel *quotes = [[QuotesModel alloc] initWithDictionary:dictionary];  
+    [indicesTableController setData:quotes.Indices.quotes];
+    [commoditiesTableController setData:quotes.Indices.quotes];
+    [stocksTableController setData:quotes.Indices.quotes];    
     [indicesTable reloadData];
     [commoditiesTable reloadData];
     [stocksTable reloadData]; 
-    
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"MMM dd, yyyy HH:mm:ss"];
-    
-    NSDate *now = [[NSDate alloc] init];
-    
-    NSString *dateString = [format stringFromDate:now];    
-    updatedLabel.text  = dateString;
-    [now release];
-    [format release];   
-    
+    updatedLabel.text  = quotes.lastUpdate;    
 }
 -(void) requestFailed:(NSString*) errMsg
 {

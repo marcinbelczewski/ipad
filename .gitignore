@@ -1,3 +1,5 @@
 .DS_Store
 .idea
-.EEIPad/build
+EEIPad/EEIPad.xcodeproj/xcuserdata/
+ipad.xcworkspace/xcuserdata/
+EEIPad/build/

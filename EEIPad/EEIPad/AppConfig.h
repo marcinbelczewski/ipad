@@ -25,5 +25,6 @@
 
 - (void) addSmallWidget: (NSString*) name withLabel: label;
 - (void) addLargeWidget: (NSString*) name withLabel: label;
+- (void)addLargeWidget:(NSString *)name withParameter:(NSString*)param withLabel:(id)label;
 + (id) EEIPadAppConfig;
 @end

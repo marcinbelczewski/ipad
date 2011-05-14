@@ -128,7 +128,6 @@
 								<string key="NSFrame">{{620, 6}, {24, 24}}</string>
 								<reference key="NSSuperview" ref="1009562723"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<int key="IBUIContentMode">10</int>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -150,15 +149,7 @@
 						<reference key="NSSuperview" ref="447607721"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1046698194"/>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">6</int>
-							<string key="NSCatalogName">System</string>
-							<string key="NSColorName">alternateSelectedControlColor</string>
-							<object class="NSColor" key="NSColor">
-								<int key="NSColorSpace">1</int>
-								<bytes key="NSRGB">MCAwIDEAA</bytes>
-							</object>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="27174725"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>

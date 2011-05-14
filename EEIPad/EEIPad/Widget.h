@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 @class WidgetConfig;
 
+@protocol ParametrizedWidget <NSObject>
+
+- (void) setParam: (NSString *)parameter;
+
+@end
+
 @interface Widget : UIViewController {
     UILabel *label;
 @protected

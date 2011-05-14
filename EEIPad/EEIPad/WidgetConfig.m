@@ -11,7 +11,7 @@
 
 @implementation WidgetConfig
 
-@synthesize widgetClass,label,widgetContainerClass,widgetRect;
+@synthesize widgetClass,label,widgetContainerClass,widgetRect,parameter;
 
 -(id)initSmWithClass:(NSString*)widgetClass andLabel:(NSString*)label
 {
@@ -37,6 +37,24 @@
         
         [self setWidgetClass: widgetClass];
         [self setLabel: label];
+        self->widgetContainerClass = @"WidgetLg";
+        self.widgetRect = CGRectMake(1, 35, 647, 471);
+        
+    }
+    
+    return self;
+}
+
+-(id)initLgWithClass:(NSString*)widgetClass andParameter:(NSString*) parameter andLabel:(NSString*)label
+{
+    self = [super init];
+    
+    if (self) {
+        
+        [self setWidgetClass: widgetClass];
+        [self setLabel: label];
+        [self setParameter: parameter];
+        
         self->widgetContainerClass = @"WidgetLg";
         self.widgetRect = CGRectMake(1, 35, 647, 471);
         

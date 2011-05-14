@@ -76,7 +76,9 @@
             [[self.view.subviews objectAtIndex:0] addSubview:subView.view];
         else
             [self.view addSubview:subView.view];
-            
+        
+        if([subView conformsToProtocol: @protocol(ParametrizedWidget)])
+            [(id<ParametrizedWidget>)subView setParam:widgetConfig.parameter];
     }
 }
 

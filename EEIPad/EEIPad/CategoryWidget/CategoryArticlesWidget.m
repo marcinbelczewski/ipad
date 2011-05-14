@@ -35,20 +35,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *urlAddress = @"http://www.google.com";
-    
-    
-    //Create a URL object.
-    NSURL *url = [NSURL URLWithString:urlAddress];
-    
-    //URL Requst Object
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    listView.allowsSelection=YES;
-    [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
+
+//    listView.allowsSelection=YES;
+//    [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
     //Load the request in the UIWebView.
-    [articleView loadRequest:requestObj];
 }
 
+-(void)setParam:(NSString *)parameter
+{
+    [categoryViewDeletegate refreshWithCategory:parameter];    
+}
 
 - (void)viewDidUnload
 {
@@ -64,6 +60,28 @@
 {
     // Return YES for supported orientations
     return YES;
+}
+
+@end
+
+@implementation SpotlightArticlesWidget
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [categoryViewDeletegate refreshWithCategory:@"spotlight"];
+    
+}
+
+@end
+
+@implementation NewsArticlesWidget
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [categoryViewDeletegate refreshWithCategory:@"newsandanalysis"];
+    
 }
 
 @end

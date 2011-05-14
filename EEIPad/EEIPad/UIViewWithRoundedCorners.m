@@ -27,7 +27,7 @@
     if (self) {
         self.layer.masksToBounds = YES;
         self.layer.cornerRadius = 6; // if you like rounded corners
-        self.layer.borderColor = [UIColor colorWithRed:159.0/255.0f green:159.0/255.0f blue:159.0/255.0f alpha:1.0].CGColor;
+        self.layer.borderColor = [UIColor colorWithRed:100.0/255.0f green:100.0/255.0f blue:100.0/255.0f alpha:1.0].CGColor;
         self.layer.borderWidth = 1.0f;
         
     }

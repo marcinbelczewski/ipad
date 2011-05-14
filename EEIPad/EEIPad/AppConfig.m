@@ -33,6 +33,14 @@
     [largeWidgets addObject:[[WidgetConfig alloc] initLgWithClass:name andLabel:label]];    
 }
 
+-(void)addLargeWidget:(NSString *)name withParameter:(NSString*)param withLabel:(id)label
+{
+    if(largeWidgets==nil)
+        largeWidgets = [[NSMutableArray alloc]init];
+    
+    [largeWidgets addObject:[[WidgetConfig alloc] initLgWithClass:name andParameter:param andLabel:label]];    
+}
+
 +(id)EEIPadAppConfig
 {
     AppConfig *cfg = [[AppConfig alloc]init];
@@ -44,9 +52,16 @@
     [cfg addSmallWidget:nil withLabel:@"Stock Quotes"];
     cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:314];
     
-    [cfg addLargeWidget:@"CategoryArticlesWidget" withLabel:@"Spotlight"];
-    [cfg addLargeWidget:@"NewsAndAnalysisWidget" withLabel:@"News & Analysis"];    
-    [cfg addLargeWidget:nil withLabel:@"Latest Deal"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"spotlight" withLabel:@"Spotlight"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"newsandanalysis" withLabel:@"News & Analysis"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"latestdeal" withLabel:@"Latest Deal"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"onetowatch" withLabel:@"One To Watch"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"companyfocus" withLabel:@"Company Focus"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"countryrisk" withLabel:@"Country Rick"];
+    [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"powergeneration" withLabel:@"Power Generation"];
+
+//http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=latestdeal
+//    newsandanalysis,spotlight,onetowatch,companyfocus,countryrisk,powergeneration
     
     cfg.largeScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:649];
     

@@ -16,11 +16,13 @@
 }
 
 @property (readwrite,retain) NSString* label;
+@property (readwrite,retain) NSString* parameter;
 @property (readwrite,retain) NSString* widgetClass;
 @property (readwrite,retain) NSString* widgetContainerClass;
 @property (readwrite) CGRect widgetRect;
 
 - (id) initLgWithClass: (NSString*) widgetClass andLabel: (NSString*) label;
+- (id) initLgWithClass: (NSString*) widgetClass andParameter:(NSString*) parameter andLabel: (NSString*) label;
 - (id) initSmWithClass: (NSString*) widgetClass andLabel: (NSString*) label;
 
 - (id) instantiateWidget;

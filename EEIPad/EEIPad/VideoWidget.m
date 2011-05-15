@@ -12,6 +12,11 @@
 
 @implementation VideoWidget
 @synthesize videoView;
+@synthesize duration = _duration;
+@synthesize people = _people;
+@synthesize date = _date;
+@synthesize videoTitle = _videoTitle;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +31,10 @@
 {
     [player release];
     [videoView release];
+    [_duration release];
+    [_people release];
+    [_date release];
+    [_videoTitle release];
     [super dealloc];
 }
 

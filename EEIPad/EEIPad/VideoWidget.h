@@ -14,7 +14,18 @@
     
     UIView *videoView;
     MPMoviePlayerController *player;
+@private
+    UILabel *_duration;
+    UILabel *_people;
+    UILabel *_date;
+    UILabel *_videoTitle;
 }
 @property (nonatomic, retain) IBOutlet UIView *videoView;
+
+@property (retain, nonatomic) IBOutlet UILabel *date;
+@property (retain, nonatomic) IBOutlet UILabel *videoTitle;
+@property (retain, nonatomic) IBOutlet UILabel *people;
+@property (retain, nonatomic) IBOutlet UILabel *duration;
+
 
 @end

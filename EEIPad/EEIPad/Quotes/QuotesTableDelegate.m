@@ -19,7 +19,7 @@
 
 - (void)categoryUpdated:(id)categoryUpdated {
 
-    NSLog(@"updating though notifications");
+    //NSLog(@"updating though notifications");
     QuotesCategory *category = [categoryUpdated object];
     self.data = category.quotes;
     [self.ownerView reloadData];

@@ -41,12 +41,21 @@
     [largeWidgets addObject:[[WidgetConfig alloc] initLgWithClass:name andParameter:param andLabel:label]];    
 }
 
+
+- (void)addSmallWidget:(NSString *)name withParameter:(NSString *)param withLabel:(id)label {
+     if(smallWidgets==nil)
+        smallWidgets = [[NSMutableArray alloc]init];
+    [smallWidgets addObject:[[WidgetConfig alloc] initLgWithClass:name andParameter:param andLabel:label]];
+}
+
 +(id)EEIPadAppConfig
 {
     AppConfig *cfg = [[AppConfig alloc]init];
 
     [cfg addSmallWidget:@"VideoWidget" withLabel:@"Video"];
-    [cfg addSmallWidget:@"SingleQuotesViewController" withLabel:@"Indicies notification"];
+    [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"IndicesUpdate" withLabel:@"Indices" ];
+    [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
+    [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"StocksUpdate" withLabel:@"Stocks" ];
 
     //[cfg addSmallWidget:@"QuotesViewController" withLabel:@"Quotes"];
     [cfg addSmallWidget:@"StocksWidget" withLabel:@"Futures"];
@@ -69,4 +78,6 @@
     
     return cfg;
 }
+
+
 @end

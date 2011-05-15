@@ -6,14 +6,17 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "Widget.h"
 #import "SingleQuotesViewController.h"
 #import "QuotesTableDelegate.h"
+#import "Widget.h"
 
 
 @implementation SingleQuotesViewController
 
 @synthesize indices = _indices;
 @synthesize indicesTable = _indicesTable;
+@synthesize quotesType = _quotesType;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,6 +32,7 @@
 {
     [_indices release];
     [_indicesTable release];
+    [_quotesType release];
     [super dealloc];
 }
 
@@ -47,8 +51,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.indices.ownerView = self.indicesTable;
-    [self.indices startLoadingQuotes:@"IndicesUpdate"];
+
 
 }
 
@@ -64,5 +67,12 @@
     // Return YES for supported orientations
 	return YES;
 }
+
+- (void)setParam:(NSString *)parameter {
+    self.quotesType = parameter;
+    self.indices.ownerView = self.indicesTable;
+    [self.indices startLoadingQuotes:self.quotesType];
+}
+
 
 @end

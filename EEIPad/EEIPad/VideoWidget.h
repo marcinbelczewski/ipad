@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "WebRequest.h"
 
 
-@interface VideoWidget : UIViewController {
+@interface VideoWidget : UIViewController<WebRequestDelegate>{
     
     UIView *videoView;
     MPMoviePlayerController *player;
@@ -19,6 +20,7 @@
     UILabel *_people;
     UILabel *_date;
     UILabel *_videoTitle;
+    WebRequest *_webRequest;
 }
 @property (nonatomic, retain) IBOutlet UIView *videoView;
 

@@ -92,6 +92,8 @@
 		F4ECB5B7135827AC009CD828 /* WidgetSm.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ECB5B5135827AC009CD828 /* WidgetSm.xib */; };
 		F4F62E161376DAAA00D6989F /* UIViewWithRoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */; };
 		F4F62E161376DAAA00D698A1 /* QuotesService.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A0 /* QuotesService.m */; };
+		F4F62E161376DAAA00D698A4 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A3 /* VideoModel.m */; };
+		F4F62E161376DAAA00D698A7 /* NSDate+FromJsonDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A6 /* NSDate+FromJsonDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +210,10 @@
 		F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewWithRoundedCorners.m; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698A0 /* QuotesService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuotesService.m; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698A2 /* QuotesService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuotesService.h; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698A3 /* VideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698A5 /* VideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698A6 /* NSDate+FromJsonDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FromJsonDate.m"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698A8 /* NSDate+FromJsonDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+FromJsonDate.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +274,8 @@
 		197D02EC1369DEEF0082C1EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F4F62E161376DAAA00D698A8 /* NSDate+FromJsonDate.h */,
+				F4F62E161376DAAA00D698A6 /* NSDate+FromJsonDate.m */,
 				23B808521379C46800FC40C3 /* PageControl.h */,
 				23B808531379C46800FC40C3 /* PageControl.m */,
 				197D02F41369E7720082C1EC /* WebRequest.h */,
@@ -351,6 +359,8 @@
 		F43DD72F1358CBDC00F92AD9 /* SmallWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				F4F62E161376DAAA00D698A5 /* VideoModel.h */,
+				F4F62E161376DAAA00D698A3 /* VideoModel.m */,
 				19B51B2E135C80D70015FB5A /* Quotes */,
 				F43DD7301358CC7100F92AD9 /* StocksWidget.h */,
 				F43DD7311358CC7100F92AD9 /* StocksWidget.m */,
@@ -658,6 +668,8 @@
 				F403699D137DA92F00F4C212 /* Article.m in Sources */,
 				F40369A1137DAB7A00F4C212 /* ArticlesGroup.m in Sources */,
 				23AF2E6C1380062C00942F5E /* SingleQuotesViewController.m in Sources */,
+				F4F62E161376DAAA00D698A4 /* VideoModel.m in Sources */,
+				F4F62E161376DAAA00D698A7 /* NSDate+FromJsonDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

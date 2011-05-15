@@ -7,7 +7,9 @@
 //
 
 #import <MediaPlayer/MediaPlayer.h>
+#import "WebRequest.h"
 #import "VideoWidget.h"
+#import "VideoModel.h"
 
 
 @implementation VideoWidget
@@ -22,7 +24,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        _webRequest = [[WebRequest alloc] initWithURLString:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/LatestVideo"];
+        _webRequest.delegate = self;
     }
     return self;
 }
@@ -35,6 +38,7 @@
     [_people release];
     [_date release];
     [_videoTitle release];
+    [_webRequest release];
     [super dealloc];
 }
 
@@ -51,16 +55,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    //NSURL *movieUrl = [NSURL URLWithString:@"http://eeivid.exec-insider.com/PROD_VIDEO/2011_04_28_Mandell1.mp4"];
-    NSURL *movieUrl = [NSURL URLWithString:@"http://media.ch9.ms/ch9/1ea0/ef05d6a9-86a1-43bd-af65-9ed200a41ea0/devdays054_high_ch9.mp4"];
-    player = [[MPMoviePlayerController alloc]
-                initWithContentURL:movieUrl];
-
+    player = [[MPMoviePlayerController alloc] init];
     player.controlStyle = MPMovieControlStyleEmbedded;
     [player.view setFrame: videoView.bounds];  // player's frame must match parent's
     [videoView addSubview: player.view];
-    [player play];
+    [_webRequest makeRequest];
 }
 
 - (void)viewDidUnload
@@ -76,5 +75,22 @@
     // Return YES for supported orientations
 	return YES;
 }
+
+- (void)requestFailed:(NSString *)errMsg {
+}
+
+- (void)dataLoaded:(NSData *)data {
+    NSDictionary *dictionary = [data objectFromJSONData];
+    VideoModel * videoModel = [[VideoModel alloc] initWithDictionary:dictionary];
+
+    self.videoTitle.text = videoModel.title;
+    self.duration.text = videoModel.duration;
+    self.people.text = videoModel.starring;
+    self.date.text = videoModel.date;
+    player.contentURL = videoModel.videoUrl;
+    [player play];
+    [videoModel release];
+}
+
 
 @end

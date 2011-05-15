@@ -21,7 +21,9 @@
         category = categoryName;
         quotes = [[NSMutableArray alloc] init];
         [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            [quotes addObject:[[Quote alloc]initWithDictionary:obj]];
+            Quote *quote = [[Quote alloc] initWithDictionary:obj];
+            [quotes addObject:quote];
+            [quote release];
         }];
     }
     return self;

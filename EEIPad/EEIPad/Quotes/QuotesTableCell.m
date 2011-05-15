@@ -31,6 +31,11 @@
 
 - (void)dealloc
 {
+    [name release];
+    [price release];
+    [change release];
+    [changePercent release];
+    [self setTrendImage:nil];
     [super dealloc];
 }
 

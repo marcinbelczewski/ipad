@@ -20,15 +20,12 @@
 {
     [super dealloc];
     [timer release], timer = nil;
-  //  [quotes release], quotes = nil;
+    [webRequest release];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -38,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    webRequest = [[WebRequest alloc] initWithURLString:@"http://www.globalinsight.test.idmanagedsolutions.com/json/indexlist"];
+    webRequest = [[WebRequest alloc] initWithURLString:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/DefaultPrices"];
     webRequest.delegate = self;
     timer = [NSTimer scheduledTimerWithTimeInterval:5.0 
                                              target:self 
@@ -64,7 +61,8 @@
     [indicesTable reloadData];
     [commoditiesTable reloadData];
     [stocksTable reloadData]; 
-    updatedLabel.text  = quotes.lastUpdate;    
+    updatedLabel.text  = quotes.lastUpdate;
+    //[quotes release];
 }
 -(void) requestFailed:(NSString*) errMsg
 {

@@ -11,6 +11,9 @@
 
 @interface QuotesTableDelegate : NSObject<UITableViewDelegate, UITableViewDataSource> {
     NSArray *data;
+@private
+    UITableView *_ownerView;
 }
 @property (nonatomic, retain) NSArray *data;
+@property (nonatomic, retain) UITableView * ownerView;
 @end

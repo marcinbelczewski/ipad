@@ -7,7 +7,6 @@
 //
 
 #import "WebRequest.h"
-#import "JSONKit.h"
 
 
 @implementation WebRequest

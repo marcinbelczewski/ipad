@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class DetailViewController;
+@class QuotesService;
+
 @interface EEIAppDelegate : NSObject <UIApplicationDelegate> {
 
+    QuotesService * _quotesService;
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+
 
 @end

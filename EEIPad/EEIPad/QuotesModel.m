@@ -7,7 +7,6 @@
 //
 
 #import "QuotesModel.h"
-#import "QuotesCategory.h"
 
 
 @implementation QuotesModel
@@ -26,7 +25,6 @@
                     initWithCategory:categoryName 
                     withQuotes:[object objectForKey:@"symbols"]];
             [self setValue:category forKey:categoryName];
-            [category release];
         }];
     }
     return self;

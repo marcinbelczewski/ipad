@@ -9,14 +9,37 @@
 #import "QuotesTableDelegate.h"
 #import "QuotesTableCell.h"
 #import "Quote.h"
+#import "QuotesCategory.h"
 
 
 @implementation QuotesTableDelegate
 @synthesize data;
+@synthesize ownerView = _ownerView;
 
--(void)dealloc{
+
+- (void)categoryUpdated:(id)categoryUpdated {
+//    QuotesCategory *category = (QuotesCategory *)categoryUpdated;
+//    self.data = category.quotes;
+//    [self.ownerView reloadData];
+
+    NSLog(@"updating though notifications");
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+        [notificationCenter addObserver:self selector:@selector(categoryUpdated:) name:@"IndicesUpdate" object:nil];
+    }
+
+    return self;
+//To change body of implemented methods use File | Settings | File Templates.
+}
+
+- (void)dealloc {
     [super dealloc];
     [data release];
+    [_ownerView release];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -25,40 +48,39 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //create a cell
-    
+    if (self.ownerView == nil) {
+        self.ownerView = [tableView retain];
+    }
     static NSString *CellIdentifier = @"quotesTableCell";
-    
-    QuotesTableCell *cell = (QuotesTableCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil){
+
+    QuotesTableCell *cell = (QuotesTableCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    if (cell == nil) {
         //NSLog(@"Cell created");
-        
+
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"QuotesTableCell" owner:nil options:nil];
-        
-        for(id currentObject in topLevelObjects)
-        {
-            if([currentObject isKindOfClass:[QuotesTableCell class]])
-            {
+
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[QuotesTableCell class]]) {
                 cell = (QuotesTableCell *)currentObject;
                 break;
             }
         }
     }
-    
-    
+
+
     Quote *quote = [data objectAtIndex:indexPath.row];
     id changeColor = [UIColor greenColor];
     NSString *changeIcon = @"green_up.png";
-    if([quote isNegativeChange])
-    {
-        changeColor =  [UIColor redColor];
+    if ([quote isNegativeChange]) {
+        changeColor = [UIColor redColor];
         changeIcon = @"red_down.png";
     }
     [[cell name] setText:quote.name];
     [[cell price] setText:quote.price];
     [[cell change] setText:quote.change];
-    [[cell change] setTextColor:changeColor];    
-    [[cell changePercent] setText:quote.changePercent];    
+    [[cell change] setTextColor:changeColor];
+    [[cell changePercent] setText:quote.changePercent];
     [[cell changePercent] setTextColor:changeColor];
     [[cell trendImage] setImage:[UIImage imageNamed:changeIcon]];
     return cell;

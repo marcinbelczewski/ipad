@@ -174,7 +174,7 @@ extern "C" {
 #pragma mark Deserializing methods
     ////////////
     
-    @interface NSString (JSONKitDeserializing)
+@interface NSString (JSONKitDeserializing)
 - (id)objectFromJSONString;
 - (id)objectFromJSONStringWithParseOptions:(JKParseOptionFlags)parseOptionFlags;
 - (id)objectFromJSONStringWithParseOptions:(JKParseOptionFlags)parseOptionFlags error:(NSError **)error;
@@ -183,7 +183,7 @@ extern "C" {
 - (id)mutableObjectFromJSONStringWithParseOptions:(JKParseOptionFlags)parseOptionFlags error:(NSError **)error;
 @end
     
-    @interface NSData (JSONKitDeserializing)
+@interface NSData (JSONKitDeserializing)
 // The NSData MUST be UTF8 encoded JSON.
 - (id)objectFromJSONData;
 - (id)objectFromJSONDataWithParseOptions:(JKParseOptionFlags)parseOptionFlags;

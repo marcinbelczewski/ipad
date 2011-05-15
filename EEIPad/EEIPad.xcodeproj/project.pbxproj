@@ -87,6 +87,7 @@
 		F4ECB5B6135827AC009CD828 /* WidgetSm.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECB5B4135827AC009CD828 /* WidgetSm.m */; };
 		F4ECB5B7135827AC009CD828 /* WidgetSm.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ECB5B5135827AC009CD828 /* WidgetSm.xib */; };
 		F4F62E161376DAAA00D6989F /* UIViewWithRoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */; };
+		F4F62E161376DAAA00D698A1 /* QuotesService.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A0 /* QuotesService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +195,8 @@
 		F4ECB5B5135827AC009CD828 /* WidgetSm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetSm.xib; sourceTree = "<group>"; };
 		F4F62E141376DAAA00D6989F /* UIViewWithRoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewWithRoundedCorners.h; sourceTree = "<group>"; };
 		F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewWithRoundedCorners.m; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698A0 /* QuotesService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuotesService.m; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698A2 /* QuotesService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuotesService.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +276,8 @@
 		19B51B2E135C80D70015FB5A /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				F4F62E161376DAAA00D698A2 /* QuotesService.h */,
+				F4F62E161376DAAA00D698A0 /* QuotesService.m */,
 				19B51B42135C823A0015FB5A /* QuotesViewController.xib */,
 				19B51B36135C81840015FB5A /* QuotesTableCell.h */,
 				19B51B37135C81840015FB5A /* QuotesTableCell.m */,
@@ -630,6 +635,7 @@
 				F41434481375C1EB007605F2 /* UIViewWithGradient.m in Sources */,
 				F4F62E161376DAAA00D6989F /* UIViewWithRoundedCorners.m in Sources */,
 				23B808541379C46800FC40C3 /* PageControl.m in Sources */,
+				F4F62E161376DAAA00D698A1 /* QuotesService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

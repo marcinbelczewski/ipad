@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>EEIPad.LogicTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SplitViewTest1.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1919B5BA1377180800D3D5F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F48B4D09134E063F007B0100</key>
 		<dict>
 			<key>primary</key>

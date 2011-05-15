@@ -77,7 +77,7 @@
     
     [self.view setFrame:frameRectInRootController];
     [self.view hideShadow];
-    [UIView animateWithDuration:0.4
+    [UIView animateWithDuration:0.6
                      animations:^{
                          [self.view setFrame:CGRectMake(0, 44, 768, 914)];                         
                      }
@@ -89,7 +89,7 @@
      }
 
 - (IBAction)RestoreClicked:(id)sender {
-    [UIView animateWithDuration:0.4
+    [UIView animateWithDuration:0.6
                      animations: ^{[self.view setFrame:frameRectInRootController];} 
                      completion:  ^(BOOL finished){
                          [self.view showShadow];

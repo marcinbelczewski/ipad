@@ -38,6 +38,8 @@
 		23B808541379C46800FC40C3 /* PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B808531379C46800FC40C3 /* PageControl.m */; };
 		23B808581379C4A200FC40C3 /* active_page_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B808561379C4A200FC40C3 /* active_page_icon.png */; };
 		23B808591379C4A200FC40C3 /* page_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B808571379C4A200FC40C3 /* page_icon.png */; };
+		F403699D137DA92F00F4C212 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = F403699C137DA92F00F4C212 /* Article.m */; };
+		F40369A1137DAB7A00F4C212 /* ArticlesGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F40369A0137DAB7A00F4C212 /* ArticlesGroup.m */; };
 		F404C875134F4FF0006EAA18 /* WidgetLg.m in Sources */ = {isa = PBXBuildFile; fileRef = F404C873134F4FF0006EAA18 /* WidgetLg.m */; };
 		F404C876134F4FF0006EAA18 /* WidgetLg.xib in Resources */ = {isa = PBXBuildFile; fileRef = F404C874134F4FF0006EAA18 /* WidgetLg.xib */; };
 		F414340F13758C14007605F2 /* UIViewWithShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = F414340E13758C14007605F2 /* UIViewWithShadow.m */; };
@@ -125,6 +127,10 @@
 		23B808531379C46800FC40C3 /* PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControl.m; sourceTree = "<group>"; };
 		23B808561379C4A200FC40C3 /* active_page_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = active_page_icon.png; sourceTree = "<group>"; };
 		23B808571379C4A200FC40C3 /* page_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_icon.png; sourceTree = "<group>"; };
+		F403699B137DA92F00F4C212 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		F403699C137DA92F00F4C212 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		F403699F137DAB7A00F4C212 /* ArticlesGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesGroup.h; sourceTree = "<group>"; };
+		F40369A0137DAB7A00F4C212 /* ArticlesGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesGroup.m; sourceTree = "<group>"; };
 		F404C872134F4FF0006EAA18 /* WidgetLg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetLg.h; sourceTree = "<group>"; };
 		F404C873134F4FF0006EAA18 /* WidgetLg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetLg.m; sourceTree = "<group>"; };
 		F404C874134F4FF0006EAA18 /* WidgetLg.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetLg.xib; sourceTree = "<group>"; };
@@ -456,6 +462,10 @@
 				F46BACCD136F3A3600AEED85 /* CategoryArticlesWidget.xib */,
 				F46BACCE136F3A3600AEED85 /* CategoryViewController.h */,
 				F46BACCF136F3A3600AEED85 /* CategoryViewController.m */,
+				F403699B137DA92F00F4C212 /* Article.h */,
+				F403699C137DA92F00F4C212 /* Article.m */,
+				F403699F137DAB7A00F4C212 /* ArticlesGroup.h */,
+				F40369A0137DAB7A00F4C212 /* ArticlesGroup.m */,
 			);
 			name = CategoryWidget;
 			sourceTree = "<group>";
@@ -636,6 +646,8 @@
 				F4F62E161376DAAA00D6989F /* UIViewWithRoundedCorners.m in Sources */,
 				23B808541379C46800FC40C3 /* PageControl.m in Sources */,
 				F4F62E161376DAAA00D698A1 /* QuotesService.m in Sources */,
+				F403699D137DA92F00F4C212 /* Article.m in Sources */,
+				F40369A1137DAB7A00F4C212 /* ArticlesGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

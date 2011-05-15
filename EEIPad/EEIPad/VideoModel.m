@@ -24,10 +24,13 @@
     if (self) {
         NSDictionary * document = [dict objectForKey:@"Document"];
         _title = [document objectForKey:@"Title"];
-        _starring = [document objectForKey:@"Summary"];
+        NSString * rawSummary = [document objectForKey:@"Summary"];
+        _starring = [[rawSummary
+                stringByReplacingOccurrencesOfString:@"<span>" withString:@""]
+                stringByReplacingOccurrencesOfString:@"</span>" withString:@""];
         NSDate * date = [NSDate dateFromJsonDate:[document objectForKey:@"LastChangeDate"]];
         NSDateFormatter * formatter = [[NSDateFormatter alloc] init] ;
-        formatter.dateFormat = @"yyyy'-'MM'-'dd'T'HH':'mm':'ssZ";
+        formatter.dateFormat = @"yyyy-MM-dd";
         _date = [formatter stringFromDate:date];
         _duration = [dict objectForKey:@"Duration"];
         _videoUrl = [NSURL URLWithString:[dict objectForKey:@"VideoUrl"]];

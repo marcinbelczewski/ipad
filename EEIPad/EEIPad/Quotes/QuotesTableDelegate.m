@@ -18,18 +18,20 @@
 
 
 - (void)categoryUpdated:(id)categoryUpdated {
-//    QuotesCategory *category = (QuotesCategory *)categoryUpdated;
-//    self.data = category.quotes;
-//    [self.ownerView reloadData];
 
     NSLog(@"updating though notifications");
+    QuotesCategory *category = [categoryUpdated object];
+    self.data = category.quotes;
+    [self.ownerView reloadData];
+
 }
+
+
 
 - (id)init {
     self = [super init];
     if (self) {
-        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-        [notificationCenter addObserver:self selector:@selector(categoryUpdated:) name:@"IndicesUpdate" object:nil];
+
     }
 
     return self;
@@ -37,9 +39,9 @@
 }
 
 - (void)dealloc {
-    [super dealloc];
     [data release];
     [_ownerView release];
+    [super dealloc];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,9 +50,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //create a cell
-    if (self.ownerView == nil) {
-        self.ownerView = [tableView retain];
-    }
     static NSString *CellIdentifier = @"quotesTableCell";
 
     QuotesTableCell *cell = (QuotesTableCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -84,5 +83,10 @@
     [[cell changePercent] setTextColor:changeColor];
     [[cell trendImage] setImage:[UIImage imageNamed:changeIcon]];
     return cell;
+}
+
+- (void)startLoadingQuotes:(NSString *)quotesType {
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(categoryUpdated:) name:quotesType object:nil];
 }
 @end

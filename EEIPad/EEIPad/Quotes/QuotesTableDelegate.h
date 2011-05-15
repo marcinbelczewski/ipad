@@ -16,4 +16,6 @@
 }
 @property (nonatomic, retain) NSArray *data;
 @property (nonatomic, retain) UITableView * ownerView;
+
+- (void)startLoadingQuotes:(NSString *)quotesType;
 @end

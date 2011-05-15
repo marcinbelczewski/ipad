@@ -24,6 +24,7 @@
                                            selector:@selector(refreshQuotes)
                                            userInfo:nil
                                             repeats:YES];
+        [self refreshQuotes];
     }
 
     return self;

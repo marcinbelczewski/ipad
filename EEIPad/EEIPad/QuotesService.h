@@ -18,5 +18,7 @@
 }
 - (id)initWithUrl:(NSURL *)dataUrl;
 
+- (void)refreshQuotes;
+
 
 @end

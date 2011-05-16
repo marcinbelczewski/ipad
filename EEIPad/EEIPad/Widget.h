@@ -18,7 +18,7 @@
 @interface Widget : UIViewController {
     UILabel *label;
 @protected
-    WidgetConfig *widgetConfig;
+    WidgetConfig *widgetCornfig;
     UIViewController *subView;
 }
 - (void) configureWith: (WidgetConfig*) config;

@@ -24,6 +24,7 @@
 - (id) initLgWithClass: (NSString*) widgetClass andLabel: (NSString*) label;
 - (id) initLgWithClass: (NSString*) widgetClass andParameter:(NSString*) parameter andLabel: (NSString*) label;
 - (id) initSmWithClass: (NSString*) widgetClass andLabel: (NSString*) label;
+- (id) initSmWithClass: (NSString*) widgetClass andParameter:(NSString*) parameter andLabel: (NSString*) label;
 
 - (id) instantiateWidget;
 

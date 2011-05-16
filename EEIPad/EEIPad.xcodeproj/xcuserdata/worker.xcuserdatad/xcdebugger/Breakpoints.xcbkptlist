@@ -513,11 +513,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetConfig.m"
-         timestampString = "327087676.481167"
+         timestampString = "327268310.696089"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "72"
-         endingLineNumber = "72"
+         startingLineNumber = "76"
+         endingLineNumber = "76"
          landmarkName = "-instantiateWidget"
          landmarkType = "5">
       </FileBreakpoint>
@@ -555,11 +555,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/AppConfig.m"
-         timestampString = "327088040.756455"
+         timestampString = "327268390.290835"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
+         startingLineNumber = "61"
+         endingLineNumber = "61"
          landmarkName = "+EEIPadAppConfig"
          landmarkType = "5">
       </FileBreakpoint>
@@ -597,11 +597,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/WidgetConfig.m"
-         timestampString = "327087676.481167"
+         timestampString = "327268310.696089"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "71"
-         endingLineNumber = "71"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
          landmarkName = "-instantiateWidget"
          landmarkType = "5">
       </FileBreakpoint>

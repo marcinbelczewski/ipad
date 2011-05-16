@@ -45,7 +45,7 @@
 - (void)addSmallWidget:(NSString *)name withParameter:(NSString *)param withLabel:(id)label {
      if(smallWidgets==nil)
         smallWidgets = [[NSMutableArray alloc]init];
-    [smallWidgets addObject:[[WidgetConfig alloc] initLgWithClass:name andParameter:param andLabel:label]];
+    [smallWidgets addObject:[[WidgetConfig alloc] initSmWithClass:name andParameter:param andLabel:label]];
 }
 
 +(id)EEIPadAppConfig
@@ -57,10 +57,6 @@
     [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
     [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"StocksUpdate" withLabel:@"Stocks" ];
 
-    //[cfg addSmallWidget:@"QuotesViewController" withLabel:@"Quotes"];
-    [cfg addSmallWidget:@"StocksWidget" withLabel:@"Futures"];
-    [cfg addSmallWidget:nil withLabel:@"Indicies"];    
-    [cfg addSmallWidget:nil withLabel:@"Stock Quotes"];
     cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:314];
     
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"spotlight" withLabel:@"Spotlight"];

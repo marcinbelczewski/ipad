@@ -15,15 +15,19 @@
 @implementation CategoryViewController
 
 @synthesize arcticleView,listView;
+@synthesize listActivityIndicator;
+@synthesize articleActivityIndicator;
 
 -(id)init
 {
     self = [super init];
+    self.arcticleView.delegate = self;
     return self;
 }
 
 -(void)refreshWithCategory:(NSString *)category
 {
+    [self.listActivityIndicator startAnimating];
     self->webRequest = [[WebRequest alloc] initWithURLString:[[NSString alloc] initWithFormat:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=%@",category]];
     self->webRequest.delegate = self;
     [webRequest makeRequest];
@@ -134,6 +138,8 @@
 }
 -(void) dataLoaded:(NSData*)data
 {
+    [self.listActivityIndicator stopAnimating];
+
     NSArray *articles = [data objectFromJSONData];
     NSMutableDictionary *articlesByDate = [[NSMutableDictionary alloc]init];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -164,11 +170,21 @@
         NSArray *values = [articlesByDate valueForKey:(NSString*)key];
         [articleGroups addObject:[[ArticlesGroup alloc]initWithDate:(NSString*)key withArticles:values]];
     }];
-
     [listView reloadData];
-    
-    int i=0; 
+    [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
+    Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:0]).articles objectAtIndex:0];
+    NSString *str = [[NSString alloc] initWithFormat:
+                     @"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetById?id=%d",article.identifier];
+    [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+   
  }
 
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [self.articleActivityIndicator startAnimating];
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.articleActivityIndicator stopAnimating];
+}
 
 @end

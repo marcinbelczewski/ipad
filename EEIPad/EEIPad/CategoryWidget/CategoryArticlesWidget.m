@@ -12,12 +12,16 @@
 @synthesize articleView;
 @synthesize categoryViewDeletegate;
 @synthesize listView;
+@synthesize listActivityIndicator;
+@synthesize articleActivityIndicator;
 
 - (void)dealloc
 {
     [articleView release];
     [categoryViewDeletegate release];
     [listView release];
+    [listActivityIndicator release];
+    [articleActivityIndicator release];
     [super dealloc];
 }
 
@@ -51,6 +55,8 @@
     [self setArticleView:nil];
     [self setCategoryViewDeletegate:nil];
     [self setListView:nil];
+    [self setListActivityIndicator:nil];
+    [self setArticleActivityIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

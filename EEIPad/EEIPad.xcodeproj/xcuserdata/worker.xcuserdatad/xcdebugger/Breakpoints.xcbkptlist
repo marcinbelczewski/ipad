@@ -746,20 +746,6 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "170"
-         endingLineNumber = "170"
-         landmarkName = "-dataLoaded:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
@@ -793,11 +779,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         timestampString = "327262983.590995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "145"
-         endingLineNumber = "145"
+         startingLineNumber = "151"
+         endingLineNumber = "151"
          landmarkName = "-dataLoaded:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -807,11 +793,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         timestampString = "327262983.590995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "154"
-         endingLineNumber = "154"
+         startingLineNumber = "160"
+         endingLineNumber = "160"
          landmarkName = "-dataLoaded:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -821,11 +807,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         timestampString = "327262983.590995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137"
+         startingLineNumber = "143"
+         endingLineNumber = "143"
          landmarkName = "-dataLoaded:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -835,11 +821,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         timestampString = "327262983.590995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "116"
-         endingLineNumber = "116"
+         startingLineNumber = "120"
+         endingLineNumber = "120"
          landmarkName = "-tableView:didDeselectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -849,11 +835,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         timestampString = "327262983.590995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
+         startingLineNumber = "122"
+         endingLineNumber = "122"
          landmarkName = "-tableView:didDeselectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -863,11 +849,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         timestampString = "327262983.590995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "158"
-         endingLineNumber = "158"
+         startingLineNumber = "164"
+         endingLineNumber = "164"
          landmarkName = "-dataLoaded:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -877,7 +863,63 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         timestampString = "327262983.590995"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "163"
+         endingLineNumber = "163"
+         landmarkName = "-dataLoaded:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
+         timestampString = "327262983.590995"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
+         landmarkName = "-dataLoaded:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
+         timestampString = "327262983.590995"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "-refreshWithCategory:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryArticlesWidget.m"
+         timestampString = "327262395.405134"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
+         landmarkName = "-setParam:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
+         timestampString = "327262983.590995"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "157"
@@ -886,17 +928,31 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052314.71373"
+         filePath = "EEIPad/Utils/WebRequest.m"
+         timestampString = "327229344.207627"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "150"
-         endingLineNumber = "150"
-         landmarkName = "-dataLoaded:"
+         startingLineNumber = "52"
+         endingLineNumber = "52"
+         landmarkName = "-connection:didReceiveResponse:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryArticlesWidget.m"
+         timestampString = "327262395.405134"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -905,12 +961,54 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
-         timestampString = "327052497.59941"
+         timestampString = "327262850.577421"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "27"
-         endingLineNumber = "27"
-         landmarkName = "-refreshWithCategory:"
+         startingLineNumber = "25"
+         endingLineNumber = "25"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
+         timestampString = "327262852.284958"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
+         landmarkName = "-init"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
+         timestampString = "327263340.584424"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "184"
+         endingLineNumber = "184"
+         landmarkName = "-webViewDidStartLoad:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "EEIPad/CategoryWidget/CategoryViewController.m"
+         timestampString = "327263340.584424"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "187"
+         endingLineNumber = "187"
+         landmarkName = "-webViewDidFinishLoad:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -216,6 +216,7 @@
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
     pageControlUsed = NO;
     if ([self needToChangePage]){
+        [self changePage];
         pageControl.currentPage += direction;
         [self pageControlPageDidChange:pageControl];
     }

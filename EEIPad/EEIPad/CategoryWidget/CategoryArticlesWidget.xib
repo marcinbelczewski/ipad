@@ -15,6 +15,7 @@
 			<string>IBUICustomObject</string>
 			<string>IBUIWebView</string>
 			<string>IBUITableView</string>
+			<string>IBUIActivityIndicatorView</string>
 			<string>IBUIView</string>
 			<string>IBProxyObject</string>
 		</object>
@@ -52,7 +53,8 @@
 						<int key="NSvFlags">276</int>
 						<string key="NSFrameSize">{210, 470}</string>
 						<reference key="NSSuperview" ref="365664360"/>
-						<reference key="NSNextKeyView" ref="132130884"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="129491543"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">6</int>
 							<string key="NSCatalogName">System</string>
@@ -78,7 +80,8 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{214, 4}, {429, 460}}</string>
 						<reference key="NSSuperview" ref="365664360"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="255527220"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -86,9 +89,33 @@
 						<bool key="IBUIAutoresizesSubviews">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
+					<object class="IBUIActivityIndicatorView" id="129491543">
+						<reference key="NSNextResponder" ref="365664360"/>
+						<int key="NSvFlags">260</int>
+						<string key="NSFrame">{{87, 225}, {20, 20}}</string>
+						<reference key="NSSuperview" ref="365664360"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="132130884"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<bool key="IBUIAnimating">YES</bool>
+						<int key="IBUIStyle">2</int>
+					</object>
+					<object class="IBUIActivityIndicatorView" id="255527220">
+						<reference key="NSNextResponder" ref="365664360"/>
+						<int key="NSvFlags">-2147483392</int>
+						<string key="NSFrame">{{419, 215}, {37, 37}}</string>
+						<reference key="NSSuperview" ref="365664360"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIStyle">0</int>
+					</object>
 				</object>
 				<string key="NSFrameSize">{647, 470}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="68640201"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -169,6 +196,30 @@
 					</object>
 					<int key="connectionID">21</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">listActivityIndicator</string>
+						<reference key="source" ref="404814535"/>
+						<reference key="destination" ref="129491543"/>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">articleActivityIndicator</string>
+						<reference key="source" ref="404814535"/>
+						<reference key="destination" ref="255527220"/>
+					</object>
+					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="132130884"/>
+						<reference key="destination" ref="404814535"/>
+					</object>
+					<int key="connectionID">28</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -202,6 +253,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="68640201"/>
 							<reference ref="132130884"/>
+							<reference ref="255527220"/>
+							<reference ref="129491543"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -215,6 +268,16 @@
 						<reference key="object" ref="132130884"/>
 						<reference key="parent" ref="365664360"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">22</int>
+						<reference key="object" ref="129491543"/>
+						<reference key="parent" ref="365664360"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">23</int>
+						<reference key="object" ref="255527220"/>
+						<reference key="parent" ref="365664360"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -224,6 +287,8 @@
 					<string>-1.CustomClassName</string>
 					<string>-2.CustomClassName</string>
 					<string>15.IBPluginDependency</string>
+					<string>22.IBPluginDependency</string>
+					<string>23.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>9.CustomClassName</string>
@@ -233,6 +298,8 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>CategoryArticlesWidget</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -252,7 +319,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">21</int>
+			<int key="maxID">28</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -264,14 +331,18 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>articleActivityIndicator</string>
 							<string>articleView</string>
 							<string>categoryViewDeletegate</string>
+							<string>listActivityIndicator</string>
 							<string>listView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIActivityIndicatorView</string>
 							<string>UIWebView</string>
 							<string>CategoryViewController</string>
+							<string>UIActivityIndicatorView</string>
 							<string>UITableView</string>
 						</object>
 					</object>
@@ -279,12 +350,18 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>articleActivityIndicator</string>
 							<string>articleView</string>
 							<string>categoryViewDeletegate</string>
+							<string>listActivityIndicator</string>
 							<string>listView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">articleActivityIndicator</string>
+								<string key="candidateClassName">UIActivityIndicatorView</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">articleView</string>
 								<string key="candidateClassName">UIWebView</string>
@@ -292,6 +369,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">categoryViewDeletegate</string>
 								<string key="candidateClassName">CategoryViewController</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">listActivityIndicator</string>
+								<string key="candidateClassName">UIActivityIndicatorView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">listView</string>
@@ -312,11 +393,15 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>arcticleView</string>
+							<string>articleActivityIndicator</string>
+							<string>listActivityIndicator</string>
 							<string>listView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIWebView</string>
+							<string>UIActivityIndicatorView</string>
+							<string>UIActivityIndicatorView</string>
 							<string>UITableView</string>
 						</object>
 					</object>
@@ -325,6 +410,8 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>arcticleView</string>
+							<string>articleActivityIndicator</string>
+							<string>listActivityIndicator</string>
 							<string>listView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -332,6 +419,14 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">arcticleView</string>
 								<string key="candidateClassName">UIWebView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">articleActivityIndicator</string>
+								<string key="candidateClassName">UIActivityIndicatorView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">listActivityIndicator</string>
+								<string key="candidateClassName">UIActivityIndicatorView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">listView</string>

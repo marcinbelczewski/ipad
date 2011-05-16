@@ -14,10 +14,14 @@
     UIWebView *articleView;
     CategoryViewController *categoryViewDeletegate;
     UITableView *listView;
+    UIActivityIndicatorView *listActivityIndicator;
+    UIActivityIndicatorView *articleActivityIndicator;
 }
 @property (nonatomic, retain) IBOutlet UIWebView *articleView;
 @property (nonatomic, retain) IBOutlet CategoryViewController *categoryViewDeletegate;
 @property (nonatomic, retain) IBOutlet UITableView *listView;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *listActivityIndicator;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *articleActivityIndicator;
 
 @end
 

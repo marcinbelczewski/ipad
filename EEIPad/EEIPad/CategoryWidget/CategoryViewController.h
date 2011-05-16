@@ -11,7 +11,7 @@
 #import "ArticlesGroup.h"
 
 
-@interface CategoryViewController : NSObject<UITableViewDataSource,UITableViewDelegate,WebRequestDelegate> {
+@interface CategoryViewController : NSObject<UITableViewDataSource,UITableViewDelegate,WebRequestDelegate,UIWebViewDelegate> {
     UIWebView *articleView;
     UITableView *listView;
     NSMutableArray *articleGroups;
@@ -20,6 +20,8 @@
 
 @property (retain,nonatomic) IBOutlet UIWebView *arcticleView;
 @property (retain,nonatomic) IBOutlet UITableView *listView;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *listActivityIndicator;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *articleActivityIndicator;
 
 -(NSDate *) dateFromJson: (NSString *)json;
 -(void) refreshWithCategory: (NSString*)category;

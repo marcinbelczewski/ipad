@@ -9,7 +9,6 @@
 #import "Widget.h"
 #import "SingleQuotesViewController.h"
 #import "QuotesTableDelegate.h"
-#import "Widget.h"
 
 
 @implementation SingleQuotesViewController

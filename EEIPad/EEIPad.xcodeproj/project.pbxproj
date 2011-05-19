@@ -94,6 +94,9 @@
 		F4F62E161376DAAA00D698A1 /* QuotesService.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A0 /* QuotesService.m */; };
 		F4F62E161376DAAA00D698A4 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A3 /* VideoModel.m */; };
 		F4F62E161376DAAA00D698A7 /* NSDate+FromJsonDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A6 /* NSDate+FromJsonDate.m */; };
+		F4F62E161376DAAA00D698AA /* UIView+ShowActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A9 /* UIView+ShowActivityIndicator.m */; };
+		F4F62E161376DAAA00D698AD /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698AC /* NSArray+Linq.m */; };
+		F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,7 +184,7 @@
 		F43DD755135B691A00F92AD9 /* NewsAndAnalysisWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsAndAnalysisWidget.m; sourceTree = "<group>"; };
 		F43DD756135B691A00F92AD9 /* NewsAndAnalysisWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsAndAnalysisWidget.xib; sourceTree = "<group>"; };
 		F46BACCB136F3A3600AEED85 /* CategoryArticlesWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryArticlesWidget.h; path = CategoryWidget/CategoryArticlesWidget.h; sourceTree = "<group>"; };
-		F46BACCC136F3A3600AEED85 /* CategoryArticlesWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryArticlesWidget.m; path = CategoryWidget/CategoryArticlesWidget.m; sourceTree = "<group>"; };
+		F46BACCC136F3A3600AEED85 /* CategoryArticlesWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryArticlesWidget.m; path = CategoryWidget/CategoryArticlesWidget.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		F46BACCD136F3A3600AEED85 /* CategoryArticlesWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryArticlesWidget.xib; path = CategoryWidget/CategoryArticlesWidget.xib; sourceTree = "<group>"; };
 		F46BACCE136F3A3600AEED85 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryViewController.h; path = CategoryWidget/CategoryViewController.h; sourceTree = "<group>"; };
 		F46BACCF136F3A3600AEED85 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewController.m; path = CategoryWidget/CategoryViewController.m; sourceTree = "<group>"; };
@@ -214,6 +217,12 @@
 		F4F62E161376DAAA00D698A5 /* VideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698A6 /* NSDate+FromJsonDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FromJsonDate.m"; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698A8 /* NSDate+FromJsonDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+FromJsonDate.h"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698A9 /* UIView+ShowActivityIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowActivityIndicator.m"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698AB /* UIView+ShowActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowActivityIndicator.h"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698AC /* NSArray+Linq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Linq.m"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698AE /* NSArray+Linq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Linq.h"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ShowActivityIndicator.m"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698B1 /* UIViewController+ShowActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ShowActivityIndicator.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +283,12 @@
 		197D02EC1369DEEF0082C1EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F4F62E161376DAAA00D698B1 /* UIViewController+ShowActivityIndicator.h */,
+				F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */,
+				F4F62E161376DAAA00D698AE /* NSArray+Linq.h */,
+				F4F62E161376DAAA00D698AC /* NSArray+Linq.m */,
+				F4F62E161376DAAA00D698AB /* UIView+ShowActivityIndicator.h */,
+				F4F62E161376DAAA00D698A9 /* UIView+ShowActivityIndicator.m */,
 				F4F62E161376DAAA00D698A8 /* NSDate+FromJsonDate.h */,
 				F4F62E161376DAAA00D698A6 /* NSDate+FromJsonDate.m */,
 				23B808521379C46800FC40C3 /* PageControl.h */,
@@ -670,6 +685,9 @@
 				23AF2E6C1380062C00942F5E /* SingleQuotesViewController.m in Sources */,
 				F4F62E161376DAAA00D698A4 /* VideoModel.m in Sources */,
 				F4F62E161376DAAA00D698A7 /* NSDate+FromJsonDate.m in Sources */,
+				F4F62E161376DAAA00D698AA /* UIView+ShowActivityIndicator.m in Sources */,
+				F4F62E161376DAAA00D698AD /* NSArray+Linq.m in Sources */,
+				F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

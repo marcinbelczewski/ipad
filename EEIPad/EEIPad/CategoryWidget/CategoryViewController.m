@@ -176,6 +176,7 @@
     NSString *str = [[NSString alloc] initWithFormat:
                      @"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetById?id=%d",article.identifier];
     [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+//    arcticleView.layer.shouldRasterize = true;
    
  }
 
@@ -185,6 +186,10 @@
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.articleActivityIndicator stopAnimating];
+}
+- requestFailed
+{
+    
 }
 
 @end

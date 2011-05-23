@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PageControl.h"
-
+#include "WidgetConfig.h"
 static NSInteger overlapWidth = 40;
 static NSInteger marginWidth = 20;
 
@@ -35,6 +35,7 @@ static NSInteger marginWidth = 20;
 - (void) setupWithWidgets: (NSMutableArray *) array andConfig: (ScrollViewConfig *) config;
 
 - (int)calculateItemWidth;
+- (void) setAlphaForAllPages; 
 
 
 @end

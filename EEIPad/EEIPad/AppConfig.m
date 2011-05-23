@@ -52,12 +52,24 @@
 {
     AppConfig *cfg = [[AppConfig alloc]init];
 
-    [cfg addSmallWidget:@"VideoWidget" withLabel:@"Video"];
-    [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"IndicesUpdate" withLabel:@"Indices" ];
+//    [cfg addSmallWidget:nil withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
+//    [cfg addSmallWidget:nil withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
+//    [cfg addSmallWidget:nil withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
+//    [cfg addSmallWidget:nil withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
+
     [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
+    [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"IndicesUpdate" withLabel:@"Indices" ];
     [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"StocksUpdate" withLabel:@"Stocks" ];
+    [cfg addSmallWidget:@"VideoWidget" withLabel:@"Video"];
 
     cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:314];
+    
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
     
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"spotlight" withLabel:@"Spotlight"];
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"newsandanalysis" withLabel:@"News & Analysis"];

@@ -79,7 +79,7 @@
     [self.view hideShadow];
     [UIView animateWithDuration:0.6
                      animations:^{
-                         [self.view setFrame:CGRectMake(0, 44, 768, 914)];                         
+                         [self.view setFrame:CGRectMake(0+10, 44+10, 768-20, 914-20)];                         
                      }
                      completion:^(BOOL finished) {
                          expandButton.hidden = true;

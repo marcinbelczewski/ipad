@@ -69,10 +69,10 @@
 
 
     Quote *quote = [data objectAtIndex:indexPath.row];
-    id changeColor = [UIColor greenColor];
+    id changeColor = [UIColor colorWithRed:2.0/255.0 green:155.0/255.0 blue:31.0/255.0 alpha:1.0];
     NSString *changeIcon = @"green_up.png";
     if ([quote isNegativeChange]) {
-        changeColor = [UIColor redColor];
+        changeColor = [UIColor colorWithRed:208.0/255.0 green:13.0/255.0 blue:0.0/255.0 alpha:1.0];
         changeIcon = @"red_down.png";
     }
     [[cell name] setText:quote.name];

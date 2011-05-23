@@ -95,5 +95,9 @@
     [videoModel release];
 }
 
+-(UIView *)activityParent {
+    return self.view.superview;
+}
+
 
 @end

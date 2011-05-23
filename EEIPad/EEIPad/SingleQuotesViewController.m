@@ -67,7 +67,7 @@
 }
 
 -(UIView *)activityParent {
-    return self.view;
+    return self.view.superview;
 }
 
 - (void)setParam:(NSString *)parameter {

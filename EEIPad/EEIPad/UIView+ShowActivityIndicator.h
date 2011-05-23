@@ -10,6 +10,7 @@
 @protocol ActivityShower
 -(void)showActivity;
 -(void)hideActivity;
+- (void)showActivity:(UIActivityIndicatorViewStyle)indicatorStyle;
 @end
 
 @interface UIView(ShowActivityIndicator) <ActivityShower>

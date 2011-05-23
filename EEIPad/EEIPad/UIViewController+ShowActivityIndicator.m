@@ -25,4 +25,9 @@
 - (void)showActivity {
     [[self targetIndicatorParent] showActivity];
 }
+
+- (void)showActivity:(UIActivityIndicatorViewStyle)indicatorStyle {
+    [[self targetIndicatorParent] showActivity: indicatorStyle];
+}
+
 @end

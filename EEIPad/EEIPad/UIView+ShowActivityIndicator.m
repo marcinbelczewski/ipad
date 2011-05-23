@@ -19,12 +19,17 @@
     }];
     return indicator;
 }
-
 - (void)showActivity {
+    [self showActivity:UIActivityIndicatorViewStyleGray];
+}
+
+- (void)showActivity:(UIActivityIndicatorViewStyle )indicatorStyle {
     UIActivityIndicatorView *activityIndicator = [self findIndicator];
     if (activityIndicator == nil){
-        activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:indicatorStyle];
+        activityIndicator.frame = self.frame;
         activityIndicator.center = self.center;
+        activityIndicator.contentMode = UIViewContentModeCenter;
         [self addSubview:activityIndicator];
     }
     [activityIndicator startAnimating];

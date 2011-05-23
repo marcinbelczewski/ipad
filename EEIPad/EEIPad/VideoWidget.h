@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <UIKit/UIViewController.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import "WebRequest.h"
 
@@ -21,6 +21,7 @@
     UILabel *_date;
     UILabel *_videoTitle;
     WebRequest *_webRequest;
+    UIActivityIndicatorView *_activityIndicator;
 }
 @property (nonatomic, retain) IBOutlet UIView *videoView;
 

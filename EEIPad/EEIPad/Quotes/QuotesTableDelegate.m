@@ -12,6 +12,7 @@
 #import "QuotesCategory.h"
 
 
+
 @implementation QuotesTableDelegate
 @synthesize data;
 @synthesize ownerView = _ownerView;
@@ -23,7 +24,6 @@
     QuotesCategory *category = [categoryUpdated object];
     self.data = category.quotes;
     [self.ownerView reloadData];
-
 }
 
 

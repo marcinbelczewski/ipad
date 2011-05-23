@@ -22,7 +22,7 @@
 {
     if(smallWidgets==nil)
         smallWidgets = [[NSMutableArray alloc]init];
-    [smallWidgets addObject:[[WidgetConfig alloc] initSmWithClass:name andLabel:label]];
+    [smallWidgets addObject:[[[WidgetConfig alloc] initSmWithClass:name andLabel:label] autorelease]];
 }
 
 -(void)addLargeWidget:(NSString *)name withLabel:(id)label
@@ -30,7 +30,7 @@
     if(largeWidgets==nil)
         largeWidgets = [[NSMutableArray alloc]init];
     
-    [largeWidgets addObject:[[WidgetConfig alloc] initLgWithClass:name andLabel:label]];    
+    [largeWidgets addObject:[[[WidgetConfig alloc] initLgWithClass:name andLabel:label] autorelease]];
 }
 
 -(void)addLargeWidget:(NSString *)name withParameter:(NSString*)param withLabel:(id)label
@@ -38,19 +38,19 @@
     if(largeWidgets==nil)
         largeWidgets = [[NSMutableArray alloc]init];
     
-    [largeWidgets addObject:[[WidgetConfig alloc] initLgWithClass:name andParameter:param andLabel:label]];    
+    [largeWidgets addObject:[[[WidgetConfig alloc] initLgWithClass:name andParameter:param andLabel:label] autorelease]];
 }
 
 
 - (void)addSmallWidget:(NSString *)name withParameter:(NSString *)param withLabel:(id)label {
      if(smallWidgets==nil)
         smallWidgets = [[NSMutableArray alloc]init];
-    [smallWidgets addObject:[[WidgetConfig alloc] initSmWithClass:name andParameter:param andLabel:label]];
+    [smallWidgets addObject:[[[WidgetConfig alloc] initSmWithClass:name andParameter:param andLabel:label] autorelease]];
 }
 
 +(id)EEIPadAppConfig
 {
-    AppConfig *cfg = [[AppConfig alloc]init];
+    AppConfig *cfg = [[[AppConfig alloc]init] autorelease];
 
 //    [cfg addSmallWidget:nil withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
 //    [cfg addSmallWidget:nil withParameter:@"CommoditesUpdate" withLabel:@"Commodites" ];
@@ -85,6 +85,14 @@
     cfg.largeScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:649];
     
     return cfg;
+}
+
+- (void)dealloc {
+    [smallWidgets release];
+    [largeWidgets release];
+    [smalScrollView release];
+    [largeScrollView release];
+    [super dealloc];
 }
 
 

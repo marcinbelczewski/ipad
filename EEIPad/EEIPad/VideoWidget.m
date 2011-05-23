@@ -6,11 +6,11 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <MediaPlayer/MediaPlayer.h>
 #import "WebRequest.h"
 #import "VideoWidget.h"
 #import "VideoModel.h"
-
+#import "UIView+ShowActivityIndicator.h"
+#import "UIViewController+ShowActivityIndicator.h"
 
 @implementation VideoWidget
 @synthesize videoView;
@@ -39,6 +39,7 @@
     [_date release];
     [_videoTitle release];
     [_webRequest release];
+    [_activityIndicator release];
     [super dealloc];
 }
 
@@ -55,6 +56,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self showActivity];
     player = [[MPMoviePlayerController alloc] init];
     player.controlStyle = MPMovieControlStyleEmbedded;
     [player.view setFrame: videoView.bounds];  // player's frame must match parent's
@@ -80,6 +82,7 @@
 }
 
 - (void)dataLoaded:(NSData *)data {
+    [self hideActivity];
     NSDictionary *dictionary = [data objectFromJSONData];
     VideoModel * videoModel = [[VideoModel alloc] initWithDictionary:dictionary];
 

@@ -10,11 +10,15 @@
 #import "SingleQuotesViewController.h"
 #import "QuotesTableDelegate.h"
 #import "UIViewController+ShowActivityIndicator.h"
+#import "QuotesCategory.h"
+#import "NSDate+Format.h"
+
 
 @implementation SingleQuotesViewController
 @synthesize indices = _indices;
 @synthesize indicesTable = _indicesTable;
 @synthesize quotesType = _quotesType;
+@synthesize lastUpdated = _lastUpdated;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,6 +35,7 @@
     [_indices release];
     [_indicesTable release];
     [_quotesType release];
+    [_lastUpdated release];
     [super dealloc];
 }
 
@@ -70,13 +75,21 @@
     return self.view.superview;
 }
 
+-(void)quotesUpdate:(id)category {
+    QuotesCategory *quotesCategory = [category object];
+    [self hideActivity];
+    NSDate *date = quotesCategory.lastUpdate;
+    NSString *string = [date stringWithDateAndTime];
+    self.lastUpdated.text = string;
+}
+
 - (void)setParam:(NSString *)parameter {
     [self showActivity];
     self.quotesType = parameter;
     self.indices.ownerView = self.indicesTable;
     [self.indices startLoadingQuotes:self.quotesType];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter addObserver:self selector:@selector(hideActivity) name:self.quotesType object:nil];
+    [notificationCenter addObserver:self selector:@selector(quotesUpdate:) name:self.quotesType object:nil];
 }
 
 

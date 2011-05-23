@@ -18,11 +18,12 @@
     QuotesTableDelegate *_indices;
     UITableView *_indicesTable;
     NSString *_quotesType;
+    UILabel *_lastUpdated;
 }
 
 @property (retain, nonatomic) IBOutlet QuotesTableDelegate *indices;
 @property (retain, nonatomic) IBOutlet UITableView *indicesTable;
-
+@property (retain, nonatomic) IBOutlet UILabel *lastUpdated;
 
 @property(retain) NSString *quotesType;
 @end

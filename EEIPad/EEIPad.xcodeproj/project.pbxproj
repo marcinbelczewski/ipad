@@ -97,6 +97,7 @@
 		F4F62E161376DAAA00D698AA /* UIView+ShowActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698A9 /* UIView+ShowActivityIndicator.m */; };
 		F4F62E161376DAAA00D698AD /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698AC /* NSArray+Linq.m */; };
 		F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */; };
+		F4F62E161376DAAA00D698B3 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698B2 /* NSDate+Format.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,6 +224,8 @@
 		F4F62E161376DAAA00D698AE /* NSArray+Linq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Linq.h"; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ShowActivityIndicator.m"; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698B1 /* UIViewController+ShowActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ShowActivityIndicator.h"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698B2 /* NSDate+Format.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Format.m"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698B4 /* NSDate+Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +286,8 @@
 		197D02EC1369DEEF0082C1EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F4F62E161376DAAA00D698B4 /* NSDate+Format.h */,
+				F4F62E161376DAAA00D698B2 /* NSDate+Format.m */,
 				F4F62E161376DAAA00D698B1 /* UIViewController+ShowActivityIndicator.h */,
 				F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */,
 				F4F62E161376DAAA00D698AE /* NSArray+Linq.h */,
@@ -688,6 +693,7 @@
 				F4F62E161376DAAA00D698AA /* UIView+ShowActivityIndicator.m in Sources */,
 				F4F62E161376DAAA00D698AD /* NSArray+Linq.m in Sources */,
 				F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */,
+				F4F62E161376DAAA00D698B3 /* NSDate+Format.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

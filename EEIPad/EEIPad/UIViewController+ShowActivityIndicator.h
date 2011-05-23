@@ -8,6 +8,11 @@
 #import <Foundation/Foundation.h>
 #import "UIView+ShowActivityIndicator.h"
 
-@interface UIViewController(ShowActivityIndicator) <ActivityShower>
+@protocol ActivityShowerController<ActivityShower >
+@optional
+@property(readonly) UIView *activityParent;
+@end
+
+@interface UIViewController(ShowActivityIndicator) <ActivityShowerController>
 
 @end

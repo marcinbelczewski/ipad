@@ -9,10 +9,9 @@
 #import "Widget.h"
 #import "SingleQuotesViewController.h"
 #import "QuotesTableDelegate.h"
-
+#import "UIViewController+ShowActivityIndicator.h"
 
 @implementation SingleQuotesViewController
-
 @synthesize indices = _indices;
 @synthesize indicesTable = _indicesTable;
 @synthesize quotesType = _quotesType;
@@ -67,10 +66,17 @@
 	return YES;
 }
 
+-(UIView *)activityParent {
+    return self.view;
+}
+
 - (void)setParam:(NSString *)parameter {
+    [self showActivity];
     self.quotesType = parameter;
     self.indices.ownerView = self.indicesTable;
     [self.indices startLoadingQuotes:self.quotesType];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(hideActivity) name:self.quotesType object:nil];
 }
 
 

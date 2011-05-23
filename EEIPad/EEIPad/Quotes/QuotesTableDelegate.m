@@ -10,7 +10,7 @@
 #import "QuotesTableCell.h"
 #import "Quote.h"
 #import "QuotesCategory.h"
-#import "UIView+ShowActivityIndicator.h"
+
 
 
 @implementation QuotesTableDelegate
@@ -24,8 +24,6 @@
     QuotesCategory *category = [categoryUpdated object];
     self.data = category.quotes;
     [self.ownerView reloadData];
-    [self.ownerView hideActivity];
-
 }
 
 
@@ -88,7 +86,6 @@
 }
 
 - (void)startLoadingQuotes:(NSString *)quotesType {
-    [self.ownerView showActivity];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(categoryUpdated:) name:quotesType object:nil];
 }

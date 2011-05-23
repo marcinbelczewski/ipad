@@ -11,11 +11,18 @@
 
 @implementation UIViewController(ShowActivityIndicator)
 
+-(UIView *)targetIndicatorParent {
+    if ([self respondsToSelector:@selector(activityParent)]){
+        return [self activityParent];
+    }
+    return self.view;
+}
+
 - (void)hideActivity {
-    [self.view hideActivity];
+    [[self targetIndicatorParent] hideActivity];
 }
 
 - (void)showActivity {
-    [self.view showActivity];
+    [[self targetIndicatorParent] showActivity];
 }
 @end

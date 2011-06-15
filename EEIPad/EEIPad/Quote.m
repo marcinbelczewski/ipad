@@ -27,9 +27,9 @@
                                                            withString:@""
                                                               options:0
                                                                 range:NSMakeRange(20, stringDate.length-20)];
-    
+
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ssZ"];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
         lastUpdate = [[dateFormatter dateFromString:stringDate] retain];
         [dateFormatter release];
     }

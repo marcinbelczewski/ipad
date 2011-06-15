@@ -140,7 +140,7 @@
 {
     [self.listActivityIndicator stopAnimating];
 
-    NSArray *articles = [data objectFromJSONData];
+    NSArray *articles = (NSArray *) [data objectFromJSONData];
     NSMutableDictionary *articlesByDate = [[NSMutableDictionary alloc]init];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
@@ -152,28 +152,24 @@
         
         NSDate *date = [self dateFromJson: [artDict objectForKey:@"PublishDate"]];
         NSString *keyFromArt = [formatter stringFromDate:date];
-        keyFromArt = @"Articles";
-        NSMutableArray *articlesV = [articlesByDate objectForKey:keyFromArt];
-        if(articlesV == nil)
+        if([articlesByDate objectForKey:keyFromArt] == nil)
         {
-            articlesV = [[NSMutableArray alloc]init];
-            [articlesByDate setObject:articlesV forKey:keyFromArt];
-            
-        }   
-        [articlesV addObject:art];
-        
+            [articlesByDate setObject:[[[NSMutableArray alloc]init] autorelease] forKey:keyFromArt];
+        }
+        [[articlesByDate objectForKey:keyFromArt] addObject:art];
+
     }];
 
     articleGroups = [[NSMutableArray alloc]init];
     
     [[articlesByDate allKeys]enumerateObjectsUsingBlock:^(id key, NSUInteger idx, BOOL *stop) {
         NSArray *values = [articlesByDate valueForKey:(NSString*)key];
-        [articleGroups addObject:[[ArticlesGroup alloc]initWithDate:(NSString*)key withArticles:values]];
+        [articleGroups addObject:[[[ArticlesGroup alloc]initWithDate:(NSString*)key withArticles:values] autorelease]];
     }];
     [listView reloadData];
     [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
     Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:0]).articles objectAtIndex:0];
-    NSString *str = [[NSString alloc] initWithFormat:
+    NSString *str = [NSString stringWithFormat:
                      @"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetById?id=%d",article.identifier];
     [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
 //    arcticleView.layer.shouldRasterize = true;
@@ -190,6 +186,11 @@
 - requestFailed
 {
     
+}
+
+- (void)dealloc {
+    [articleGroups release];
+    [super dealloc];
 }
 
 @end

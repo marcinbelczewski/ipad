@@ -13,7 +13,7 @@
     NSString *group;
     NSMutableArray *articles; //Array of Article class instances
 }
-@property (readwrite,copy) NSString *group;
-@property (readwrite,retain) NSMutableArray *articles;
+@property (nonatomic, retain) NSString *group;
+@property (nonatomic, retain) NSMutableArray *articles;
 -(id)initWithDate:(NSString *)date withArticles:(NSArray*)articlesArray;
 @end

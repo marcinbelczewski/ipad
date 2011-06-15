@@ -17,15 +17,21 @@
     self = [super init];
     if(self!=nil)
     {
-        self->group = date;
+        self.group = date;
         self->articles = [[NSMutableArray alloc] init];
 
         [articlesArray enumerateObjectsUsingBlock:^(id key, NSUInteger idx, BOOL *stop) {
         
-            [self->articles addObject:[[Article alloc] initWithDictionary: (NSDictionary *)key]];
+            [articles addObject:[[[Article alloc] initWithDictionary: (NSDictionary *)key] autorelease]];
         }];
 
     }
     return self;
+}
+
+- (void)dealloc {
+    [articles release];
+    [group release];
+    [super dealloc];
 }
 @end

@@ -28,7 +28,7 @@
 -(void)refreshWithCategory:(NSString *)category
 {
     [self.listActivityIndicator startAnimating];
-    self->webRequest = [[WebRequest alloc] initWithURLString:[[NSString alloc] initWithFormat:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=%@",category]];
+    self->webRequest = [[WebRequest alloc] initWithURLString:[NSString stringWithFormat:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=%@",category]];
     self->webRequest.delegate = self;
     [webRequest makeRequest];
     
@@ -109,7 +109,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:[indexPath section]]).articles objectAtIndex:[indexPath row]];
-    NSString *str = [[NSString alloc] initWithFormat:
+    NSString *str = [NSString stringWithFormat:
                      @"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetById?id=%d",article.identifier];
     [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
     
@@ -160,12 +160,18 @@
 
     }];
 
+    [formatter release];
+
+    [articleGroups release];
     articleGroups = [[NSMutableArray alloc]init];
     
     [[articlesByDate allKeys]enumerateObjectsUsingBlock:^(id key, NSUInteger idx, BOOL *stop) {
         NSArray *values = [articlesByDate valueForKey:(NSString*)key];
         [articleGroups addObject:[[[ArticlesGroup alloc]initWithDate:(NSString*)key withArticles:values] autorelease]];
     }];
+
+    [articlesByDate release];
+
     [listView reloadData];
     [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
     Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:0]).articles objectAtIndex:0];
@@ -190,6 +196,7 @@
 
 - (void)dealloc {
     [articleGroups release];
+    [webRequest release];
     [super dealloc];
 }
 

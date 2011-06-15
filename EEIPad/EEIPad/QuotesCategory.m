@@ -18,11 +18,11 @@
     
     if (self != nil)
     {
-        category = categoryName;
-        quotes = [[NSMutableArray alloc] init];
+        self->category = [categoryName retain];
+        self->quotes = [[NSMutableArray alloc] init];
         [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Quote *quote = [[Quote alloc] initWithDictionary:obj];
-            [quotes addObject:quote];
+            [self->quotes addObject:quote];
             [quote release];
         }];
     }
@@ -50,9 +50,6 @@
 -(void)dealloc
 {
     [category release], category = nil;
-    [quotes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [obj release];
-    }];
     [quotes release], quotes = nil;
     [super dealloc];
 }

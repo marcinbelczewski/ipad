@@ -13,7 +13,7 @@
     NSString *category;
     NSMutableArray *quotes; //Array of Quote class instances
 }
-@property (copy) NSString *category;
+@property (retain) NSString *category;
 @property (retain) NSMutableArray *quotes;
 @property (readonly) NSDate * lastUpdate;
 -(id)initWithCategory:(NSString *)categoryName withQuotes:(NSArray*)array;

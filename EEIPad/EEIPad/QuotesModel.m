@@ -10,7 +10,7 @@
 
 
 @implementation QuotesModel
-@synthesize Indices, Commodities, Stocks;
+@synthesize Indices = _indices, Commodities = _commodities, Stocks = _stocks;
 -(id)initWithDictionary:(NSDictionary*)dictionary
 {
     self = [super init];
@@ -18,28 +18,28 @@
     if (self != nil)
     {
         NSArray *categories = [dictionary objectForKey:@"tabs"];
-        [categories enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) 
-        {
-            NSString *categoryName = [[NSString alloc] initWithString:[object objectForKey:@"category"]];
+        for (NSDictionary *object in categories) {
+            NSString *categoryName = [object objectForKey:@"category"];
             QuotesCategory *category = [[QuotesCategory alloc]
-                    initWithCategory:categoryName 
+                    initWithCategory:categoryName
                     withQuotes:[object objectForKey:@"symbols"]];
             [self setValue:category forKey:categoryName];
-        }];
+            [category release];
+        }
     }
     return self;
     
 }
 -(NSString *) lastUpdate
 {
-    NSDate *lastUpdateDate = Indices.lastUpdate;
-    if([Commodities.lastUpdate laterDate:lastUpdateDate])
+    NSDate *lastUpdateDate = _indices.lastUpdate;
+    if([_commodities.lastUpdate laterDate:lastUpdateDate])
     {
-        lastUpdateDate = Commodities.lastUpdate;
+        lastUpdateDate = _commodities.lastUpdate;
     }
-    if([Stocks.lastUpdate laterDate:lastUpdateDate])
+    if([_stocks.lastUpdate laterDate:lastUpdateDate])
     {
-        lastUpdateDate = Stocks.lastUpdate;
+        lastUpdateDate = _stocks.lastUpdate;
     }
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy'-'MM'-'dd HH':'mm':'ss"];
@@ -50,9 +50,9 @@
 
 -(void)dealloc
 {
-    [Indices release], Indices = nil;
-    [Commodities release], Commodities = nil;
-    [Stocks release], Stocks = nil;
+    [_stocks release];
+    [_commodities release];
+    [_indices release];
     [super dealloc];
 }
 @end

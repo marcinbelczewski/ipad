@@ -10,9 +10,10 @@
 #import "QuotesCategory.h"
 
 @interface QuotesModel : NSObject {
-    QuotesCategory *Indices;
-    QuotesCategory *Commodities;
-    QuotesCategory *Stocks;
+@private
+    QuotesCategory *_indices;
+    QuotesCategory *_commodities;
+    QuotesCategory *_stocks;
 }
 @property (retain) QuotesCategory *Indices;
 @property (retain) QuotesCategory *Commodities;

@@ -41,12 +41,12 @@
 -(void) dataLoaded:(NSData*)data
 {
     NSDictionary *dictionary = [data objectFromJSONData];
-    QuotesModel *quotes = [[[QuotesModel alloc] initWithDictionary:dictionary] autorelease];
+    QuotesModel *quotes = [[QuotesModel alloc] initWithDictionary:dictionary];
     NSNotificationCenter * notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter postNotificationName:@"CommoditesUpdate" object:quotes.Commodities];
     [notificationCenter postNotificationName:@"IndicesUpdate" object:quotes.Indices];
     [notificationCenter postNotificationName:@"StocksUpdate" object:quotes.Stocks];
-//    updatedLabel.text  = quotes.lastUpdate;
+    [quotes release];
 }
 
 - (void)dealloc {

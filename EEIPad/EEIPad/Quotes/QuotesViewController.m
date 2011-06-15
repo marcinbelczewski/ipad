@@ -53,16 +53,17 @@
 
 -(void) dataLoaded:(NSData*)data
 {
-    NSDictionary *dictionary = [data objectFromJSONData];
+    NSDictionary *dictionary = (NSDictionary *) [data objectFromJSONData];
     QuotesModel *quotes = [[QuotesModel alloc] initWithDictionary:dictionary];  
-    [indicesTableController setData:quotes.Indices.quotes];
-    [commoditiesTableController setData:quotes.Indices.quotes];
-    [stocksTableController setData:quotes.Indices.quotes];    
+    indicesTableController.data = quotes.Indices.quotes;
+    commoditiesTableController.data = quotes.Indices.quotes;
+    stocksTableController.data =quotes.Indices.quotes;
     [indicesTable reloadData];
     [commoditiesTable reloadData];
     [stocksTable reloadData]; 
     updatedLabel.text  = quotes.lastUpdate;
     //[quotes release];
+    [quotes release];
 }
 -(void) requestFailed:(NSString*) errMsg
 {

@@ -151,7 +151,8 @@
         NSDictionary *artDict = (NSDictionary *)art;
         
         NSDate *date = [self dateFromJson: [artDict objectForKey:@"PublishDate"]];
-        NSString *keyFromArt = [formatter stringFromDate:date];
+//        NSString *keyFromArt = [formatter stringFromDate:date];
+        NSString *keyFromArt = @"Articles";
         if([articlesByDate objectForKey:keyFromArt] == nil)
         {
             [articlesByDate setObject:[[[NSMutableArray alloc]init] autorelease] forKey:keyFromArt];
@@ -166,6 +167,7 @@
     articleGroups = [[NSMutableArray alloc]init];
     
     [[articlesByDate allKeys]enumerateObjectsUsingBlock:^(id key, NSUInteger idx, BOOL *stop) {
+        
         NSArray *values = [articlesByDate valueForKey:(NSString*)key];
         [articleGroups addObject:[[[ArticlesGroup alloc]initWithDate:(NSString*)key withArticles:values] autorelease]];
     }];
@@ -176,7 +178,7 @@
     [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
     Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:0]).articles objectAtIndex:0];
     NSString *str = [NSString stringWithFormat:
-                     @"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetById?id=%d",article.identifier];
+                     @"http://eei.globalintech.pl/IPadArticle/GetById?id=%d",article.identifier];
     [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
 //    arcticleView.layer.shouldRasterize = true;
    

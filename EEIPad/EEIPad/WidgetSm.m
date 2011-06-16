@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "WidgetSm.h"
 #import "WidgetConfig.h"
 #import "StocksWidget.h"

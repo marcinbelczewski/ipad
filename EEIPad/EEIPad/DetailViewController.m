@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "AppConfig.h"
 #import "UIViewScrollContainer.h"
+#import <QuartzCore/QuartzCore.h>
+
 @implementation DetailViewController
 
 
@@ -55,6 +57,15 @@
     AppConfig *config = [AppConfig EEIPadAppConfig];
     [self.upperContainer setupWithWidgets:config.smallWidgets andConfig:config.smalScrollView];
     [self.lowerContainer setupWithWidgets:config.largeWidgets andConfig:config.largeScrollView];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    id colorA = [[UIColor alloc]initWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:1.0];
+    id colorB = [[UIColor alloc]initWithRed:140.0/255.0 green:140.0/255.0 blue:140.0/255.0 alpha:1.0];
+    
+    gradient.colors = [NSArray arrayWithObjects:(id)[colorA CGColor], (id)[colorB CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+
 }
 
 - (void)viewDidUnload
@@ -78,5 +89,46 @@
     [upperContainer release];
     [lowerContainer release];
     [super dealloc];
+}
+- (IBAction)trashAction:(id)sender {
+    CABasicAnimation* anim = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    [anim setToValue:[NSNumber numberWithFloat:0.0f]];
+    [anim setFromValue:[NSNumber numberWithDouble:M_PI/64]];
+    [anim setDuration:0.1];
+    [anim setRepeatCount:NSUIntegerMax];
+    [anim setAutoreverses:YES];
+    
+    [self.upperContainer.scrollManager.viewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if(obj!=[NSNull null])
+        {
+            UIViewController *vc = (UIViewController *)obj;
+            [vc.view.layer addAnimation:anim forKey:@"SpringboardShake"];
+        }
+    } ];
+    [self.lowerContainer.scrollManager.viewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if(obj!=[NSNull null])
+        {
+            UIViewController *vc = (UIViewController *)obj;
+            [vc.view.layer addAnimation:anim forKey:@"SpringboardShake"];
+        }
+    }];
+    
+}
+
+- (IBAction)doneAction:(id)sender {
+    [self.upperContainer.scrollManager.viewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if(obj!=[NSNull null])
+        {
+            UIViewController *vc = (UIViewController *)obj;
+            [vc.view.layer removeAnimationForKey:@"SpringboardShake"];
+        }
+    } ];
+    [self.lowerContainer.scrollManager.viewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if(obj!=[NSNull null])
+        {
+            UIViewController *vc = (UIViewController *)obj;
+            [vc.view.layer removeAnimationForKey:@"SpringboardShake"];
+        }
+    }];
 }
 @end

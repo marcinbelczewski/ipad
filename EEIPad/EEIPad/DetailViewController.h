@@ -27,5 +27,7 @@
 @property(nonatomic, retain) IBOutlet UIViewScrollContainer * lowerContainer;
 
 
+- (IBAction)trashAction:(id)sender;
+- (IBAction)doneAction:(id)sender;
 
 @end

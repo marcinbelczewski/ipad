@@ -19,11 +19,11 @@
         _dataUrl = [dataUrl retain];
         _webRequest = [[WebRequest alloc] initWithURLString:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/DefaultPrices"];
         _webRequest.delegate = self;
-        _timer = [NSTimer scheduledTimerWithTimeInterval:5.0
-                                             target:self
-                                           selector:@selector(refreshQuotes)
-                                           userInfo:nil
-                                            repeats:YES];
+//        _timer = [NSTimer scheduledTimerWithTimeInterval:5.0
+//                                             target:self
+//                                           selector:@selector(refreshQuotes)
+//                                           userInfo:nil
+//                                            repeats:YES];
         [self refreshQuotes];
     }
 

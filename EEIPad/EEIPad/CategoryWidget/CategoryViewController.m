@@ -60,7 +60,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyIdentifier"] autorelease];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.numberOfLines = 5;
         cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:13.0];
     }
 //    cell.textLabel.text = [NSString stringWithFormat:@"Article number %d",indexPath.row];
@@ -175,12 +175,11 @@
     [articlesByDate release];
 
     [listView reloadData];
-    [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
-    Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:0]).articles objectAtIndex:0];
-    NSString *str = [NSString stringWithFormat:
-                     @"http://eei.globalintech.pl/IPadArticle/GetById?id=%d",article.identifier];
-    [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
-//    arcticleView.layer.shouldRasterize = true;
+//    [listView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:true scrollPosition:UITableViewScrollPositionTop];
+//    Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:0]).articles objectAtIndex:0];
+//    NSString *str = [NSString stringWithFormat:
+//                     @"http://eei.globalintech.pl/IPadArticle/GetById?id=%d",article.identifier];
+//    [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
    
  }
 

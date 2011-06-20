@@ -16,13 +16,13 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.layer.masksToBounds = YES;
-        self.backgroundColor = [UIColor clearColor];
-        CAGradientLayer *gradient = [CAGradientLayer layer];
-        gradient.frame = self.bounds;
-        gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:246.0/255.0f green:246.0/255.0f blue:246.0/255.0f alpha:1.0] CGColor], (id)[[UIColor colorWithRed:226.0/255.0f green:226.0/255.0f blue:226.0/255.0f alpha:1.0] CGColor], nil];
-        gradient.masksToBounds = YES;
-        [self.layer insertSublayer:gradient atIndex:0];        
+//        self.layer.masksToBounds = YES;
+//        self.backgroundColor = [UIColor clearColor];
+//        CAGradientLayer *gradient = [CAGradientLayer layer];
+//        gradient.frame = self.bounds;
+//        gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:246.0/255.0f green:246.0/255.0f blue:246.0/255.0f alpha:1.0] CGColor], (id)[[UIColor colorWithRed:226.0/255.0f green:226.0/255.0f blue:226.0/255.0f alpha:1.0] CGColor], nil];
+//        gradient.masksToBounds = YES;
+//        [self.layer insertSublayer:gradient atIndex:0];        
     }
     return self;
     

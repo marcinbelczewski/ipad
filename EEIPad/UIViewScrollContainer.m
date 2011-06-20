@@ -29,7 +29,7 @@
 }
 
 - (void)awakeFromNib {
-    self.backgroundColor = [UIColor clearColor];
+//    self.backgroundColor = [UIColor clearColor];
 
 }
 
@@ -47,8 +47,8 @@
     self.frame = CGRectMake(
             overlapWidth + marginWidth,
             self.frame.origin.y,
-            [_scrollManager calculateItemWidth] * _scrollManager.pageControl.numberOfPages,
-            self.frame.size.height - 2);
+            [_scrollManager calculateItemWidth] * _scrollManager.pageControl.numberOfPages*0+self.superview.frame.size.width-(overlapWidth + marginWidth),
+            self.frame.size.height);
 }
 
 

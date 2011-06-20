@@ -91,7 +91,7 @@
     self.people.text = videoModel.starring;
     self.date.text = videoModel.date;
     player.contentURL = videoModel.videoUrl;
-    [player play];
+    [player stop];
     [videoModel release];
 }
 

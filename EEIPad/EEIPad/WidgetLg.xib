@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10J3250</string>
+		<string key="IBDocument.SystemVersion">10J4138</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -52,9 +52,11 @@
 							<object class="IBUIImageView" id="1046698194">
 								<reference key="NSNextResponder" ref="1009562723"/>
 								<int key="NSvFlags">290</int>
-								<string key="NSFrame">{{0, 1}, {649, 34}}</string>
+								<string key="NSFrameSize">{649, 34}</string>
 								<reference key="NSSuperview" ref="1009562723"/>
 								<reference key="NSNextKeyView" ref="73689068"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<object class="NSCustomResource" key="IBUIImage">
@@ -152,8 +154,8 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="1009562723"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC44IDAuMiAwAA</bytes>
+					<int key="NSColorSpace">3</int>
+					<bytes key="NSWhite">MCAwAA</bytes>
 				</object>
 				<bool key="IBUIClipsSubviews">YES</bool>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -257,6 +259,18 @@
 						<string key="objectName">View</string>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">26</int>
+						<reference key="object" ref="1024581649"/>
+						<reference key="parent" ref="1009562723"/>
+						<string key="objectName">Button</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">28</int>
+						<reference key="object" ref="188525746"/>
+						<reference key="parent" ref="1009562723"/>
+						<string key="objectName">Button</string>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
 						<reference key="object" ref="73689068"/>
 						<reference key="parent" ref="1009562723"/>
@@ -266,18 +280,6 @@
 						<int key="objectID">55</int>
 						<reference key="object" ref="1046698194"/>
 						<reference key="parent" ref="1009562723"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">28</int>
-						<reference key="object" ref="188525746"/>
-						<reference key="parent" ref="1009562723"/>
-						<string key="objectName">Button</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">26</int>
-						<reference key="object" ref="1024581649"/>
-						<reference key="parent" ref="1009562723"/>
-						<string key="objectName">Button</string>
 					</object>
 				</object>
 			</object>

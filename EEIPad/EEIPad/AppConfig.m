@@ -70,6 +70,12 @@
 //    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
 //    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
 //    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
+//    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
     
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"spotlight" withLabel:@"Spotlight"];
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"newsandanalysis" withLabel:@"News & Analysis"];
@@ -82,7 +88,7 @@
 //http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=latestdeal
 //    newsandanalysis,spotlight,onetowatch,companyfocus,countryrisk,powergeneration
     
-    cfg.largeScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:649];
+    cfg.largeScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:648];
     
     return cfg;
 }

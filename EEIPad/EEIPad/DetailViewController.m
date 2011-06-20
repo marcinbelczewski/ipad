@@ -59,11 +59,13 @@
     [self.lowerContainer setupWithWidgets:config.largeWidgets andConfig:config.largeScrollView];
     
     CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
+    gradient.contentsRect= gradient.frame = CGRectMake(0.0, 0.0, 1024.0, 1024.0);
     id colorA = [[UIColor alloc]initWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:1.0];
     id colorB = [[UIColor alloc]initWithRed:140.0/255.0 green:140.0/255.0 blue:140.0/255.0 alpha:1.0];
     
     gradient.colors = [NSArray arrayWithObjects:(id)[colorA CGColor], (id)[colorB CGColor], nil];
+    gradient.shouldRasterize = YES;
+    gradient.contentsGravity = kCAGravityResize;
     [self.view.layer insertSublayer:gradient atIndex:0];
 
 }
@@ -130,5 +132,35 @@
             [vc.view.layer removeAnimationForKey:@"SpringboardShake"];
         }
     }];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if ((toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft)||(toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)) {
+        [UIView animateWithDuration:duration     
+                         animations:^{
+                             [self.upperContainer setFrame:CGRectMake(self.upperContainer.frame.origin.x, -self.upperContainer.frame.size.height, upperContainer.frame.size.width, upperContainer.frame.size.height)];                         
+                             [self.lowerContainer setFrame:CGRectMake(60.0, 60.0, 1024.0-60.0, 768.0-120.0)];                         
+                             [self.lowerContainer.scrollManager resizeWidgetsWithWidth:1024-120 andDuration:duration];
+                         }
+                         completion:^(BOOL finished) {
+                             [self.lowerContainer.pageControl setNeedsLayout];
+                             [self.lowerContainer.pageControl setNeedsDisplay];
+                         }];
+        }
+        else
+        {
+            [UIView animateWithDuration:duration     
+                             animations:^{
+                                 [self.upperContainer setFrame:CGRectMake(self.upperContainer.frame.origin.x, 60, upperContainer.frame.size.width, upperContainer.frame.size.height)];                         
+                                 [self.lowerContainer setFrame:CGRectMake(60.0, 425.0, 768.0-60.0, 544.0)];                         
+                                 [self.lowerContainer.scrollManager resizeWidgetsWithWidth:768-120 andDuration:duration];
+                             }
+                             completion:^(BOOL finished) {
+                                 [self.lowerContainer.pageControl setNeedsLayout];
+                                 [self.lowerContainer.pageControl setNeedsDisplay];
+                             }];
+            
+        }
 }
 @end

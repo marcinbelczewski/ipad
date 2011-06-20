@@ -22,7 +22,7 @@ static NSInteger marginWidth = 20;
     BOOL pageControlUsed;
 
     NSMutableArray *widgets;
-    ScrollViewConfig *viewConfig;
+    ScrollViewConfig *viewConfig,*originalViewConfig;
     int lastXOffset;
     char direction;
 }
@@ -36,6 +36,6 @@ static NSInteger marginWidth = 20;
 
 - (int)calculateItemWidth;
 - (void) setAlphaForAllPages; 
-
+- (void) resizeWidgetsWithWidth: (NSInteger) newWidth andDuration: (NSTimeInterval)duration;
 
 @end

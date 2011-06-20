@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PageControl.h"
 @class ScrollViewConfig;
 @class ScrollManager;
 
@@ -17,12 +17,12 @@
 
 @private
     ScrollManager *_scrollManager;
-    UIPageControl *_pageControl;
+    PageControl *_pageControl;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet ScrollManager *scrollManager;
-@property (nonatomic,retain) IBOutlet UIPageControl *pageControl;
+@property (nonatomic,retain) IBOutlet PageControl *pageControl;
 
 
 

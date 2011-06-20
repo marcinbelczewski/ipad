@@ -8,6 +8,7 @@
 
 #import "ScrollManager.h"
 #import "ScrollViewConfig.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 
@@ -58,12 +59,12 @@
 
     scrollView.pagingEnabled = NO;
     scrollView.bounces = NO;
-    scrollView.contentSize = CGSizeMake(([widgets count]) * ([self calculateItemWidth]), scrollView.frame.size.height - 2);
+    scrollView.contentSize = CGSizeMake(([widgets count]) * ([self calculateItemWidth]), scrollView.frame.size.height);
     scrollView.frame = CGRectMake(
             0,
             scrollView.frame.origin.y,
             [self calculateItemWidth] * (viewConfig.widgetsPerPage) + 1,
-            scrollView.frame.size.height-2);
+            scrollView.frame.size.height);
 
 //    scrollView.backgroundColor = [UIColor yellowColor];
     scrollView.clipsToBounds = NO;
@@ -91,6 +92,46 @@
 
 - (UIView *)view {
     return self.scrollView;
+}
+- (void)resizeWidgetsWithWidth:(NSInteger)newWidth andDuration:(NSTimeInterval)duration
+{
+//    originalViewConfig = viewConfig copy];
+    viewConfig.widgetWidth = newWidth;
+    
+    scrollView.contentSize = CGSizeMake(([widgets count]) * ([self calculateItemWidth]), scrollView.frame.size.height - 2);
+    scrollView.frame = CGRectMake(
+                                  0,
+                                  scrollView.frame.origin.y,
+                                  [self calculateItemWidth] * (viewConfig.widgetsPerPage) + 1,
+                                  scrollView.frame.size.height);
+    __block int p = self.pageControl.currentPage;
+    for (__block int w =0; w<[widgets count]; w++) {
+        UIViewController *controller = [viewControllers objectAtIndex:w];
+        if ((NSNull *)controller != [NSNull null]) {
+            [UIView animateWithDuration:duration
+                             animations:^{
+                                 CGRect frame = scrollView.frame;
+                                 frame.origin.x = w * [self calculateItemWidth];
+                                 frame.origin.y = 0;
+                                 frame.size.width = viewConfig.widgetWidth;
+                                 controller.view.frame = frame;
+                                 controller.view.layer.frame = frame;
+                                 controller.view.layer.shadowPath = [UIBezierPath bezierPathWithRect:controller.view.bounds].CGPath;
+                                 controller.view.layer.shouldRasterize = YES;
+                                 frame = scrollView.frame;
+                                 frame.origin.x = p * [self calculateItemWidth];
+                                 frame.origin.y = 0;
+                                 [scrollView setContentOffset:frame.origin];
+                                 
+                                 [self setAlphaForAllPages];
+                             }
+                             completion:^(BOOL finished) {
+                             }
+             ];
+            
+            
+        }
+    }
 }
 
 - (void)loadScrollViewWithPage:(int)page {

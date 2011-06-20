@@ -81,9 +81,9 @@
 - (void)requestFailed:(NSString *)errMsg {
 }
 
-- (void)dataLoaded:(NSData *)data {
+- (void)dataLoaded:(id)data {
     [self hideActivity];
-    NSDictionary *dictionary = [data objectFromJSONData];
+    NSDictionary *dictionary = data;
     VideoModel * videoModel = [[VideoModel alloc] initWithDictionary:dictionary];
 
     self.videoTitle.text = videoModel.title;

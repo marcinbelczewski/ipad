@@ -136,11 +136,11 @@
                     dateByAddingTimeInterval:offset];
     
 }
--(void) dataLoaded:(NSData*)data
+-(void) dataLoaded:(id)data
 {
     [self.listActivityIndicator stopAnimating];
 
-    NSArray *articles = (NSArray *) [data objectFromJSONData];
+    NSArray *articles = (NSArray *) data;
     NSMutableDictionary *articlesByDate = [[NSMutableDictionary alloc]init];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd"];

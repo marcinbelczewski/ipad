@@ -51,9 +51,9 @@
     [webRequest makeRequest];
 }
 
--(void) dataLoaded:(NSData*)data
+-(void) dataLoaded:(id)data
 {
-    NSDictionary *dictionary = (NSDictionary *) [data objectFromJSONData];
+    NSDictionary *dictionary = (NSDictionary *) data;
     QuotesModel *quotes = [[QuotesModel alloc] initWithDictionary:dictionary];  
     indicesTableController.data = quotes.Indices.quotes;
     commoditiesTableController.data = quotes.Indices.quotes;

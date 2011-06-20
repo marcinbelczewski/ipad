@@ -7,89 +7,76 @@
 //
 
 #import "WebRequest.h"
+#import <Foundation/NSOperation.h>
+#import "JSONKit.h"
 
 
 @implementation WebRequest
 @synthesize delegate;
 
--(id) initWithURLString:(NSString*)requestURL {
-	if (self == [super init]) {
-		url = [requestURL retain];
-	}
-	return self;
+static NSOperationQueue *requestQueue;
+
++ (NSOperationQueue *)sharedQueue {
+    if (requestQueue == nil) {
+        requestQueue = [[NSOperationQueue alloc] init];
+        [requestQueue setMaxConcurrentOperationCount:5];
+    }
+    return requestQueue;
 }
 
--(void) makeRequest {    	    
-	if (urlConnection != nil) {
-		[urlConnection release];
-		urlConnection = nil;
-	}		
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-	urlConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
-    
-	UIApplication* app = [UIApplication sharedApplication];
-	app.networkActivityIndicatorVisible = YES;
+- (id)initWithURLString:(NSString *)requestURL andPriority:(WebRequestPriority )priority {
+    if (self == [super init]) {
+        url = [requestURL retain];
+        _priority = priority;
+    }
+    return self;
 }
 
--(void) cancelRequest {
-	
-	if (urlConnection) {
-		[urlConnection cancel];
-		[urlConnection release];
-		urlConnection = nil;
-		[data release];
-		data = nil;
-	}
-	
-	UIApplication* app = [UIApplication sharedApplication];
-	app.networkActivityIndicatorVisible = NO;
+- (id)initWithURLString:(NSString *)requestURL {
+    return [self initWithURLString:requestURL andPriority: WebRequestPriorityUrgent];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	//NSLog(@"Did receive response: %@", response);
-	
-    [data release];
-	data = [[NSMutableData alloc] init];
+- (id)initWithURLStringAndLowPriority:(NSString *)requestURL {
+    return [self initWithURLString:requestURL andPriority:WebRequestPriorityLow];
 }
 
 
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)dataReceived {
-	assert(data != nil);
-	[data appendData:dataReceived];
+- (void)performRequest {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    UIApplication *app = [UIApplication sharedApplication];
+    app.networkActivityIndicatorVisible = YES;
+    NSData *result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    app.networkActivityIndicatorVisible = NO;
+
+    if (error) {
+        [delegate requestFailed:[error localizedDescription]];
+    } else {
+        [delegate dataLoaded:[result objectFromJSONData]];
+    }
+
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [data release];
-	data = nil;
-	[urlConnection release];
-	urlConnection = nil;
-	
-	UIApplication* app = [UIApplication sharedApplication];
-	app.networkActivityIndicatorVisible = NO;
-	
-	[delegate requestFailed:[error localizedDescription]];
+- (void)setOperationPriority:(NSInvocationOperation *)operation {
+     if (_priority == WebRequestPriorityLow)  {
+         [operation setQueuePriority:NSOperationQueuePriorityVeryLow];
+         [operation setThreadPriority:0.1];
+     }
 }
 
-
--(void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	[urlConnection release];
-	urlConnection = nil;
-	
-	UIApplication* app = [UIApplication sharedApplication];
-	app.networkActivityIndicatorVisible = NO;
-	
-	[delegate dataLoaded:data];
-	
-	[data release];
-    data = nil;
+- (void)makeRequest {
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                            selector:@selector(performRequest)
+                                                                              object:nil];
+    [self setOperationPriority:operation];
+    [[WebRequest sharedQueue] addOperation:operation];
+    [operation release];
 }
 
-
--(void) dealloc {
-	[data release];
-	[urlConnection release];
-	[url release];
-	[super dealloc];
+- (void)dealloc {
+    [url release];
+    [super dealloc];
 }
 
 @end

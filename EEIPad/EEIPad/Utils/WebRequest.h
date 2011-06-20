@@ -9,19 +9,28 @@
 #import <Foundation/Foundation.h>
 
 @protocol WebRequestDelegate
--(void) dataLoaded:(NSData*)data;
+-(void) dataLoaded:(id)data;
 -(void) requestFailed:(NSString*) errMsg;
 @end
 
+
+typedef enum {
+    WebRequestPriorityLow, WebRequestPriorityUrgent
+} WebRequestPriority;
+
+
 @interface WebRequest : NSObject {
 	NSString* url;
-	NSURLConnection *urlConnection;
 	id<WebRequestDelegate> delegate;
-	NSMutableData* data;
+    WebRequestPriority _priority;
 }
 @property (assign) id<WebRequestDelegate> delegate;
 
--(id) initWithURLString:(NSString*)requestURL;
++(NSOperationQueue *) sharedQueue;
+
+- (id)initWithURLString:(NSString *)requestURL;
+- (id)initWithURLStringAndLowPriority:(NSString *)requestURL;
 -(void) makeRequest;
--(void) cancelRequest;
+
+
 @end

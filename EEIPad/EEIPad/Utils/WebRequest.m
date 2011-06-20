@@ -48,8 +48,7 @@ static NSOperationQueue *requestQueue;
     UIApplication *app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
     NSData *result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    app.networkActivityIndicatorVisible = NO;
-
+    app.networkActivityIndicatorVisible = ([[WebRequest sharedQueue] operationCount] > 1);
     if (error) {
         [delegate requestFailed:[error localizedDescription]];
     } else {

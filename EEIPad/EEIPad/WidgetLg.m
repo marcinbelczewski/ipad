@@ -73,7 +73,17 @@
      }
 
 - (IBAction)RestoreClicked:(id)sender {
-    [self collapse];
+    [UIView animateWithDuration:0.4
+                     animations: ^{[self.view setFrame:frameRectInRootController];} 
+                     completion:  ^(BOOL finished){
+                         [self.view showShadow];
+                         [originalSuperView addSubview: self.view];
+                         [self.view setFrame:frameRect];
+                         expandButton.hidden = false;
+                         restoreButton.hidden = true;
+                         
+                     }
+     ];
 }
 
 -(void)expand {
@@ -109,17 +119,13 @@
         return;
     _isExpanded = false;
     
-    [UIView animateWithDuration:0.4
-                     animations: ^{[self.view setFrame:frameRectInRootController];} 
-                     completion:  ^(BOOL finished){
-                         [self.view showShadow];
-                         [originalSuperView addSubview: self.view];
-                         [self.view setFrame:frameRect];
-                         expandButton.hidden = false;
-                         restoreButton.hidden = true;
-                         
-                     }
-     ];
+    [self.view setFrame:frameRectInRootController];
+    [self.view showShadow];
+    [originalSuperView addSubview: self.view];
+    [self.view setFrame:frameRect];
+    expandButton.hidden = false;
+    restoreButton.hidden = true;
+    
     
 }
 @end

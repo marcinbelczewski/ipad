@@ -15,6 +15,14 @@
 
 @end
 
+@protocol  ExpanableWidget <NSObject>
+
+@property (readonly) bool isExpanded;
+-(void) expand;
+-(void) collapse;
+
+
+@end
 @interface Widget : UIViewController {
     UILabel *label;
 @protected

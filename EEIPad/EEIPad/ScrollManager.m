@@ -9,7 +9,7 @@
 #import "ScrollManager.h"
 #import "ScrollViewConfig.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "Widget.h"
 
 
 @interface ScrollManager (PrivateMethods)
@@ -152,6 +152,7 @@
         frame.origin.y = 0;
         frame.size.width = viewConfig.widgetWidth;
         controller.view.frame = frame;
+        [controller.view setupShadow];
         [scrollView addSubview:controller.view];
 
     }
@@ -298,5 +299,20 @@
 - (IBAction)changePage {
     [self pageControlPageDidChange:pageControl];
  }
-
+-(void)collapseWidgets
+{
+    for (__block int w =0; w<[widgets count]; w++) {
+        
+        UIViewController *controller = [viewControllers objectAtIndex:w];
+        if ((NSNull *)controller != [NSNull null]) {
+            if([controller conformsToProtocol:@protocol(ExpanableWidget)])
+            {
+                id<ExpanableWidget> expandable = controller;
+                [expandable collapse];
+            }
+            
+        }
+    }
+    
+}
 @end

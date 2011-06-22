@@ -15,6 +15,7 @@
 @implementation WidgetLg
 @synthesize restoreButton;
 @synthesize expandButton;
+@synthesize isExpanded=_isExpanded;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,27 +69,46 @@
 }
 
 - (IBAction)ExpandClicked:(id)sender {
+    [self expand];
+     }
+
+- (IBAction)RestoreClicked:(id)sender {
+    [self collapse];
+}
+
+-(void)expand {
+    if (self.isExpanded)
+        return;
+    _isExpanded = true;
+    
     originalSuperView = self.view.superview;
     EEIAppDelegate *eeiapp= [[UIApplication sharedApplication] delegate];
+    UIViewController *rootcontroller = [[eeiapp window]rootViewController];
+    CGRect frame = rootcontroller.view.bounds;
     frameRect = self.view.frame;
     frameRectInRootController = [originalSuperView convertRect:self.view.frame toView:eeiapp.window.rootViewController.view];
-
+    
     [eeiapp.window.rootViewController.view addSubview: self.view];
     
     [self.view setFrame:frameRectInRootController];
     [self.view hideShadow];
     [UIView animateWithDuration:0.4
                      animations:^{
-                         [self.view setFrame:CGRectMake(0+10, 44+10, 768-20, 914-20)];                         
+                         [self.view setFrame:CGRectMake(0+10, 44+10, rootcontroller.view.bounds.size.width-20, rootcontroller.view.bounds.size.height-20-2*44)];                         
                      }
                      completion:^(BOOL finished) {
                          expandButton.hidden = true;
                          restoreButton.hidden = false;                         
                      }
      ];
-     }
-
-- (IBAction)RestoreClicked:(id)sender {
+    
+}
+-(void)collapse
+{
+    if (!self.isExpanded)
+        return;
+    _isExpanded = false;
+    
     [UIView animateWithDuration:0.4
                      animations: ^{[self.view setFrame:frameRectInRootController];} 
                      completion:  ^(BOOL finished){
@@ -100,5 +120,6 @@
                          
                      }
      ];
+    
 }
 @end

@@ -136,6 +136,7 @@
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
+    [[self.lowerContainer scrollManager] collapseWidgets];
     if ((toInterfaceOrientation==UIInterfaceOrientationLandscapeLeft)||(toInterfaceOrientation==UIInterfaceOrientationLandscapeRight)) {
         [UIView animateWithDuration:duration     
                          animations:^{

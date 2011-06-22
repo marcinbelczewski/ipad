@@ -10,13 +10,16 @@
 #import "Widget.h"
 @class WidgetConfig;
 
-@interface WidgetLg : Widget {
+@interface WidgetLg : Widget<ExpanableWidget> {
     
     UIButton *restoreButton;
     UIButton *expandButton;
     CGRect frameRect,frameRectInRootController;
     UIView *originalSuperView;
+@private
+    bool _isExpanded;
 }
+
 - (IBAction)ExpandClicked:(id)sender;
 - (IBAction)RestoreClicked:(id)sender;
 @property (nonatomic, retain) IBOutlet UIButton *restoreButton;

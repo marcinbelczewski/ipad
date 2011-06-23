@@ -42,7 +42,7 @@
 - (id)showShadow
 {
     self.layer.shadowOpacity = 0.3;
-    
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.

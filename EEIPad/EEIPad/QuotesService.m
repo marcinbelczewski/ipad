@@ -37,7 +37,7 @@
 }
 
 - (void)dataLoaded:(id)data {
-    return;
+    return ;
     NSDictionary *dictionary = data;
     QuotesModel *quotes = [[QuotesModel alloc] initWithDictionary:dictionary];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];

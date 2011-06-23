@@ -6,10 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
 #import "WidgetLg.h"
-#import "WidgetConfig.h"
 #import "EEIAppDelegate.h"
+#import "UIViewWithShadow.h"
 
 
 @implementation WidgetLg
@@ -48,7 +47,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
 }
 
 - (void)viewDidUnload
@@ -69,63 +68,78 @@
 }
 
 - (IBAction)ExpandClicked:(id)sender {
-    [self expand];
-     }
+    [self expandWithAnimation:YES];
+ }
 
 - (IBAction)RestoreClicked:(id)sender {
-    [UIView animateWithDuration:0.4
-                     animations: ^{[self.view setFrame:frameRectInRootController];} 
-                     completion:  ^(BOOL finished){
-                         [self.view showShadow];
-                         [originalSuperView addSubview: self.view];
-                         [self.view setFrame:frameRect];
-                         expandButton.hidden = false;
-                         restoreButton.hidden = true;
-                         
-                     }
-     ];
+    [self collapseWithAnimation:YES];
 }
 
--(void)expand {
+- (void)transitionWith:(void(^)()) transition andCompletion: (void(^)()) completion animate: (BOOL) animate
+{
+    if (animate)
+    {
+        [UIView animateWithDuration:0.4
+                         animations:^{
+                            transition();
+                         }
+                         completion:^(BOOL finished) {
+                             completion();
+                         }
+         ];
+    }
+    else
+    {
+        transition();
+        completion();
+    }
+
+}
+- (void)expandWithAnimation:(BOOL)animation {
+
     if (self.isExpanded)
         return;
     _isExpanded = true;
     
     originalSuperView = self.view.superview;
-    EEIAppDelegate *eeiapp= [[UIApplication sharedApplication] delegate];
-    UIViewController *rootcontroller = [[eeiapp window]rootViewController];
-    CGRect frame = rootcontroller.view.bounds;
-    frameRect = self.view.frame;
-    frameRectInRootController = [originalSuperView convertRect:self.view.frame toView:eeiapp.window.rootViewController.view];
-    
-    [eeiapp.window.rootViewController.view addSubview: self.view];
-    
-    [self.view setFrame:frameRectInRootController];
-    [self.view hideShadow];
-    [UIView animateWithDuration:0.4
-                     animations:^{
-                         [self.view setFrame:CGRectMake(0+10, 44+10, rootcontroller.view.bounds.size.width-20, rootcontroller.view.bounds.size.height-20-2*44)];                         
-                     }
-                     completion:^(BOOL finished) {
-                         expandButton.hidden = true;
-                         restoreButton.hidden = false;                         
-                     }
-     ];
-    
+    UIView *rootView = [[[[UIApplication sharedApplication] delegate] window]rootViewController].view;
+    UIViewWithShadow *ourView = (UIViewWithShadow *)self.view;
+    frameRect = ourView.frame;
+    frameRectInRootController = [originalSuperView convertRect:ourView.frame toView:rootView];
+
+
+    void (^beginAnim)() = ^{
+        [ourView hideShadow];
+        [rootView addSubview: ourView];
+        [ourView setFrame:frameRectInRootController];
+        [ourView setFrame:CGRectMake(0+10, 44+10, rootView.bounds.size.width-20, rootView.bounds.size.height-20-2*44)];
+    };
+
+    void (^completeAnim)() = ^
+    {
+        expandButton.hidden = true;
+        restoreButton.hidden = false;
+
+    };
+    [self transitionWith:beginAnim andCompletion:completeAnim animate:animation];
 }
--(void)collapse
-{
+
+- (void)collapseWithAnimation:(BOOL)animation {
     if (!self.isExpanded)
         return;
     _isExpanded = false;
-    
-    [self.view setFrame:frameRectInRootController];
-    [self.view showShadow];
-    [originalSuperView addSubview: self.view];
-    [self.view setFrame:frameRect];
-    expandButton.hidden = false;
-    restoreButton.hidden = true;
-    
-    
+    UIViewWithShadow *ourView = (UIViewWithShadow *)self.view;
+
+    void (^beginAnim)() = ^{[self.view setFrame:frameRectInRootController];};
+    void (^completeAnim)() = ^ {
+        [ourView showShadow];
+        [originalSuperView addSubview: self.view];
+        [self.view setFrame:frameRect];
+        expandButton.hidden = false;
+        restoreButton.hidden = true;
+
+    };
+    [self transitionWith:beginAnim andCompletion:completeAnim animate:animation];
+
 }
 @end

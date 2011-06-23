@@ -10,7 +10,7 @@
 #import "Widget.h"
 @class WidgetConfig;
 
-@interface WidgetLg : Widget<ExpanableWidget> {
+@interface WidgetLg : Widget<ExpandableWidget> {
     
     UIButton *restoreButton;
     UIButton *expandButton;
@@ -19,6 +19,7 @@
 @private
     bool _isExpanded;
 }
+- (void)transitionWith:(void(^)()) transition andCompletion: (void(^)()) completion animate: (BOOL) animate;
 
 - (IBAction)ExpandClicked:(id)sender;
 - (IBAction)RestoreClicked:(id)sender;

@@ -13,10 +13,13 @@
     NSString *title;
     NSInteger identifier;
 
+@private
+    NSString *_date;
 }
 
 @property (readonly) NSInteger identifier;
 @property (readonly) NSString *title;
+@property (readonly) NSString *date;
 
 -(id)initWithDictionary:(NSDictionary*)dictionary;
 

@@ -305,10 +305,10 @@
         
         UIViewController *controller = [viewControllers objectAtIndex:w];
         if ((NSNull *)controller != [NSNull null]) {
-            if([controller conformsToProtocol:@protocol(ExpanableWidget)])
+            if([controller conformsToProtocol:@protocol(ExpandableWidget)])
             {
-                id<ExpanableWidget> expandable = controller;
-                [expandable collapse];
+                id<ExpandableWidget> expandable = controller;
+                [expandable collapseWithAnimation:NO];
             }
             
         }

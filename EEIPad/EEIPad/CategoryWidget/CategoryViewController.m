@@ -57,7 +57,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
     cell = nil;
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyIdentifier"] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"] autorelease];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
         cell.textLabel.numberOfLines = 5;
@@ -65,6 +65,8 @@
     }
 //    cell.textLabel.text = [NSString stringWithFormat:@"Article number %d",indexPath.row];
     cell.textLabel.text = article.title;
+    if (article.date!=nil)
+        cell.detailTextLabel.text=article.date;
 //    NSString *path = [[NSBundle mainBundle] pathForResource:[item objectForKey:@"imageKey"] ofType:@"png"];
 //    UIImage *theImage = [UIImage imageWithContentsOfFile:path];
 //    cell.imageView.image = theImage;
@@ -102,8 +104,8 @@
     UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:13.0];
     CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
     CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
-    
-    return labelSize.height + 30;
+
+    return labelSize.height + 40;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -144,7 +146,8 @@
     NSMutableDictionary *articlesByDate = [[NSMutableDictionary alloc]init];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    
+//        NSString *keyFromArt = [formatter stringFromDate:date];
+
     
     [articles enumerateObjectsUsingBlock:^(id art, NSUInteger idx, BOOL *stop) {
         

@@ -15,11 +15,13 @@
 
 @end
 
-@protocol  ExpanableWidget <NSObject>
+@protocol ExpandableWidget <NSObject>
 
 @property (readonly) bool isExpanded;
--(void) expand;
--(void) collapse;
+
+- (void)expandWithAnimation:(BOOL)animation;
+
+- (void)collapseWithAnimation:(BOOL)animation;
 
 
 @end

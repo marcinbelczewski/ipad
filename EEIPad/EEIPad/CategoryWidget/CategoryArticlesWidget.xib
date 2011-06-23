@@ -53,7 +53,6 @@
 						<int key="NSvFlags">276</int>
 						<string key="NSFrameSize">{210, 470}</string>
 						<reference key="NSSuperview" ref="365664360"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="129491543"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">6</int>
@@ -85,7 +84,6 @@
 								<int key="NSvFlags">274</int>
 								<string key="NSFrameSize">{429, 460}</string>
 								<reference key="NSSuperview" ref="1033131492"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="255527220"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -101,8 +99,6 @@
 								<int key="NSvFlags">-2147483347</int>
 								<string key="NSFrame">{{196, 212}, {37, 37}}</string>
 								<reference key="NSSuperview" ref="1033131492"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIStyle">0</int>
@@ -110,7 +106,6 @@
 						</object>
 						<string key="NSFrame">{{214, 4}, {429, 460}}</string>
 						<reference key="NSSuperview" ref="365664360"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="132130884"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -126,7 +121,6 @@
 						<int key="NSvFlags">260</int>
 						<string key="NSFrame">{{87, 225}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="365664360"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1033131492"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -136,7 +130,6 @@
 				</object>
 				<string key="NSFrameSize">{647, 470}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="68640201"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -354,126 +347,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">30</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBPartialClassDescription">
-					<string key="className">CategoryArticlesWidget</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>articleActivityIndicator</string>
-							<string>articleView</string>
-							<string>categoryViewDeletegate</string>
-							<string>listActivityIndicator</string>
-							<string>listView</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UIActivityIndicatorView</string>
-							<string>UIWebView</string>
-							<string>CategoryViewController</string>
-							<string>UIActivityIndicatorView</string>
-							<string>UITableView</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>articleActivityIndicator</string>
-							<string>articleView</string>
-							<string>categoryViewDeletegate</string>
-							<string>listActivityIndicator</string>
-							<string>listView</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">articleActivityIndicator</string>
-								<string key="candidateClassName">UIActivityIndicatorView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">articleView</string>
-								<string key="candidateClassName">UIWebView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">categoryViewDeletegate</string>
-								<string key="candidateClassName">CategoryViewController</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">listActivityIndicator</string>
-								<string key="candidateClassName">UIActivityIndicatorView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">listView</string>
-								<string key="candidateClassName">UITableView</string>
-							</object>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CategoryArticlesWidget.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">CategoryViewController</string>
-					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>arcticleView</string>
-							<string>articleActivityIndicator</string>
-							<string>listActivityIndicator</string>
-							<string>listView</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UIWebView</string>
-							<string>UIActivityIndicatorView</string>
-							<string>UIActivityIndicatorView</string>
-							<string>UITableView</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>arcticleView</string>
-							<string>articleActivityIndicator</string>
-							<string>listActivityIndicator</string>
-							<string>listView</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">arcticleView</string>
-								<string key="candidateClassName">UIWebView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">articleActivityIndicator</string>
-								<string key="candidateClassName">UIActivityIndicatorView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">listActivityIndicator</string>
-								<string key="candidateClassName">UIActivityIndicatorView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">listView</string>
-								<string key="candidateClassName">UITableView</string>
-							</object>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CategoryViewController.h</string>
-					</object>
-				</object>
-			</object>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">

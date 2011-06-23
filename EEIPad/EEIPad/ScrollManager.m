@@ -276,11 +276,13 @@
 
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-//    pageControlUsed = NO;
-//    if ([self needToChangePage]){
-//        pageControl.currentPage += direction;
-//        [self pageControlPageDidChange: pageControl];
-//    }
+    if(!decelerate)
+    {
+        [self calculateScrollDirection];
+        pageControlUsed = NO;
+        pageControl.currentPage += direction;
+        [self pageControlPageDidChange: pageControl];
+    }
 }
 
 

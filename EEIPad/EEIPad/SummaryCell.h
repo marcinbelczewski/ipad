@@ -13,10 +13,14 @@
     
     UILabel *title;
     UILabel *category;
-    UIWebView *webView;
+    UILabel *date;
+    UILabel *summary;
+    UIImageView *image;
 }
 @property (nonatomic, retain) IBOutlet UILabel *title;
 @property (nonatomic, retain) IBOutlet UILabel *category;
-@property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, retain) IBOutlet UILabel *date;
+@property (nonatomic, retain) IBOutlet UILabel *summary;
+@property (nonatomic, retain) IBOutlet UIImageView *image;
 
 @end

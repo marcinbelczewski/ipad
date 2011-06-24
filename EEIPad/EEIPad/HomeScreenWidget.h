@@ -16,6 +16,7 @@
     WebRequest *_webRequest;
     UIActivityIndicatorView *_activityIndicator;
     NSMutableArray *_articles;
+    NSArray *_categories;
 }
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 

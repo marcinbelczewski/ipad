@@ -12,11 +12,14 @@
 #import "ScrollManager.h"
 
 @class UIViewScrollContainer;
+@class ConfigureWidgetsViewController;
 
 @interface DetailViewController : UIViewController {
 
     UIViewScrollContainer *upperContainer;
-    UIViewScrollContainer *lowerContainer;    
+    UIViewScrollContainer *lowerContainer;
+@private
+    ConfigureWidgetsViewController *_editView;
 }
 
 
@@ -27,7 +30,10 @@
 @property(nonatomic, retain) IBOutlet UIViewScrollContainer * lowerContainer;
 
 
+@property(nonatomic, retain) ConfigureWidgetsViewController *editView;
+
 - (IBAction)trashAction:(id)sender;
 - (IBAction)doneAction:(id)sender;
+- (IBAction)showEdit:(id)sender;
 
 @end

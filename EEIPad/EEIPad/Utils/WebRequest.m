@@ -49,8 +49,7 @@ static NSOperationQueue *requestQueue;
     UIApplication *app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
     NSData *result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    app.networkActivityIndicatorVisible = NO;
-
+    app.networkActivityIndicatorVisible = ([[WebRequest sharedQueue] operationCount] > 1);
     if (error) {
         [delegate performSelectorOnMainThread:@selector(requestFailed:) withObject:[error localizedDescription] waitUntilDone:NO];
     } else {

@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "AppConfig.h"
 #import "UIViewScrollContainer.h"
+#import "ConfigureWidgetsViewController.h"
+#import "ConfigureWidgetsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation DetailViewController
@@ -18,6 +20,7 @@
 @synthesize toolbar=_toolbar;
 @synthesize upperContainer;
 @synthesize lowerContainer;
+@synthesize editView = _editView;
 
 
 - (void)configureView
@@ -90,6 +93,7 @@
     [_toolbar release];
     [upperContainer release];
     [lowerContainer release];
+    [_editView release];
     [super dealloc];
 }
 - (IBAction)trashAction:(id)sender {
@@ -132,6 +136,15 @@
             [vc.view.layer removeAnimationForKey:@"SpringboardShake"];
         }
     }];
+}
+
+- (IBAction)showEdit:(id)sender {
+    if (self.editView == nil) {
+        self.editView = [[[ConfigureWidgetsViewController alloc] init] autorelease];
+    }
+    self.editView.modalPresentationStyle = UIModalPresentationFormSheet;
+    self.editView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentModalViewController:self.editView animated:YES];
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

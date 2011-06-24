@@ -35,6 +35,8 @@
 		19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */; };
 		19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3C135C81840015FB5A /* QuotesViewController.m */; };
 		19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B42135C823A0015FB5A /* QuotesViewController.xib */; };
+		23A7191B13AFC33700710DD2 /* ConfigureWidgetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A7191913AFC33700710DD2 /* ConfigureWidgetsViewController.m */; };
+		23A7191C13AFC33700710DD2 /* ConfigureWidgetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A7191A13AFC33700710DD2 /* ConfigureWidgetsViewController.xib */; };
 		23AF2E6C1380062C00942F5E /* SingleQuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2E6A1380062C00942F5E /* SingleQuotesViewController.m */; };
 		23AF2E6D1380062C00942F5E /* SingleQuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2E6B1380062C00942F5E /* SingleQuotesViewController.xib */; };
 		23B808541379C46800FC40C3 /* PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B808531379C46800FC40C3 /* PageControl.m */; };
@@ -144,6 +146,9 @@
 		19F032C1137677B600920828 /* Quote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quote.m; sourceTree = "<group>"; };
 		19F032C313767C7800920828 /* QuotesCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesCategory.h; sourceTree = "<group>"; };
 		19F032C413767C7800920828 /* QuotesCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesCategory.m; sourceTree = "<group>"; };
+		23A7191813AFC33700710DD2 /* ConfigureWidgetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigureWidgetsViewController.h; sourceTree = "<group>"; };
+		23A7191913AFC33700710DD2 /* ConfigureWidgetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigureWidgetsViewController.m; sourceTree = "<group>"; };
+		23A7191A13AFC33700710DD2 /* ConfigureWidgetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureWidgetsViewController.xib; sourceTree = "<group>"; };
 		23AF2E691380062C00942F5E /* SingleQuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleQuotesViewController.h; sourceTree = "<group>"; };
 		23AF2E6A1380062C00942F5E /* SingleQuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleQuotesViewController.m; sourceTree = "<group>"; };
 		23AF2E6B1380062C00942F5E /* SingleQuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleQuotesViewController.xib; sourceTree = "<group>"; };
@@ -520,6 +525,9 @@
 				F48B4D17134E063F007B0100 /* Supporting Files */,
 				F485BE20134E4C9200B344D9 /* ScrollManager.h */,
 				F485BE21134E4C9200B344D9 /* ScrollManager.m */,
+				23A7191813AFC33700710DD2 /* ConfigureWidgetsViewController.h */,
+				23A7191913AFC33700710DD2 /* ConfigureWidgetsViewController.m */,
+				23A7191A13AFC33700710DD2 /* ConfigureWidgetsViewController.xib */,
 			);
 			path = EEIPad;
 			sourceTree = "<group>";
@@ -685,6 +693,7 @@
 				23AF2E6D1380062C00942F5E /* SingleQuotesViewController.xib in Resources */,
 				F478DCEA13AE8AA3007574A6 /* ihslogo.png in Resources */,
 				F478DCED13AE8AB3007574A6 /* eeilogo.png in Resources */,
+				23A7191C13AFC33700710DD2 /* ConfigureWidgetsViewController.xib in Resources */,
 				F490CCC613B46B5C006B6A67 /* icon.png in Resources */,
 				F490CCC813B46B74006B6A67 /* Default-Portrait~ipad.png in Resources */,
 				F490CCCA13B46B92006B6A67 /* Default-Landscape~ipad.png in Resources */,
@@ -779,6 +788,7 @@
 				F4F62E161376DAAA00D698AD /* NSArray+Linq.m in Sources */,
 				F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */,
 				F4F62E161376DAAA00D698B3 /* NSDate+Format.m in Sources */,
+				23A7191B13AFC33700710DD2 /* ConfigureWidgetsViewController.m in Sources */,
 				F490CCD513B4770C006B6A67 /* HomeScreenWidget.m in Sources */,
 				F4F62E161376DAAA00D698B6 /* ArticleWithSummary.m in Sources */,
 				F463466813B49B3200BD199B /* SummaryCell.m in Sources */,
@@ -908,6 +918,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EEIPad/EEIPad-Prefix.pch";
 				INFOPLIST_FILE = "EEIPad/EEIPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = EEIPad;
 				WRAPPER_EXTENSION = app;
 			};
@@ -921,6 +932,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EEIPad/EEIPad-Prefix.pch";
 				INFOPLIST_FILE = "EEIPad/EEIPad-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = EEIPad;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

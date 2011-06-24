@@ -173,7 +173,6 @@
 						<string key="NSFrame">{{0, 960}, {768, 44}}</string>
 						<reference key="NSSuperview" ref="647120888"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -189,6 +188,12 @@
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="502923759"/>
 								<int key="IBUISystemItemIdentifier">0</int>
+							</object>
+							<object class="IBUIBarButtonItem" id="1057625720">
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="502923759"/>
+								<int key="IBUISystemItemIdentifier">2</int>
 							</object>
 						</array>
 					</object>
@@ -338,6 +343,14 @@
 					</object>
 					<int key="connectionID">174</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">showEdit:</string>
+						<reference key="source" ref="1057625720"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">179</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -407,6 +420,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="62402653"/>
 							<reference ref="662619973"/>
+							<reference ref="1057625720"/>
 						</array>
 						<reference key="parent" ref="647120888"/>
 					</object>
@@ -458,6 +472,11 @@
 						<reference key="object" ref="441955953"/>
 						<reference key="parent" ref="647120888"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">178</int>
+						<reference key="object" ref="1057625720"/>
+						<reference key="parent" ref="502923759"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -479,6 +498,7 @@
 				<string key="169.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="176.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="177.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="178.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="71.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<object class="NSAffineTransform" key="71.IBViewBoundsToFrameTransform">
 					<bytes key="NSTransformStruct">P4AAAL+AAABDWgAAw5yAAA</bytes>
@@ -503,7 +523,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">177</int>
+			<int key="maxID">179</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -512,11 +532,16 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="doneAction:">id</string>
+						<string key="showEdit:">id</string>
 						<string key="trashAction:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="doneAction:">
 							<string key="name">doneAction:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showEdit:">
+							<string key="name">showEdit:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="trashAction:">

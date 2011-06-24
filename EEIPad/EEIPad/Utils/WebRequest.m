@@ -8,6 +8,7 @@
 
 #import "WebRequest.h"
 #import <Foundation/NSOperation.h>
+#import <Foundation/NSThread.h>
 #import "JSONKit.h"
 
 
@@ -51,9 +52,10 @@ static NSOperationQueue *requestQueue;
     app.networkActivityIndicatorVisible = NO;
 
     if (error) {
-        [delegate requestFailed:[error localizedDescription]];
+        [delegate performSelectorOnMainThread:@selector(requestFailed:) withObject:[error localizedDescription] waitUntilDone:NO];
     } else {
-        [delegate dataLoaded:[result objectFromJSONData]];
+        NSData *dataResult = [result objectFromJSONData];
+        [delegate performSelectorOnMainThread:@selector(dataLoaded:) withObject:dataResult waitUntilDone:NO];
     }
 
 }

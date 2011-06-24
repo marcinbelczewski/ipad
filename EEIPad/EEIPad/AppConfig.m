@@ -77,6 +77,7 @@
 //    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
 //    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
     
+    [cfg addLargeWidget:@"HomeScreenWidget" withLabel:@"Home"];
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"spotlight" withLabel:@"Spotlight"];
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"newsandanalysis" withLabel:@"News & Analysis"];
     [cfg addLargeWidget:@"CategoryArticlesWidget" withParameter:@"latestdeal" withLabel:@"Latest Deal"];

@@ -21,7 +21,6 @@
     
     if (self != nil)
     {
-        id cos = [dictionary objectForKey:@"DocumentId"];
         self->identifier = [[dictionary objectForKey:@"DocumentId"] integerValue];
         self->title = [[NSString alloc] initWithString:[dictionary objectForKey:@"Title"]];
         NSDate *date = [NSDate dateFromJsonDate:[dictionary objectForKey:@"PublishDate"]];

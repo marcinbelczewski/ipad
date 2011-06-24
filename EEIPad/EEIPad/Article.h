@@ -13,7 +13,7 @@
     NSString *title;
     NSInteger identifier;
 
-@private
+@protected
     NSString *_date;
 }
 

@@ -60,8 +60,9 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"] autorelease];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.numberOfLines = 5;
-        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:13.0];
+        cell.textLabel.numberOfLines = 10;
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:12.0];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:11.0];
     }
 //    cell.textLabel.text = [NSString stringWithFormat:@"Article number %d",indexPath.row];
     cell.textLabel.text = article.title;
@@ -99,13 +100,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:[indexPath section]]).articles objectAtIndex:[indexPath row]];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
     NSString *cellText = article.title;
-    UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:13.0];
-    CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
+    UIFont *cellFont = [UIFont fontWithName:@"Helvetica" size:12.0];
+    CGSize constraintSize = CGSizeMake(190.0f, MAXFLOAT);
     CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
 
-    return labelSize.height + 40;
+    return labelSize.height+20;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

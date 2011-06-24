@@ -15,6 +15,16 @@
 
 @end
 
+@protocol ExpandableWidget <NSObject>
+
+@property (readonly) bool isExpanded;
+
+- (void)expandWithAnimation:(BOOL)animation;
+
+- (void)collapseWithAnimation:(BOOL)animation;
+
+
+@end
 @interface Widget : UIViewController {
     UILabel *label;
 @protected

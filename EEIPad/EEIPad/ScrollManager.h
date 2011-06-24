@@ -37,5 +37,6 @@ static NSInteger marginWidth = 20;
 - (int)calculateItemWidth;
 - (void) setAlphaForAllPages; 
 - (void) resizeWidgetsWithWidth: (NSInteger) newWidth andDuration: (NSTimeInterval)duration;
+-(void) collapseWidgets;
 
 @end

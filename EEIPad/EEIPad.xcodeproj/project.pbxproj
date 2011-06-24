@@ -73,8 +73,8 @@
 		F43DD73B1358D17B00F92AD9 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DD73A1358D17B00F92AD9 /* AppConfig.m */; };
 		F43DD7471359DCEC00F92AD9 /* ScrollViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DD7461359DCEC00F92AD9 /* ScrollViewConfig.m */; };
 		F43DD752135AB2C700F92AD9 /* Widget.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DD751135AB2C600F92AD9 /* Widget.m */; };
-		F43DD757135B691A00F92AD9 /* NewsAndAnalysisWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DD755135B691A00F92AD9 /* NewsAndAnalysisWidget.m */; };
-		F43DD758135B691A00F92AD9 /* NewsAndAnalysisWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43DD756135B691A00F92AD9 /* NewsAndAnalysisWidget.xib */; };
+		F463466813B49B3200BD199B /* SummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F463466713B49B3200BD199B /* SummaryCell.m */; };
+		F463466A13B49B5600BD199B /* SummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F463466913B49B5600BD199B /* SummaryCell.xib */; };
 		F46BACD0136F3A3600AEED85 /* CategoryArticlesWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = F46BACCC136F3A3600AEED85 /* CategoryArticlesWidget.m */; };
 		F46BACD1136F3A3600AEED85 /* CategoryArticlesWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46BACCD136F3A3600AEED85 /* CategoryArticlesWidget.xib */; };
 		F46BACD2136F3A3600AEED85 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46BACCF136F3A3600AEED85 /* CategoryViewController.m */; };
@@ -92,6 +92,11 @@
 		F48B4D27134E063F007B0100 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48B4D25134E063F007B0100 /* MainWindow.xib */; };
 		F48B4D2A134E063F007B0100 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48B4D29134E063F007B0100 /* DetailViewController.m */; };
 		F48B4D2D134E063F007B0100 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48B4D2B134E063F007B0100 /* DetailView.xib */; };
+		F490CCC613B46B5C006B6A67 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F490CCC513B46B5C006B6A67 /* icon.png */; };
+		F490CCC813B46B74006B6A67 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F490CCC713B46B74006B6A67 /* Default-Portrait~ipad.png */; };
+		F490CCCA13B46B92006B6A67 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F490CCC913B46B92006B6A67 /* Default-Landscape~ipad.png */; };
+		F490CCD513B4770C006B6A67 /* HomeScreenWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = F490CCD313B4770C006B6A67 /* HomeScreenWidget.m */; };
+		F490CCD613B4770C006B6A67 /* HomeScreenWidget.xib in Resources */ = {isa = PBXBuildFile; fileRef = F490CCD413B4770C006B6A67 /* HomeScreenWidget.xib */; };
 		F4ECB5B6135827AC009CD828 /* WidgetSm.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ECB5B4135827AC009CD828 /* WidgetSm.m */; };
 		F4ECB5B7135827AC009CD828 /* WidgetSm.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ECB5B5135827AC009CD828 /* WidgetSm.xib */; };
 		F4F62E161376DAAA00D6989F /* UIViewWithRoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E151376DAAA00D6989F /* UIViewWithRoundedCorners.m */; };
@@ -102,6 +107,7 @@
 		F4F62E161376DAAA00D698AD /* NSArray+Linq.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698AC /* NSArray+Linq.m */; };
 		F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */; };
 		F4F62E161376DAAA00D698B3 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698B2 /* NSDate+Format.m */; };
+		F4F62E161376DAAA00D698B6 /* ArticleWithSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698B5 /* ArticleWithSummary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,9 +194,9 @@
 		F43DD7461359DCEC00F92AD9 /* ScrollViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewConfig.m; sourceTree = "<group>"; };
 		F43DD750135AB2C600F92AD9 /* Widget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Widget.h; sourceTree = "<group>"; };
 		F43DD751135AB2C600F92AD9 /* Widget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Widget.m; sourceTree = "<group>"; };
-		F43DD754135B691A00F92AD9 /* NewsAndAnalysisWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsAndAnalysisWidget.h; sourceTree = "<group>"; };
-		F43DD755135B691A00F92AD9 /* NewsAndAnalysisWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsAndAnalysisWidget.m; sourceTree = "<group>"; };
-		F43DD756135B691A00F92AD9 /* NewsAndAnalysisWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsAndAnalysisWidget.xib; sourceTree = "<group>"; };
+		F463466613B49B3100BD199B /* SummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryCell.h; sourceTree = "<group>"; };
+		F463466713B49B3200BD199B /* SummaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryCell.m; sourceTree = "<group>"; };
+		F463466913B49B5600BD199B /* SummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryCell.xib; sourceTree = "<group>"; };
 		F46BACCB136F3A3600AEED85 /* CategoryArticlesWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryArticlesWidget.h; path = CategoryWidget/CategoryArticlesWidget.h; sourceTree = "<group>"; };
 		F46BACCC136F3A3600AEED85 /* CategoryArticlesWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryArticlesWidget.m; path = CategoryWidget/CategoryArticlesWidget.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		F46BACCD136F3A3600AEED85 /* CategoryArticlesWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryArticlesWidget.xib; path = CategoryWidget/CategoryArticlesWidget.xib; sourceTree = "<group>"; };
@@ -216,6 +222,12 @@
 		F48B4D28134E063F007B0100 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F48B4D29134E063F007B0100 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F48B4D2C134E063F007B0100 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
+		F490CCC513B46B5C006B6A67 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		F490CCC713B46B74006B6A67 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		F490CCC913B46B92006B6A67 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		F490CCD213B4770C006B6A67 /* HomeScreenWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenWidget.h; sourceTree = "<group>"; };
+		F490CCD313B4770C006B6A67 /* HomeScreenWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenWidget.m; sourceTree = "<group>"; };
+		F490CCD413B4770C006B6A67 /* HomeScreenWidget.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenWidget.xib; sourceTree = "<group>"; };
 		F4ECB5B3135827AC009CD828 /* WidgetSm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetSm.h; sourceTree = "<group>"; };
 		F4ECB5B4135827AC009CD828 /* WidgetSm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetSm.m; sourceTree = "<group>"; };
 		F4ECB5B5135827AC009CD828 /* WidgetSm.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetSm.xib; sourceTree = "<group>"; };
@@ -235,6 +247,8 @@
 		F4F62E161376DAAA00D698B1 /* UIViewController+ShowActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ShowActivityIndicator.h"; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698B2 /* NSDate+Format.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Format.m"; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698B4 /* NSDate+Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698B5 /* ArticleWithSummary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleWithSummary.m; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698B7 /* ArticleWithSummary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleWithSummary.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,10 +431,8 @@
 		F43DD753135B68E700F92AD9 /* LargeWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				F490CCCB13B473FF006B6A67 /* HomePageWidget */,
 				F4E293B2136F386400E9E361 /* CategoryWidget */,
-				F43DD754135B691A00F92AD9 /* NewsAndAnalysisWidget.h */,
-				F43DD755135B691A00F92AD9 /* NewsAndAnalysisWidget.m */,
-				F43DD756135B691A00F92AD9 /* NewsAndAnalysisWidget.xib */,
 			);
 			name = LargeWidgets;
 			sourceTree = "<group>";
@@ -428,6 +440,7 @@
 		F4825F6F13562E8300837AE2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F490CCBD13B46AB0006B6A67 /* App */,
 				F478DCEC13AE8AB3007574A6 /* eeilogo.png */,
 				F478DCE913AE8AA3007574A6 /* ihslogo.png */,
 				F414341113759A9A007605F2 /* images */,
@@ -474,6 +487,7 @@
 		F48B4D16134E063F007B0100 /* EEIPad */ = {
 			isa = PBXGroup;
 			children = (
+				F490CCCC13B47420006B6A67 /* Model */,
 				197D02EC1369DEEF0082C1EC /* Utils */,
 				F43DD7351358D02900F92AD9 /* Configuration */,
 				F43DD72D1358CB8A00F92AD9 /* Widgets */,
@@ -506,6 +520,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F490CCBD13B46AB0006B6A67 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F490CCC913B46B92006B6A67 /* Default-Landscape~ipad.png */,
+				F490CCC713B46B74006B6A67 /* Default-Portrait~ipad.png */,
+				F490CCC513B46B5C006B6A67 /* icon.png */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		F490CCCB13B473FF006B6A67 /* HomePageWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F490CCD213B4770C006B6A67 /* HomeScreenWidget.h */,
+				F490CCD313B4770C006B6A67 /* HomeScreenWidget.m */,
+				F490CCD413B4770C006B6A67 /* HomeScreenWidget.xib */,
+				F463466613B49B3100BD199B /* SummaryCell.h */,
+				F463466713B49B3200BD199B /* SummaryCell.m */,
+				F463466913B49B5600BD199B /* SummaryCell.xib */,
+			);
+			name = HomePageWidget;
+			sourceTree = "<group>";
+		};
+		F490CCCC13B47420006B6A67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4F62E161376DAAA00D698B7 /* ArticleWithSummary.h */,
+				F4F62E161376DAAA00D698B5 /* ArticleWithSummary.m */,
+				F403699B137DA92F00F4C212 /* Article.h */,
+				F403699C137DA92F00F4C212 /* Article.m */,
+				F403699F137DAB7A00F4C212 /* ArticlesGroup.h */,
+				F40369A0137DAB7A00F4C212 /* ArticlesGroup.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F4E293B2136F386400E9E361 /* CategoryWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,10 +564,6 @@
 				F46BACCD136F3A3600AEED85 /* CategoryArticlesWidget.xib */,
 				F46BACCE136F3A3600AEED85 /* CategoryViewController.h */,
 				F46BACCF136F3A3600AEED85 /* CategoryViewController.m */,
-				F403699B137DA92F00F4C212 /* Article.h */,
-				F403699C137DA92F00F4C212 /* Article.m */,
-				F403699F137DAB7A00F4C212 /* ArticlesGroup.h */,
-				F40369A0137DAB7A00F4C212 /* ArticlesGroup.m */,
 			);
 			name = CategoryWidget;
 			sourceTree = "<group>";
@@ -603,7 +649,6 @@
 				F404C876134F4FF0006EAA18 /* WidgetLg.xib in Resources */,
 				F4ECB5B7135827AC009CD828 /* WidgetSm.xib in Resources */,
 				F43DD7341358CC7100F92AD9 /* StocksWidget.xib in Resources */,
-				F43DD758135B691A00F92AD9 /* NewsAndAnalysisWidget.xib in Resources */,
 				19B51B3F135C81840015FB5A /* QuotesTableCell.xib in Resources */,
 				19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */,
 				F424706B13692AC100660869 /* VideoWidget.xib in Resources */,
@@ -626,6 +671,11 @@
 				F478DCEA13AE8AA3007574A6 /* ihslogo.png in Resources */,
 				F478DCED13AE8AB3007574A6 /* eeilogo.png in Resources */,
 				23A7191C13AFC33700710DD2 /* ConfigureWidgetsViewController.xib in Resources */,
+				F490CCC613B46B5C006B6A67 /* icon.png in Resources */,
+				F490CCC813B46B74006B6A67 /* Default-Portrait~ipad.png in Resources */,
+				F490CCCA13B46B92006B6A67 /* Default-Landscape~ipad.png in Resources */,
+				F490CCD613B4770C006B6A67 /* HomeScreenWidget.xib in Resources */,
+				F463466A13B49B5600BD199B /* SummaryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +737,6 @@
 				F43DD73B1358D17B00F92AD9 /* AppConfig.m in Sources */,
 				F43DD7471359DCEC00F92AD9 /* ScrollViewConfig.m in Sources */,
 				F43DD752135AB2C700F92AD9 /* Widget.m in Sources */,
-				F43DD757135B691A00F92AD9 /* NewsAndAnalysisWidget.m in Sources */,
 				F424C405135C1BDE00EF228D /* UIViewScrollContainer.m in Sources */,
 				19B51B3E135C81840015FB5A /* QuotesTableCell.m in Sources */,
 				19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */,
@@ -712,6 +761,9 @@
 				F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */,
 				F4F62E161376DAAA00D698B3 /* NSDate+Format.m in Sources */,
 				23A7191B13AFC33700710DD2 /* ConfigureWidgetsViewController.m in Sources */,
+				F490CCD513B4770C006B6A67 /* HomeScreenWidget.m in Sources */,
+				F4F62E161376DAAA00D698B6 /* ArticleWithSummary.m in Sources */,
+				F463466813B49B3200BD199B /* SummaryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

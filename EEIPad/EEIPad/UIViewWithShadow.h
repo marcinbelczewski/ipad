@@ -15,4 +15,6 @@
 
 - hideShadow;
 - showShadow;
+-(void) setupShadow;
+
 @end

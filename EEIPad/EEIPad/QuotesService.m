@@ -35,15 +35,18 @@
 - (void)requestFailed:(NSString *)errMsg {
 }
 
+- (id)convertData:(NSData *)result fromResponse:(NSURLResponse *)response {
+    return [[[QuotesModel alloc] initWithDictionary:[result objectFromJSONData]] autorelease];
+}
+
+
 - (void)dataLoaded:(id)data {
     //return ;
-    NSDictionary *dictionary = data;
-    QuotesModel *quotes = [[QuotesModel alloc] initWithDictionary:dictionary];
+    QuotesModel *quotes = data;
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter postNotificationName:@"CommoditesUpdate" object:quotes.Commodities];
     [notificationCenter postNotificationName:@"IndicesUpdate" object:quotes.Indices];
     [notificationCenter postNotificationName:@"StocksUpdate" object:quotes.Stocks];
-    [quotes release];
 }
 
 - (void)dealloc {

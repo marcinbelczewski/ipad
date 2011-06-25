@@ -62,7 +62,7 @@
     [cfg addSmallWidget:@"SingleQuotesViewController" withParameter:@"StocksUpdate" withLabel:@"Stocks" ];
     [cfg addSmallWidget:@"VideoWidget" withLabel:@"Video"];
 
-    cfg.smalScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:314];
+    cfg.smalScrollView = [[[ScrollViewConfig alloc] initWithNumOfWidgets:2 andViewWidth:314] autorelease];
     
 //    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
 //    [cfg addLargeWidget:nil withLabel:@"Spotlight"];
@@ -89,7 +89,7 @@
 //http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=latestdeal
 //    newsandanalysis,spotlight,onetowatch,companyfocus,countryrisk,powergeneration
     
-    cfg.largeScrollView = [[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:648];
+    cfg.largeScrollView = [[[ScrollViewConfig alloc] initWithNumOfWidgets:1 andViewWidth:648] autorelease];
     
     return cfg;
 }

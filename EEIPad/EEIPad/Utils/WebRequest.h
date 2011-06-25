@@ -10,7 +10,9 @@
 
 @protocol WebRequestDelegate
 -(void) dataLoaded:(id)data;
+@optional
 -(void) requestFailed:(NSString*) errMsg;
+-(id) convertData:(NSData *)result fromResponse: (NSURLResponse *) response;
 @end
 
 
@@ -20,17 +22,23 @@ typedef enum {
 
 
 @interface WebRequest : NSObject {
-	NSString* url;
+	NSURL* url;
 	id<WebRequestDelegate> delegate;
     WebRequestPriority _priority;
+    NSString *_method;
 }
 @property (assign) id<WebRequestDelegate> delegate;
 
 +(NSOperationQueue *) sharedQueue;
 
+- (id)initWithURL:(NSURL *)targetUrl andMethod:(NSString *)method;
+
 - (id)initWithURLString:(NSString *)requestURL;
 - (id)initWithURLStringAndLowPriority:(NSString *)requestURL;
 -(void) makeRequest;
 
+- (void)makeRequest:(NSData *)httpBody;
 
+
+- (WebRequest *)initWithURLAndLowPriority:(NSURL *)url;
 @end

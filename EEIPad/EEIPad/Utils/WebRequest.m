@@ -25,12 +25,21 @@ static NSOperationQueue *requestQueue;
     return requestQueue;
 }
 
-- (id)initWithURLString:(NSString *)requestURL andPriority:(WebRequestPriority )priority {
-    if (self == [super init]) {
-        url = [requestURL retain];
+
+-(id) initWithURL:(NSURL *)targetUrl andMethod: (NSString *) method priority:(WebRequestPriority )priority {
+     if (self == [super init]) {
+        url = [targetUrl retain];
         _priority = priority;
+        _method = [method retain];
     }
     return self;
+}
+-(id) initWithURL:(NSURL *)targetUrl andMethod: (NSString *) method {
+    return [self initWithURL:targetUrl andMethod:method priority:WebRequestPriorityUrgent];
+}
+
+- (id)initWithURLString:(NSString *)requestURL andPriority:(WebRequestPriority )priority {
+    return [self initWithURL:[NSURL URLWithString:requestURL] andMethod:@"GET" priority: priority];
 }
 
 - (id)initWithURLString:(NSString *)requestURL {
@@ -42,8 +51,18 @@ static NSOperationQueue *requestQueue;
 }
 
 
-- (void)performRequest {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+- (WebRequest *)initWithURLAndLowPriority:(NSURL *)targetUrl {
+    return [self initWithURL:targetUrl andMethod:@"GET" priority:WebRequestPriorityLow];
+}
+
+
+- (void)performRequest : (NSData *)httpBody {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:_method];
+    if (httpBody != nil){
+        [request setHTTPBody:httpBody];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+    }
     NSURLResponse *response = nil;
     NSError *error = nil;
     UIApplication *app = [UIApplication sharedApplication];
@@ -53,10 +72,14 @@ static NSOperationQueue *requestQueue;
     if (error) {
         [delegate performSelectorOnMainThread:@selector(requestFailed:) withObject:[error localizedDescription] waitUntilDone:NO];
     } else {
-        NSData *dataResult = [result objectFromJSONData];
+        id dataResult = nil;
+        if ([delegate respondsToSelector:@selector(convertData:fromResponse:)]){
+            dataResult = [delegate convertData: result fromResponse: response];
+        } else {
+            dataResult = [result objectFromJSONData];
+        }
         [delegate performSelectorOnMainThread:@selector(dataLoaded:) withObject:dataResult waitUntilDone:NO];
     }
-
 }
 
 - (void)setOperationPriority:(NSInvocationOperation *)operation {
@@ -67,15 +90,20 @@ static NSOperationQueue *requestQueue;
 }
 
 - (void)makeRequest {
-    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
-                                                                            selector:@selector(performRequest)
-                                                                              object:nil];
+    [self makeRequest:nil];
+}
+-(void )makeRequest : (NSData *) httpBody {
+     NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                            selector:@selector(performRequest:)
+                                                                              object:httpBody];
     [self setOperationPriority:operation];
     [[WebRequest sharedQueue] addOperation:operation];
     [operation release];
 }
 
+
 - (void)dealloc {
+    [_method release];
     [url release];
     [super dealloc];
 }

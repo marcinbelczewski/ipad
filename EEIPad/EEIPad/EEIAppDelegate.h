@@ -11,8 +11,9 @@
 @class DetailViewController;
 @class QuotesService;
 @class LoginView;
+@protocol LoginDelegate;
 
-@interface EEIAppDelegate : NSObject <UIApplicationDelegate> {
+@interface EEIAppDelegate : NSObject <UIApplicationDelegate, LoginDelegate> {
 
     QuotesService * _quotesService;
     LoginView *_loginView;

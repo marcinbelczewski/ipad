@@ -110,6 +110,9 @@
 		F4F62E161376DAAA00D698B0 /* UIViewController+ShowActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698AF /* UIViewController+ShowActivityIndicator.m */; };
 		F4F62E161376DAAA00D698B3 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698B2 /* NSDate+Format.m */; };
 		F4F62E161376DAAA00D698B6 /* ArticleWithSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698B5 /* ArticleWithSummary.m */; };
+		F4F62E161376DAAA00D698B9 /* Urls.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698B8 /* Urls.m */; };
+		F4F62E161376DAAA00D698BC /* NSString+UrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698BB /* NSString+UrlEncode.m */; };
+		F4F62E161376DAAA00D698BF /* LoginResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F62E161376DAAA00D698BE /* LoginResultModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +257,12 @@
 		F4F62E161376DAAA00D698B4 /* NSDate+Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698B5 /* ArticleWithSummary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleWithSummary.m; sourceTree = "<group>"; };
 		F4F62E161376DAAA00D698B7 /* ArticleWithSummary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleWithSummary.h; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698B8 /* Urls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Urls.m; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698BA /* Urls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Urls.h; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698BB /* NSString+UrlEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UrlEncode.m"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698BD /* NSString+UrlEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UrlEncode.h"; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698BE /* LoginResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginResultModel.m; sourceTree = "<group>"; };
+		F4F62E161376DAAA00D698C0 /* LoginResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginResultModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +323,10 @@
 		197D02EC1369DEEF0082C1EC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F4F62E161376DAAA00D698BD /* NSString+UrlEncode.h */,
+				F4F62E161376DAAA00D698BB /* NSString+UrlEncode.m */,
+				F4F62E161376DAAA00D698BA /* Urls.h */,
+				F4F62E161376DAAA00D698B8 /* Urls.m */,
 				F4F62E161376DAAA00D698B4 /* NSDate+Format.h */,
 				F4F62E161376DAAA00D698B2 /* NSDate+Format.m */,
 				F4F62E161376DAAA00D698B1 /* UIViewController+ShowActivityIndicator.h */,
@@ -554,6 +567,8 @@
 		F490CCCC13B47420006B6A67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4F62E161376DAAA00D698C0 /* LoginResultModel.h */,
+				F4F62E161376DAAA00D698BE /* LoginResultModel.m */,
 				F4F62E161376DAAA00D698B7 /* ArticleWithSummary.h */,
 				F4F62E161376DAAA00D698B5 /* ArticleWithSummary.m */,
 				F403699B137DA92F00F4C212 /* Article.h */,
@@ -774,6 +789,9 @@
 				F4F62E161376DAAA00D698B6 /* ArticleWithSummary.m in Sources */,
 				F463466813B49B3200BD199B /* SummaryCell.m in Sources */,
 				234A72F913B6118700B94030 /* LoginView.m in Sources */,
+				F4F62E161376DAAA00D698B9 /* Urls.m in Sources */,
+				F4F62E161376DAAA00D698BC /* NSString+UrlEncode.m in Sources */,
+				F4F62E161376DAAA00D698BF /* LoginResultModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

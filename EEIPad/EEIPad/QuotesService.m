@@ -16,8 +16,7 @@
 - (id)initWithUrl:(NSURL *)dataUrl {
     self = [super init];
     if (self) {
-        _dataUrl = [dataUrl retain];
-        _webRequest = [[WebRequest alloc] initWithURLStringAndLowPriority:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/DefaultPrices"];
+        _webRequest = [[WebRequest alloc] initWithURLAndLowPriority: dataUrl];
         _webRequest.delegate = self;
         _timer = [NSTimer scheduledTimerWithTimeInterval:30.0
                                                   target:self
@@ -37,7 +36,7 @@
 }
 
 - (void)dataLoaded:(id)data {
-    return ;
+    //return ;
     NSDictionary *dictionary = data;
     QuotesModel *quotes = [[QuotesModel alloc] initWithDictionary:dictionary];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -48,9 +47,8 @@
 }
 
 - (void)dealloc {
-    [_dataUrl release];
     [_webRequest release];
-    [super dealloc];  //To change body of implemented methods use File | Settings | File Templates.
+    [super dealloc];
 }
 
 

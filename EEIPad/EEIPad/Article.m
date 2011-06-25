@@ -28,9 +28,16 @@
         [formatter setDateFormat:@"yyyy-MM-dd"];
        
         self->_date= [[formatter stringFromDate:date] retain];
+        [formatter release];
     }
     return self;
     
+}
+
+- (void)dealloc {
+    [title release];
+    [_date release];
+    [super dealloc];
 }
 
 @end

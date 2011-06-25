@@ -9,6 +9,7 @@
 #import "HomeScreenWidget.h"
 #import "ArticleWithSummary.h"
 #import "SummaryCell.h"
+#import "Urls.h"
 
 
 @implementation HomeScreenWidget
@@ -48,7 +49,7 @@
     [super viewDidLoad];
 
     [self.activityIndicator startAnimating];
-    self->_webRequest = [[WebRequest alloc] initWithURLString:[NSString stringWithFormat:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=%@",@"onetowatch"]];
+    self->_webRequest = [[WebRequest alloc] initWithURL:[Urls homeArticles]];
     self->_webRequest.delegate = self;
     [_webRequest makeRequest];
 }
@@ -214,15 +215,18 @@
     [self.activityIndicator stopAnimating];
 
     NSArray *articlesData = (NSArray *) data;
-    self->_articles = [[NSMutableArray alloc]init];
+    [_articles release];
+    _articles = [[NSMutableArray alloc]init];
 
 
     [articlesData enumerateObjectsUsingBlock:^(id art, NSUInteger idx, BOOL *stop) {
 
         NSDictionary *artDict = (NSDictionary *)art;
 
-        [self->_articles addObject:[[[ArticleWithSummary alloc] initWithDictionary: artDict] retain]];
+        ArticleWithSummary *summary = [[ArticleWithSummary alloc] initWithDictionary:artDict];
+        [self->_articles addObject:summary];
 
+        [summary release];
     }];
 
     [self.tableView reloadData];

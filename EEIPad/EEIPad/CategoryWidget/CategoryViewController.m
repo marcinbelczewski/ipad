@@ -11,6 +11,7 @@
 #import "JSONKit.h"
 #import "Article.h"
 #import "ArticlesGroup.h"
+#import "Urls.h"
 
 @implementation CategoryViewController
 
@@ -28,7 +29,7 @@
 -(void)refreshWithCategory:(NSString *)category
 {
     [self.listActivityIndicator startAnimating];
-    self->webRequest = [[WebRequest alloc] initWithURLString:[NSString stringWithFormat:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetLatest?categoryName=%@",category]];
+    self->webRequest = [[WebRequest alloc] initWithURL:[Urls articlesByCategory: category]];
     self->webRequest.delegate = self;
     [webRequest makeRequest];
     
@@ -112,9 +113,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Article *article = [((ArticlesGroup*)[articleGroups objectAtIndex:[indexPath section]]).articles objectAtIndex:[indexPath row]];
-    NSString *str = [NSString stringWithFormat:
-                     @"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/GetById?id=%d",article.identifier];
-    [arcticleView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [arcticleView loadRequest:[NSURLRequest requestWithURL:[Urls articleById: article.identifier]]];
     
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath

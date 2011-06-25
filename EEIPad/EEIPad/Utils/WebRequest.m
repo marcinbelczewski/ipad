@@ -34,6 +34,11 @@ static NSOperationQueue *requestQueue;
     }
     return self;
 }
+
+- (WebRequest *)initWithURL:(NSURL *)target {
+  return [self initWithURL:target andMethod:@"GET"];
+}
+
 -(id) initWithURL:(NSURL *)targetUrl andMethod: (NSString *) method {
     return [self initWithURL:targetUrl andMethod:method priority:WebRequestPriorityUrgent];
 }
@@ -51,8 +56,8 @@ static NSOperationQueue *requestQueue;
 }
 
 
-- (WebRequest *)initWithURLAndLowPriority:(NSURL *)targetUrl {
-    return [self initWithURL:targetUrl andMethod:@"GET" priority:WebRequestPriorityLow];
+- (id)initWithURLAndLowPriority:(NSURL *)target {
+    return [self initWithURL:target andMethod:@"GET" priority:WebRequestPriorityLow];
 }
 
 

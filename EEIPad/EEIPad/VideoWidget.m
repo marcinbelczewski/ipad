@@ -11,6 +11,7 @@
 #import "VideoModel.h"
 #import "UIView+ShowActivityIndicator.h"
 #import "UIViewController+ShowActivityIndicator.h"
+#import "Urls.h"
 
 @implementation VideoWidget
 @synthesize videoView;
@@ -24,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _webRequest = [[WebRequest alloc] initWithURLString:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/LatestVideo"];
+        _webRequest = [[WebRequest alloc] initWithURLAndLowPriority:[Urls latestVideo]];
         _webRequest.delegate = self;
     }
     return self;

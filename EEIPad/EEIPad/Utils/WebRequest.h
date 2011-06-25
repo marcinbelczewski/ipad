@@ -35,10 +35,13 @@ typedef enum {
 
 - (id)initWithURLString:(NSString *)requestURL;
 - (id)initWithURLStringAndLowPriority:(NSString *)requestURL;
+
+- (id)initWithURLAndLowPriority:(NSURL *)target;
+
+- (WebRequest *)initWithURL:(NSURL *)target;
 -(void) makeRequest;
 
 - (void)makeRequest:(NSData *)httpBody;
 
 
-- (WebRequest *)initWithURLAndLowPriority:(NSURL *)url;
 @end

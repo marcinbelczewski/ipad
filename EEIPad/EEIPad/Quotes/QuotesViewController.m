@@ -12,6 +12,7 @@
 #import "QuotesViewController.h"
 #import "WebRequest.h"
 #import "QuotesTableDelegate.h"
+#import "Urls.h"
 
 
 @implementation QuotesViewController
@@ -35,7 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    webRequest = [[WebRequest alloc] initWithURLString:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/DefaultPrices"];
+    webRequest = [[WebRequest alloc] initWithURLAndLowPriority:[Urls defaultPrices]];
     webRequest.delegate = self;
     timer = [NSTimer scheduledTimerWithTimeInterval:5.0 
                                              target:self 

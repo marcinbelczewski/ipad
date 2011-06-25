@@ -12,4 +12,12 @@
 }
 +(NSURL *) defaultPrices;
 +(NSURL *) authenticate;
+
++ (NSURL *)homeArticles;
+
++ (NSURL *)latestVideo;
+
++ (NSURL *)articlesByCategory:(NSString *)category;
+
++ (NSURL *)articleById:(NSInteger)articleId;
 @end

@@ -20,6 +20,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        _categories = [[NSArray alloc] initWithObjects:@"Spotlight",@"News And Analysis",@"Latest Deal",@"One To Watch",@"Company Focus", @"Country Risk", @"Power Generation", @"People News",nil];
     }
     return self;
 }
@@ -98,7 +99,7 @@
 {
     // Return the number of rows in the section.
     if (_articles)
-        return [_articles count];
+        return 8;
     else
         return 0;
 }
@@ -139,18 +140,20 @@
 
     }
 
-
+    int index = indexPath.row;
     ArticleWithSummary *art = [_articles objectAtIndex:indexPath.row];
-    cell.title.text = art.title;
-    cell.category.text=@"Latest deal";
-    [cell.webView loadHTMLString:art.summary baseURL:[[NSURL alloc] initWithString:@"http://qaeei.ihsglobalinsight.com/energy"]];
+    cell.category.text = [_categories objectAtIndex:indexPath.row];
+    [cell.image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"summary%d.png",index%5]]];
+//    cell.title.text = art.title;
+//    cell.category.text=@"Latest deal";
+//    [cell.webView loadHTMLString:art.summary baseURL:[[NSURL alloc] initWithString:@"http://qaeei.ihsglobalinsight.com/energy"]];
     return cell;
 
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    return 145;
 }
 
 /*

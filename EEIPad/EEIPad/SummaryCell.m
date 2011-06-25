@@ -12,13 +12,17 @@
 @implementation SummaryCell
 @synthesize title;
 @synthesize category;
-@synthesize webView;
+@synthesize date;
+@synthesize summary;
+@synthesize image;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.selectionStyle = UITableViewCellSelectionStyleGray;
+
     }
     return self;
 }
@@ -36,7 +40,9 @@
 {
     [title release];
     [category release];
-    [webView release];
+    [date release];
+    [summary release];
+    [image release];
     [super dealloc];
 }
 

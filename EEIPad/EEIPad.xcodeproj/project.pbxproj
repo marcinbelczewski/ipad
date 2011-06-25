@@ -48,6 +48,10 @@
 		F40369A1137DAB7A00F4C212 /* ArticlesGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F40369A0137DAB7A00F4C212 /* ArticlesGroup.m */; };
 		F404C875134F4FF0006EAA18 /* WidgetLg.m in Sources */ = {isa = PBXBuildFile; fileRef = F404C873134F4FF0006EAA18 /* WidgetLg.m */; };
 		F404C876134F4FF0006EAA18 /* WidgetLg.xib in Resources */ = {isa = PBXBuildFile; fileRef = F404C874134F4FF0006EAA18 /* WidgetLg.xib */; };
+		F410881D13B51ED50000667E /* summary0.png in Resources */ = {isa = PBXBuildFile; fileRef = F410881913B51ED50000667E /* summary0.png */; };
+		F410881E13B51ED50000667E /* summary2.png in Resources */ = {isa = PBXBuildFile; fileRef = F410881A13B51ED50000667E /* summary2.png */; };
+		F410881F13B51ED50000667E /* summary3.png in Resources */ = {isa = PBXBuildFile; fileRef = F410881B13B51ED50000667E /* summary3.png */; };
+		F410882013B51ED50000667E /* summary4.png in Resources */ = {isa = PBXBuildFile; fileRef = F410881C13B51ED50000667E /* summary4.png */; };
 		F414340F13758C14007605F2 /* UIViewWithShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = F414340E13758C14007605F2 /* UIViewWithShadow.m */; };
 		F414342C13759A9A007605F2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F414341213759A9A007605F2 /* background.png */; };
 		F414342D13759A9A007605F2 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = F414341313759A9A007605F2 /* banner.png */; };
@@ -82,6 +86,7 @@
 		F46BACD2136F3A3600AEED85 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46BACCF136F3A3600AEED85 /* CategoryViewController.m */; };
 		F478DCEA13AE8AA3007574A6 /* ihslogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F478DCE913AE8AA3007574A6 /* ihslogo.png */; };
 		F478DCED13AE8AB3007574A6 /* eeilogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F478DCEC13AE8AB3007574A6 /* eeilogo.png */; };
+		F47E3AC013B506BF0042696C /* summary1.png in Resources */ = {isa = PBXBuildFile; fileRef = F47E3ABF13B506BF0042696C /* summary1.png */; };
 		F485BE22134E4C9200B344D9 /* ScrollManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F485BE21134E4C9200B344D9 /* ScrollManager.m */; };
 		F48B4D0F134E063F007B0100 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D0E134E063F007B0100 /* UIKit.framework */; };
 		F48B4D11134E063F007B0100 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B4D10134E063F007B0100 /* Foundation.framework */; };
@@ -166,6 +171,10 @@
 		F404C872134F4FF0006EAA18 /* WidgetLg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetLg.h; sourceTree = "<group>"; };
 		F404C873134F4FF0006EAA18 /* WidgetLg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetLg.m; sourceTree = "<group>"; };
 		F404C874134F4FF0006EAA18 /* WidgetLg.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WidgetLg.xib; sourceTree = "<group>"; };
+		F410881913B51ED50000667E /* summary0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary0.png; sourceTree = "<group>"; };
+		F410881A13B51ED50000667E /* summary2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary2.png; sourceTree = "<group>"; };
+		F410881B13B51ED50000667E /* summary3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary3.png; sourceTree = "<group>"; };
+		F410881C13B51ED50000667E /* summary4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary4.png; sourceTree = "<group>"; };
 		F414340D13758C14007605F2 /* UIViewWithShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewWithShadow.h; sourceTree = "<group>"; };
 		F414340E13758C14007605F2 /* UIViewWithShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewWithShadow.m; sourceTree = "<group>"; };
 		F414341213759A9A007605F2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -212,6 +221,7 @@
 		F46BACCF136F3A3600AEED85 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewController.m; path = CategoryWidget/CategoryViewController.m; sourceTree = "<group>"; };
 		F478DCE913AE8AA3007574A6 /* ihslogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ihslogo.png; path = images/ihslogo.png; sourceTree = "<group>"; };
 		F478DCEC13AE8AB3007574A6 /* eeilogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eeilogo.png; path = images/eeilogo.png; sourceTree = "<group>"; };
+		F47E3ABF13B506BF0042696C /* summary1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary1.png; sourceTree = "<group>"; };
 		F485BE20134E4C9200B344D9 /* ScrollManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollManager.h; sourceTree = "<group>"; };
 		F485BE21134E4C9200B344D9 /* ScrollManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollManager.m; sourceTree = "<group>"; };
 		F48B4D0A134E063F007B0100 /* EEIPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EEIPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -455,9 +465,22 @@
 			name = LargeWidgets;
 			sourceTree = "<group>";
 		};
+		F47E3ABD13B506B00042696C /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F410881913B51ED50000667E /* summary0.png */,
+				F410881A13B51ED50000667E /* summary2.png */,
+				F410881B13B51ED50000667E /* summary3.png */,
+				F410881C13B51ED50000667E /* summary4.png */,
+				F47E3ABF13B506BF0042696C /* summary1.png */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
 		F4825F6F13562E8300837AE2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F47E3ABD13B506B00042696C /* Samples */,
 				F490CCBD13B46AB0006B6A67 /* App */,
 				F478DCEC13AE8AB3007574A6 /* eeilogo.png */,
 				F478DCE913AE8AA3007574A6 /* ihslogo.png */,
@@ -700,6 +723,11 @@
 				F490CCD613B4770C006B6A67 /* HomeScreenWidget.xib in Resources */,
 				F463466A13B49B5600BD199B /* SummaryCell.xib in Resources */,
 				234A72FA13B6118700B94030 /* LoginView.xib in Resources */,
+				F47E3AC013B506BF0042696C /* summary1.png in Resources */,
+				F410881D13B51ED50000667E /* summary0.png in Resources */,
+				F410881E13B51ED50000667E /* summary2.png in Resources */,
+				F410881F13B51ED50000667E /* summary3.png in Resources */,
+				F410882013B51ED50000667E /* summary4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

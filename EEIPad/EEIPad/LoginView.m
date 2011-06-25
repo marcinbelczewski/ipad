@@ -11,6 +11,8 @@
 
 @implementation LoginView
 @synthesize backgroundImage;
+@synthesize username;
+@synthesize password;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,6 +26,8 @@
 - (void)dealloc
 {
     [backgroundImage release];
+    [username release];
+    [password release];
     [super dealloc];
 }
 
@@ -63,6 +67,8 @@
 - (void)viewDidUnload
 {
     [self setBackgroundImage:nil];
+    [self setUsername:nil];
+    [self setPassword:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -11,24 +11,26 @@
 
 #import "DetailViewController.h"
 #import "QuotesService.h"
+#import "LoginView.h"
 
 @implementation EEIAppDelegate
 
 
 @synthesize window=_window;
 @synthesize detailViewController=_detailViewController;
+@synthesize loginView = _loginView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
 
-    NSURL *dataUrl = [[NSURL alloc] initWithString:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/DefaultPrices"];
-    _quotesService = [[QuotesService alloc] initWithUrl:dataUrl];
+    //NSURL *dataUrl = [[NSURL alloc] initWithString:@"http://qaeei.ihsglobalinsight.com/energy/IPadArticle/DefaultPrices"];
+    //_quotesService = [[QuotesService alloc] initWithUrl:dataUrl];
 
     // Add the split view controller's view to the window and display.
-    self.window.rootViewController = self.detailViewController;
+    self.window.rootViewController = self.loginView;
     [self.window makeKeyAndVisible];
-    [dataUrl release];
+    //[dataUrl release];
     return YES;
 }
 
@@ -38,6 +40,7 @@
     [_window release];
     [_detailViewController release];
     [_quotesService release];
+    [_loginView release];
     [super dealloc];
 }
 

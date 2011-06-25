@@ -35,6 +35,8 @@
 		19B51B40135C81840015FB5A /* QuotesTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3A135C81840015FB5A /* QuotesTableDelegate.m */; };
 		19B51B41135C81840015FB5A /* QuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B51B3C135C81840015FB5A /* QuotesViewController.m */; };
 		19B51B43135C823A0015FB5A /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B51B42135C823A0015FB5A /* QuotesViewController.xib */; };
+		234A72F913B6118700B94030 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A72F713B6118700B94030 /* LoginView.m */; };
+		234A72FA13B6118700B94030 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234A72F813B6118700B94030 /* LoginView.xib */; };
 		23A7191B13AFC33700710DD2 /* ConfigureWidgetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A7191913AFC33700710DD2 /* ConfigureWidgetsViewController.m */; };
 		23A7191C13AFC33700710DD2 /* ConfigureWidgetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A7191A13AFC33700710DD2 /* ConfigureWidgetsViewController.xib */; };
 		23AF2E6C1380062C00942F5E /* SingleQuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2E6A1380062C00942F5E /* SingleQuotesViewController.m */; };
@@ -141,6 +143,9 @@
 		19F032C1137677B600920828 /* Quote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quote.m; sourceTree = "<group>"; };
 		19F032C313767C7800920828 /* QuotesCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesCategory.h; sourceTree = "<group>"; };
 		19F032C413767C7800920828 /* QuotesCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesCategory.m; sourceTree = "<group>"; };
+		234A72F613B6118700B94030 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		234A72F713B6118700B94030 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		234A72F813B6118700B94030 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		23A7191813AFC33700710DD2 /* ConfigureWidgetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigureWidgetsViewController.h; sourceTree = "<group>"; };
 		23A7191913AFC33700710DD2 /* ConfigureWidgetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigureWidgetsViewController.m; sourceTree = "<group>"; };
 		23A7191A13AFC33700710DD2 /* ConfigureWidgetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureWidgetsViewController.xib; sourceTree = "<group>"; };
@@ -505,6 +510,9 @@
 				23A7191813AFC33700710DD2 /* ConfigureWidgetsViewController.h */,
 				23A7191913AFC33700710DD2 /* ConfigureWidgetsViewController.m */,
 				23A7191A13AFC33700710DD2 /* ConfigureWidgetsViewController.xib */,
+				234A72F613B6118700B94030 /* LoginView.h */,
+				234A72F713B6118700B94030 /* LoginView.m */,
+				234A72F813B6118700B94030 /* LoginView.xib */,
 			);
 			path = EEIPad;
 			sourceTree = "<group>";
@@ -676,6 +684,7 @@
 				F490CCCA13B46B92006B6A67 /* Default-Landscape~ipad.png in Resources */,
 				F490CCD613B4770C006B6A67 /* HomeScreenWidget.xib in Resources */,
 				F463466A13B49B5600BD199B /* SummaryCell.xib in Resources */,
+				234A72FA13B6118700B94030 /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +773,7 @@
 				F490CCD513B4770C006B6A67 /* HomeScreenWidget.m in Sources */,
 				F4F62E161376DAAA00D698B6 /* ArticleWithSummary.m in Sources */,
 				F463466813B49B3200BD199B /* SummaryCell.m in Sources */,
+				234A72F913B6118700B94030 /* LoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

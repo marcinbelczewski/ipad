@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'EEIPad.LogicTests' target in the 'EEIPad.LogicTests' project
-//
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-#endif

@@ -29,6 +29,7 @@
 
     // Add the split view controller's view to the window and display.
     self.window.rootViewController = self.loginView;
+    [self loggedIn:@"grzegorz.chlodzinski@ihs.com"];
     self.loginView.delegate = self;
     [self.window makeKeyAndVisible];
     //[dataUrl release];

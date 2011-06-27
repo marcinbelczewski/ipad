@@ -38,6 +38,7 @@
 - (void)setupWithWidgets:(NSMutableArray *)array andConfig:(ScrollViewConfig *)config {
     widgets = [[NSMutableArray alloc] init];
     viewConfig = config;
+    [viewConfig retain];
 
     // view controllers are created lazily
     // in the meantime, load the array with placeholders which will be replaced on demand
@@ -86,6 +87,7 @@
     [viewControllers release];
     [scrollView release];
     [pageControl release];
+    [viewConfig release];
 
     [super dealloc];
 }
@@ -147,7 +149,7 @@
 
     // add the controller's view to the scroll view
     if (controller.view.superview == nil) {
-        CGRect frame = scrollView.frame;
+        CGRect frame = self.scrollView.frame;
         frame.origin.x = (page) * [self calculateItemWidth];
         frame.origin.y = 0;
         frame.size.width = viewConfig.widgetWidth;
